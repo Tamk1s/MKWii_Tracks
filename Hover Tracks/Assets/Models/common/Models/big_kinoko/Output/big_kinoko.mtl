@@ -1,0 +1,52 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'big_kinoko.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl _Color_L02_
+Ka 0.117647 0.117647 0.117647
+Kd 0.117647 0.117647 0.117647
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd big_kinoko_Textures/_Color_L02_.PNG
+
+newmtl _Color_B12_
+Ka 0.898039 0.356863 0.172549
+Kd 0.898039 0.356863 0.172549
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd big_kinoko_Textures/_Color_B12_.PNG
+
+newmtl _Color_E11_
+Ka 0.827451 0.745098 0.000000
+Kd 0.827451 0.745098 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd big_kinoko_Textures/_Color_E11_.PNG
+
+newmtl _Color_I12_
+Ka 0.309804 0.392157 0.678431
+Kd 0.309804 0.392157 0.678431
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd big_kinoko_Textures/_Color_I12_.PNG
+
+newmtl _Color_G13_
+Ka 0.239216 0.600000 0.239216
+Kd 0.239216 0.600000 0.239216
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd big_kinoko_Textures/_Color_G13_.PNG
+
+#EOF

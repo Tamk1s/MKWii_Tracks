@@ -1,0 +1,18 @@
+This folder contains the source files for creating the battle_cup_select.thp replacement file.
+
+Input folder has subfolders for each track
+(Maze 1, 2, 3, Small, Extra, and the entirety of Wii Battle Cup)
+
+Folders:
+"Input\Dummy"
+"Input\Extra"
+"Input\Maze1"
+"Input\Maze2"
+"Input\Maze3"
+"Input\Small"
+"Input\Wii"
+
+"Dummy' folder contains each padding frames for the video.
+
+Each other input folder has an input mp4 file, an output mp4 file, and a PowerDirector 11 PDS file. The PDS file was used to trim and render the video to proper spec for the THP.
+The "output" folder contains the new THP file, and "make.bat" . Run that batch script to copy over the input files, rename them proper for usage with Thwimp, and then run Thwimp to encode a new video

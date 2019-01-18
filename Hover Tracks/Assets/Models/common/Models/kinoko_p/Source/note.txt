@@ -1,0 +1,2 @@
+Extract kinoko_p.brres
+from original Common.szs (for reference)

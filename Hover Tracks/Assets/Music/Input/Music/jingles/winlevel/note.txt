@@ -1,0 +1,3 @@
+"winlevel" handles the following:
+o_FanfareMIwin_only32.brstm
+o_FanfareTA1st_only32.brstm

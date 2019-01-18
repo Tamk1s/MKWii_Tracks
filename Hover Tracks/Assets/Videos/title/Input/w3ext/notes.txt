@@ -1,0 +1,4 @@
+This is for frames 368-421 of video, renamed
+sequentially so FFMPEG frame_%0Nd can digest it
+
+0:29.71 + 36x 0:02.27 to get 1:10.90 (limit frames to limit of original THP)

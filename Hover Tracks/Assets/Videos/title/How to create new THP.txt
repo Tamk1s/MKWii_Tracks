@@ -1,0 +1,26 @@
+This folder is a mess and input videos created manually for the most part! It needs refactored.
+
+Title folder is for the 4 title videos
+(SD NTSC/PAL, and 16:9 NTSC/PAL).
+
+Each video is unique
+
+Folder/file breakdown:
+
+"Input\" - Input files
+
+"Input\200bttrf.avi"	- Source video for title.thp (16:9 NTSC)
+"Input\WELCOME1.AVI"	- Source video for title_50.thp (16:9 PAL)
+"Input\WELCOME2.AVI"	- Source video for title_SD_50.thp (4:3 PAL)
+"Input\WELCOME3.AVI"	- Source video for title_SD.thp (4:3 NTSC)
+
+All of these videos are too short to fit in the exact frame count of 4250 frames for the title videos (70.9 seconds long (about 1 minute, 11 seconds)), so they have been extended with a still frame (all videos except 200bttrf.avi)
+
+Welcome3 loops a few frames for the cloud animation, with wind sound effect
+
+Extension folders for each video (Welcome N)
+"Input\w1ext"
+"Input\w2ext"
+"Input\w3ext"
+
+Output folder has the proper input filenames for usage with Thwimp

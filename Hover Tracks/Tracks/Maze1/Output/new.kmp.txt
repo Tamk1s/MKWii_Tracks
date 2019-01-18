@@ -1,0 +1,2065 @@
+#KMP  <<<  The first 4 characters '#KMP' are the magic for a KMP text file.
+#     <<<  Don't remove them!
+#
+###############################################################################
+#
+# This is a textual representation of a KMP file used in Nintendos "Mario Kart
+# Wii". "Wiimms SZS Tools" can convert binary (raw) and text KMP files in both
+# directions. The text parser supports variables, C like expressions and nested
+# IF-THEN-ELSE and LOOP structures.
+#
+# Info about the general parser syntax and semantics:
+#   * https://szs.wiimm.de/doc/syntax
+#
+# Info about the KMP text syntax and semantics:
+#   * https://szs.wiimm.de/doc/kmp/syntax
+#
+# Reference list of KMP parser functions:
+#   * https://szs.wiimm.de/doc/kmp/func
+#
+# Info about the KMP file format:
+#   * https://szs.wiimm.de/r/wiki/KMP
+#
+# Hint:
+#   Set one of the options --no-header (-H) or --brief (-B) while decoding
+#   to suppress this generel description. The --brief option will also disable
+#   info parts in the different sections. If --brief is set twice, the output
+#   of the unneded sections CKPH, ENPH and ITPH is completly suppressed.
+#
+
+#
+###############################################################################
+
+[SETUP]
+# This is the general setup and info section. Some parameters are preceeded by
+# a hash ('#') to signal the informative only status. This section should
+# always be the first one.
+
+# Identify the tool and version, that have written this file:
+TOOL     = wkmpt
+SYSTEM   = cygwin
+VERSION  = 1.61a
+REVISION = 7601
+DATE     = 2018-09-23
+
+# If the following info string is not empty it will be
+# inserted at the end of the KMP file behind all sections:
+INFO = ""
+
+# Unknown value at offset 0x0c of the file:
+UNKNOWN-0x0c = 0x9d8
+
+# If set to '1', objects with road features will be added to the internal KCL
+# for the automatic height calculations. Like --kcl +add-road
+KCL-FALL-ADD-ROAD = 0
+
+# Define the battle mode for the next text output:
+#  0 : Disable battle support
+#  1 : Enable battle support
+#  2 : Enable exclusive battle support => remove unneeded sections and parameters
+# This setting is overiden by option --battle.
+BATTLE-MODE = 3
+
+# Experimental feature in progress!
+# If set to 1, an additional KMP section named »WIM0« is created. This new
+# section should contain data of this text file like names or flags, that can
+# be restored later. At the moment, the new section contains only dummy data
+# for compatibility tests with other tools and the Wii. Option --wim0 can
+# override this setting.
+KMP-WIM0 = 0
+
+# Statistics: Entry counter for each section:
+ # N-AREA =     9
+ # N-CAME =     9
+ # N-CKPH =     0
+ # N-CKPT =     0
+ # N-CNPT =     0
+ # N-ENPH =    71
+ # N-ENPT =   201
+ # N-GOBJ =   103
+ # N-ITPH =     0
+ # N-ITPT =     0
+ # N-JGPT =    12
+ # N-KTPT =    12
+ # N-MSPT =     4
+ # N-POTI =     3,   13
+ # N-STGI =     1
+
+#------------------------------------------------------------------------------
+
+# These are the default settings for route objects:
+# @ROUTE-OBJECT       = o$obakeblockSFCc
+# @ROUTE-OBJECT-SHIFT = v( 0.00, 0.00, 0.00 )
+# @ROUTE-OBJECT-SCALE = v( 0.20, 0.40, 1.00 )
+
+
+#
+###############################################################################
+
+# This second part of section [SETUP] is an example to prepare a KMP source
+# file for conditional encoding (compiling). The idea is, that the user
+# defines variables with the "--const name=value" option while calling one of
+# the tools 'wszst' or 'wkmpt' to create different KMP files.
+#
+# Set option --no-param (-P) to disable this parameter part.
+#
+# This example scans 7 parameters. All variables are not special for the KMP
+# encoder and fully under user control: The user can remove or rename them or
+# can add more parameters. But this values have predefined meanings:
+#
+#   slot   : Create a KMP for the entered slot.
+#            The default value 0 means: Design for allmost all slots.
+#            Use it with @if..@else..@endif to support special slots.
+#
+#   d      : Create a KMP file for a "_d" variant of a track.
+#            Use it with @if..@else..@endif to skip objects.
+#
+#   arena  : If >0, then create a battle arena instead of a racing track.
+#
+#   test   : If  >0, then test mode is enabled.
+#            If <=0, test mode and also all parameters below are disabled.
+#
+#   ocam   : If >0 and also test>0, then enable test of opening camera #
+#            (endless looping until button 'A' is pressed). With the default
+#            value 0 all opening scenes are looped. If test mode is disabled,
+#            the cameras work as usual.
+#
+#   showrt : If set and also test>0, points of different sections ar shown as
+#            item boxes and all standard item boxes are disabled. Set one or more
+#            of the following bits to show the points of the section:
+#              1 : ENPT
+#              2 : ITPT
+#              4 : JGPT
+#              8 : CNPT
+#             16 : MSPT
+#             32 : POTI
+#             -1 : enable all section (all bits set!)
+#
+#   showck : If set and also test>0, show check points as trees (or other
+#            user defined objects). See section [CKPT] for details.
+#
+#   laps   : It controls the number of laps by changing the settinge of the
+#            check point modes (CKPT/@AUTO-MODE). Allowed values are:
+#              0: Make the race a short as possible.
+#              1: Finish the race after 1 lap
+#              3: Finish the race after 3 laps (default).
+#              4: Never finish the race (unlimited).
+#            Value 3 is used, if test mode is disabled.
+#
+
+# First we define default values (if not set by --const) for all parameters:
+
+  @def slot	?= 0	# Enable support for special slots
+  @def d	?= 0	# Enable support for _d files
+  @def arena	?= 0	# Enable battle arena support and allow different modes
+  @def test	?= 0	# Enable test mode
+  @def ocam	?= 0	# Test opening cam, only relevant if test>0
+  @def showrt   ?= 0    # Show item boxes for route points.
+			# Only relevant if test>0. Set bit combination:
+			#   1:ENPT, 2:ITPT, 4:JGPT, 8:CNPT, 0x10:MSPT, 0x20:POTI (-1:all)
+  @def showck   ?= 0    # Show objects a check point positions if test>0.
+			#   0:off, 1:mandatory, 2:all, 3=left+right
+  @def laps	?= 3	# Number of laps (0|1|3|4), only relevant if test>0
+
+# In a second step, global mode variables are defined and normalized.
+# All conditions in this file should use these variables.
+
+  @gdef mode$slot	= slot > 0 ? slot : 0
+  @gdef mode$d		= d > 0
+  @gdef mode$arena	= arena > 0 ? arena : 0
+
+  @gdef mode$test	= test > 0 ? test : 0
+  @gdef mode$ocam	= mode$test && ocam >= 1 ? ocam : 0
+  @gdef mode$laps	= mode$test && laps >= 0 ? laps : 3
+  @gdef mode$showrt	= mode$test ? showrt : 0
+  @gdef mode$showck	= mode$test ? showck : 0
+  @gdef mode$automode	= select(mode$laps,AM$SHORT,AM$1LAP,AM$OFF,AM$OFF,AM$UNLIMIT)
+
+# Now the tools 'wszst' and 'wkmpt' can be called with the --const (or short
+# -c) option for a conditional encoding. Example:
+#	-c test=12,ocam=2,laps=0
+# Enable test mode 12, show opening camera 2 endless (until pressing A) and
+# finish the race very fast to view the finish cameras very soon.
+
+#
+###############################################################################
+# Macros
+
+@macro itembox
+    #-------------------------------------------------------------------
+    # This macro helps to place N itemboxes in a row between
+    # 2 points with optimal height.
+    #-------------------------------------------------------------------
+    # Syntax:
+    #	@:ITEMBOX(fall,1,pos1)
+    #	@:ITEMBOX(fall,n,pos1,pos2)
+    #	@:ITEMBOX(fall,n,pos1,pos2,factor)
+    #	@:ITEMBOX(fall,n,pos1,pos2,factor,second)
+    #	@:ITEMBOX(fall,n,pos1,pos2,factor,second,itemtype)
+    #-------------------------------------------------------------------
+    # Parameters:
+    #	FALL	: If >0: Raise the box by FALL and let it fall to
+    #		: the road to get the optimal height.
+    #	N	: If >0: Create N itemboxes between POS1 and POS2.
+    #	POS1	: Position of first itembox.
+    #	POS2	: Position of last itembox.
+    #	FACTOR	: If set and >0.01: Create a line from POS1 to POS2.
+    #		: Enlarge the line by FACTOR in both directions.
+    #		: Then use the new points as new POS1 and POS2.
+    #   SECOND	: If set and >1: Move each second itembox into a second
+    #		: row. The distance between both rows is SECOND units.
+    #   ITEMTYPE: Use this value for player and enemy items.
+    #-------------------------------------------------------------------
+    # Examples:
+    #	@:itembox( 200, 1, point )
+    #	@:itembox(   0, 3, point1, point2, 0.9 )
+    #	@:itembox( 500, 8, point1, point2, 1, 250, ITEM$3GREEN )
+    #	@:itembox( 200, 4, v(2000,1000,3000), v(3000,1000,5000) )
+    #-------------------------------------------------------------------
+
+    @param fall n p1 p2 factor second itemtype
+    @pdef fall = fall > 0 ? fall : 0
+    @if isScalar(factor) && factor > 0.01
+	@pdef a = p1, b = p2, f = (1.0-factor)/2
+	@pdef p1 = pos(f,a,b)
+	@pdef p2 = pos(f,b,a)
+    @endif
+    @pdef itemtype = int(itemtype)   
+    @if n == 1
+	@pdef p = fall ? kcl$fall(p1+vy(fall),200,KCL$DRIVE) : p1
+	0 o$itembox p 0 itemtype itemtype 0 -1  0 v3(0) 0 0 0 0 0x3f  v3(1)
+    @else
+	@pdef second = isScalar(second) && second > 0
+		> ? hrot(vz(second),hdir(p1,p2)+90) : v3(0)
+	@pdef n = n - 1.0
+	@for i=0;n
+	    @pdef p = pos(i/n,p1,p2)
+	    @doif(i&1)  @pdef p = p + second
+	    @doif(fall) @pdef p = kcl$fall(p+vy(fall),200,KCL$DRIVE)
+	    0 o$itembox p 0 itemtype itemtype 0 -1  0 v3(0) 0 0 0 0 0x3f  v3(1)
+	@endfor
+    @endif
+@endmacro
+
+#
+###############################################################################
+
+[AREA]
+# Camera and other areas
+# KMP/AREA syntax & semantics: https://szs.wiimm.de/doc/kmp/area
+
+@REVISION        = 7601
+@AREA-HEAD-VALUE = 0
+
+#AREA#
+#------------------------------------------------------------------------------------
+#       mode type    _____position/rotation/scale______   _________settings_________
+#  idx  came prio          x           y           z         #1     #2     #3     #4
+#------------------------------------------------------------------------------------
+    a0     0    0         0.000   -1000.000       0.000       0      0 0xffff      0
+ >        c3    0         0.000       0.000       0.000 
+ >                        2.050       1.000       2.050
+#------------------------------------------------------------------------------------
+    a1     0    0    -17900.000   -1000.000  -10500.000       0      0 0xffff      0
+ >        c4    0         0.000       0.000       0.000 
+ >                        2.050       1.000       3.000
+#------------------------------------------------------------------------------------
+    a2     0    0    -17900.000   -1000.000   10500.000       0      0 0xffff      0
+ >        c6    0         0.000       0.000       0.000 
+ >                        2.050       1.000       3.000
+#------------------------------------------------------------------------------------
+    a3     0    0     17900.000   -1000.000  -10500.000       0      0 0xffff      0
+ >        c7    0         0.000       0.000       0.000 
+ >                        2.050       1.000       3.000
+#------------------------------------------------------------------------------------
+    a4     0    0     17900.000   -1000.000   10500.000       0      0 0xffff      0
+ >        c5    0         0.000       0.000       0.000 
+ >                        2.050       1.000       3.000
+#------------------------------------------------------------------------------------
+    a5     0    0    -10500.000   -1000.000  -17900.000       0      0 0xffff      0
+ >        c4    0         0.000       0.000       0.000 
+ >                        3.000       1.000       2.050
+#------------------------------------------------------------------------------------
+    a6     0    0     10500.000   -1000.000  -17900.000       0      0 0xffff      0
+ >        c7    0         0.000       0.000       0.000 
+ >                        3.000       1.000       2.050
+#------------------------------------------------------------------------------------
+    a7     0    0    -10500.000   -1000.000   17900.000       0      0 0xffff      0
+ >        c6    0         0.000       0.000       0.000 
+ >                        3.000       1.000       2.050
+#------------------------------------------------------------------------------------
+    a8     0    0     10500.000   -1000.000   17900.000       0      0 0xffff      0
+ >        c5    0         0.000       0.000       0.000 
+ >                        3.000       1.000       2.050
+#------------------------------------------------------------------------------------
+
+#
+###############################################################################
+
+[CAME]
+# Cameras
+# KMP/CAME syntax & semantics: https://szs.wiimm.de/doc/kmp/came
+
+@REVISION        = 7601
+@OPENING-INDEX   = c0
+@SELECTION-INDEX = c1
+
+#CAME#
+#-------------------------------------------------------------------------------------------
+#  idx  type  v(came)  _________position (x,y,z)_________   zoom_beg  #        some
+#       next  v(zoom)  _________rotation (x,y,z)_________   zoom_end  #     calculated
+#     unknown v(v.pt)  ______view point beg (x,y,z)______       -     #       values
+#      route  unknown  ______view point end (x,y,z)______    sec*60   #     (info only)
+#-------------------------------------------------------------------------------------------
+	# CAME reference: @OPENING-INDEX c8
+    c0     5       0    29543.391    3752.000  -23049.359     55.000  # came time:   10.00s
+ > ( mode$ocam == 1 ? c0 : mode$test ? c0 : -1 )
+ >                 0        0.000       0.000       0.000     55.000
+ >         0       7     3815.390     600.000  -20361.400             # v.pt time: 4352.96s
+ >        r0       0    21479.391    2252.000  -15945.360    600.000  # v.pt len: 18282.44
+#-------------------------------------------------------------------------------------------
+	# CAME reference: @SELECTION-INDEX c2
+    c1     5       0    20000.000    1000.000       0.000     45.000  # came time:    5.00s
+ >        c2       2        0.000       0.000       0.000     55.000  # zoom time:    8.33s
+ >         0       1        0.000    1000.000       0.000
+ >        r1       0        0.000    1000.000       0.000    300.000
+#-------------------------------------------------------------------------------------------
+	# CAME reference: c1
+    c2     5       0    25000.000    1000.000       0.000     60.000  # came time:    5.00s
+ >        c1       3        0.000       0.000       0.000     45.000  # zoom time:    8.33s
+ >         0    3000        0.000    1000.000    6500.000             # v.pt time:    7.50s
+ >        r2       0        0.000    1000.000   -7000.000    300.000  # v.pt len: 13500.00
+#-------------------------------------------------------------------------------------------
+	# AREA reference: a0
+    c3     3       0    -3483.157    7151.138     162.376     45.000
+ >        -1       0        0.000       0.000       0.000     45.000
+ >         0       0      -10.000      15.000     650.000
+ >        -1       0       -5.000       5.000       0.000      0.000  # v.pt len:   650.10
+#-------------------------------------------------------------------------------------------
+	# AREA reference: a1 a5
+    c4     1       0   -18500.000    2500.000  -18500.000      8.000
+ >        -1       0        0.000       0.000       0.000      8.000
+ >         0       0      -10.000      15.000     650.000
+ >        -1       0       -5.000       5.000       0.000      0.000  # v.pt len:   650.10
+#-------------------------------------------------------------------------------------------
+	# AREA reference: a4 a8
+    c5     1       0    18500.000    2500.000   18500.000      8.000
+ >        -1       0        0.000       0.000       0.000      8.000
+ >         0       0      -10.000      15.000     650.000
+ >        -1       0       -5.000       5.000       0.000      0.000  # v.pt len:   650.10
+#-------------------------------------------------------------------------------------------
+	# AREA reference: a2 a7
+    c6     1       0    -6000.000    2500.000    6000.000      8.000
+ >        -1       0        0.000       0.000       0.000      8.000
+ >         0       0      -10.000      15.000     650.000
+ >        -1       0       -5.000       5.000       0.000      0.000  # v.pt len:   650.10
+#-------------------------------------------------------------------------------------------
+	# AREA reference: a3 a6
+    c7     1       0     6000.000    2500.000   -6000.000      8.000
+ >        -1       0        0.000       0.000       0.000      8.000
+ >         0       0      -10.000      15.000     650.000
+ >        -1       0       -5.000       5.000       0.000      0.000  # v.pt len:   650.10
+#-------------------------------------------------------------------------------------------
+    c8     0       0     3815.391     600.000  -20361.359      0.000
+ >        c0       0        0.000       0.000       0.000      0.000
+ >         0       0        0.000       0.000       0.000
+ >        -1       0        0.000       0.000       0.000      0.000
+#-------------------------------------------------------------------------------------------
+
+#
+###############################################################################
+
+[CKPH]
+# Check points header: Divide check points into groups.
+# KMP/CKPH syntax & semantics: https://szs.wiimm.de/doc/kmp/ckph
+
+#######################################################################
+## This complete section is only informative and ignored on reading, ##
+## because it will be created while scanning the [CKPT] section.     ##
+#######################################################################
+
+# values never used:
+  # @REVISION        = 7601
+  # @CKPH-HEAD-VALUE = 0
+
+#CKPH#
+#-----------------------------------------------------------------------------#-------
+#     ___range___  _________prev__________  _________next__________           # group
+#idx  beg end len   #1  #2  #3  #4  #5  #6   #1  #2  #3  #4  #5  #6  unknown  # name
+#-----------------------------------------------------------------------------#-------
+
+#
+###############################################################################
+
+[CKPT]
+# Check points
+# KMP/CKPT syntax & semantics: https://szs.wiimm.de/doc/kmp/ckpt
+
+@REVISION        = 7601
+@CKPT-HEAD-VALUE = 0
+@CKPH-HEAD-VALUE = 0
+@AUTO-NEXT       = 1
+@AUTO-GROUP-NAME = 0
+@AUTO-RESPAWN    = 0	# 0:off, 1:on
+
+@AUTO-MODE = mode$automode
+# allowed values: AM$OFF AM$NORM AM$RENUMBER AM$1LAP AM$SHORT AM$UNLIMIT
+
+@ROUTE-OBJECT-MODE   = mode$showck
+#--- default settings:
+# @ROUTE-OBJECT1       = o$castletree1
+# @ROUTE-OBJECT2       = o$TownTreeDS
+# @ROUTE-OBJECT1-SCALE = v( 0.05, 12.00, 0.20 )
+# @ROUTE-OBJECT2-SCALE = v( 0.05, 12.00, 0.20 )
+# @ROUTE-OBJECT1-BASE  = -2000
+# @ROUTE-OBJECT2-BASE  = -2000
+
+#CKPT#
+#----------------------------------------------------------------------#-------------------
+#      _____left_point______   _____right_point_____ respawn   prev    #   width     direc-
+#idx        x           y           x           y          mode   next #  of ckpt     tion
+#----------------------------------------------------------------------#-------------------
+
+#
+###############################################################################
+
+[CNPT]
+# Cannon target positions
+# KMP/CNPT syntax & semantics: https://szs.wiimm.de/doc/kmp/cnpt
+
+@REVISION           = 7601
+@CNPT-HEAD-VALUE    = 0
+@AUTO-ID            = 1
+
+# Activate automatic Y-correction (KCL fall)
+@KCL-FALL-WIDTH     =   0        # set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD   =   0        # add this height or vector before falling
+@KCL-FALL-POST-ADD  =   0        # add this height or vector after success
+@KCL-FALL-TYPES     = KCL$DRIVE  # bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+
+# Snap to nearest point of the enemy route and add the vector.
+# Activate it with something like: vy(200) => 200 units higher than the enemy point
+@HSNAP-TO-ENPT      = $NONE      # horizontal snap without adjust, y-rotation
+@SNAP-TO-ENPT       = $NONE      # 3D snap, y-rotation
+@SNAP2-TO-ENPT      = $NONE      # 3D snap, x- and y-rotation
+
+# Show points in the track by using objects
+# Values: 0=off, -1=use default (block of ghost value), >0=force object with 'id'
+@ROUTE-OBJECT       = mode$showrt & 8 ? -1 : 0  
+@ROUTE-OBJECT-SHIFT = $NONE      # v3(0)  # add vector to position
+@ROUTE-OBJECT-SCALE = $NONE      # v3(1)  # define vector scale
+
+#CNPT#
+#-------------------------------------------------------------------------------
+#      _____________position_____________ _______rotation________ related
+# idx        x           y           z        x       y       z       id effect
+#-------------------------------------------------------------------------------
+
+#
+###############################################################################
+
+[ENPH]
+# Enemy route points header: Divide enemy points into groups.
+# KMP/ENPH syntax & semantics: https://szs.wiimm.de/doc/kmp/enph
+
+#######################################################################
+## This complete section is only informative and ignored on reading, ##
+## because it will be created while scanning the [ENPT] section.     ##
+#######################################################################
+
+# values never used:
+  # @REVISION        = 7601
+  # @ENPH-HEAD-VALUE = 0
+
+#ENPH#
+#-----------------------------------------------------------------------------#-------
+#     ___range___  _________prev__________  _________next__________           # group
+#idx  beg end len   #1  #2  #3  #4  #5  #6   #1  #2  #3  #4  #5  #6  unknown  # name
+#-----------------------------------------------------------------------------#-------
+   0    0   0   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP01
+   1    1   1   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP02
+   2    2   2   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP03
+   3    3   3   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP04
+   4    4   4   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP05
+   5    5   5   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP06
+   6    6   6   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP07
+   7    7   7   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP08
+   8    8   8   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP09
+   9    9   9   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP10
+  10   10  10   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP11
+  11   11  11   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP12
+  12   12  12   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP13
+  13   13  13   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP14
+  14   14  14   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP15
+  15   15  15   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP16
+  16   16  16   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP17
+  17   17  17   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP18
+  18   18  18   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP19
+  19   19  19   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP20
+  20   20  20   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP21
+  21   21  21   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP22
+  22   22  22   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP23
+  23   23  23   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP24
+  24   24  24   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP25
+  25   25  25   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP26
+  26   26  26   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP27
+  27   27  27   1    -   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # DP28
+  28   28  33   6    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G01
+  29   34  35   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G02
+  30   36  37   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G03
+  31   38  43   6    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G04
+  32   44  45   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G05
+  33   46  51   6    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G06
+  34   52  53   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G07
+  35   54  55   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G08
+  36   56  61   6    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G09
+  37   62  63   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G10
+  38   64  65   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G11
+  39   66  79  14    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G12
+  40   80  84   5    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G13
+  41   85  87   3    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G14
+  42   88  96   9    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G15
+  43   97 101   5    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G16
+  44  102 103   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G17
+  45  104 105   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G18
+  46  106 119  14    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G19
+  47  120 123   4    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G20
+  48  124 126   3    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G21
+  49  127 133   7    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G22
+  50  134 139   6    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G23
+  51  140 141   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G24
+  52  142 143   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G25
+  53  144 145   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G26
+  54  146 147   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G27
+  55  148 149   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G28
+  56  150 152   3    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G29
+  57  153 154   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G30
+  58  155 156   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G31
+  59  157 158   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G32
+  60  159 160   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G33
+  61  161 162   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G34
+  62  163 164   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G35
+  63  165 168   4    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G36
+  64  169 170   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G37
+  65  171 172   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G38
+  66  173 182  10    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G39
+  67  183 184   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G40
+  68  185 195  11    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G41
+  69  196 198   3    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G42
+  70  199 200   2    0   -   -   -   -   -    0   -   -   -   -   -   0 0x00  # G43
+
+#
+###############################################################################
+
+[ENPT]
+# Enemy Points: Routes of the cpu racers
+# KMP/ENPT syntax & semantics: https://szs.wiimm.de/doc/kmp/enpt
+
+@REVISION           = 7601
+@ENPT-HEAD-VALUE    = 0
+@ENPH-HEAD-VALUE    = 0
+@AUTO-FILL          =   0.0      # >1 (e.g. 5000): create more points if distance is larger
+@AUTO-GROUP-NAME    =   0
+@ROTATE-GROUP-LINKS =   0
+@KCL-FALL-WIDTH     =   0        # set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD   =   0        # add this height or vector before falling
+@KCL-FALL-POST-ADD  =   0        # add this height or vector after success
+@KCL-FALL-TYPES     = KCL$DRIVE  # bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+@ROUTE-OBJECT       = mode$showrt & 1 ? -1 : 0  # 0=off, -1=use default, >0=object id
+@ROUTE-OBJECT-SHIFT = $NONE      # v3(0)  # add vector to position
+@ROUTE-OBJECT-SCALE = $NONE      # v3(1)  # define vector scale
+
+# Column 'flag' is optional and ususally only used internally.
+# Syntax:   FLAGS_STRING   or   '(' EXPRESSION ')'
+#   F (F$FALL): Point can be used for FALL-DOWN functionality.
+#   S (F$SNAP): Point can be used for SNAP functionality (ignored by ITPT).
+#   J (F$JGPT): Point can be used for automatic JGPT creation.
+# Remove the letter or replace it by '-' to disable a feature.
+# If the column is missed, all options are enabled by default.
+
+# If you enable EXPORT-FLAGS (set it to 1), the flags are exported using the
+# lowest byte of WIDTH FACTOR. The factor needs only 2 or 3 digits, so this
+# has no disadvantage on the width factors. 5 of the 8 bits are used to verify
+# changes by other tools on import. If at least 1 of these bit of all points
+# is wrong, import is canceled.
+@EXPORT-FLAGS = 0  # 0=disabled, 1=enabled (overridden by option --export-flags)
+
+# Experimental options, tools before v1.60a will throw error messages!
+@SHOW-OPTIONS = 0   # >0: force printing of all route options
+
+# AUTO-CONNECT is one of the following AC$* symbols:
+# For racing tracks and for battle areenas with manual links setup:
+#   AC$OFF
+#	Do not any auto connection. Route connection are fully under control
+#	of the user.
+#   AC$PREV
+#	Setup PREV links by NEXT links of other routes. Existing PREV links
+#	are cleared before. This is the default and the behavior of all versions
+#	before v1.60a.
+#
+# Modes for automatic route connection in battle arenas:
+#   AC$DISPATCH
+#	Find dispatch points and create links automatically if not already
+#	set manually. This is the default for enemy routes, if dispatch
+#	points detected.
+#
+# Flags: The modes of above can be combined with the following options by
+# the OR operator '|' (example: AC$PREV | ACF$FIX)
+#   ACF$FIX_PREV
+#	Add self-links, if a PREV list is empty.
+#   ACF$FIX_NEXT
+#	Add self-links, if a NEXT list is empty.
+#   ACF$FIX
+#	Abbreviation for: ACF$FIX_PREV | ACF$FIX_NEXT
+#	This is the default for item routes to avoid a freeze.
+#
+@AUTO-CONNECT = AC$DISPATCH
+
+# Syntax of new command with impact to all following $GROUP commands:
+#  "$DEF-CLASS" [":"] class_name
+
+# Syntax of new route commands (placed behind $GROUP command):
+#  "$PREV"      [":"] [group_name]...
+#  "$SETTINGS"  [":"] setting1 setting2 [ "AUTO" | "ROUTE" | "DISPATCH" ]
+#  "$CLASS"     [":"] class_name_prev [class_name_next]
+#  "$AC-PREV"   [":"] class_name
+#  "$AC-NEXT"   [":"] class_name
+#  "$ONEWAY"    [":"] "NONE" | "PREV" | "NEXT" | "BOTH"
+
+#ENPT#
+#----------------------------------------------------------------------#-------------------
+#      _____________position_____________    width     properties      #  distance   horiz
+#idx         x           y           z       factor     #1     #2 flag #   to prev   angle
+#----------------------------------------------------------------------#-------------------
+
+ 
+ $GROUP DP01
+
+
+   0     2663.391     100.000  -15946.640    7.210       0      0  FSJ
+
+ 
+ $GROUP DP02
+
+
+   1     4424.333     100.000  -10921.700    7.210       0      0  FSJ
+
+ 
+ $GROUP DP03
+
+
+   2     7271.391     100.000  -23434.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP04
+
+
+   3     9191.391     100.000  -23434.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP05
+
+
+   4     9191.391     100.000  -15946.650    7.210       0      0  FSJ
+
+ 
+ $GROUP DP06
+
+
+   5     9191.391     100.000  -10186.640    7.210       0      0  FSJ
+
+ 
+ $GROUP DP07
+
+
+   6     8615.391     100.000   -6010.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP08
+
+
+   7    10535.390     100.000   -5770.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP09
+
+
+   8    11495.390     100.000  -23434.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP10
+
+
+   9    14183.390     100.000  -24394.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP11
+
+
+  10    14183.390     100.000  -23434.641    7.210       0      0  FSJ
+
+ $GROUP DP12
+
+
+  11    14183.390     100.000  -10186.640    7.210       0      0  FSJ
+
+ 
+ $GROUP DP13
+
+
+  12    14183.390     100.000   -7498.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP14
+
+
+  13    14183.390     100.000   -5770.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP15
+
+
+  14    19175.391     100.000   -7498.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP16
+
+
+  15    19175.391     100.000   -8458.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP17
+
+
+  16    19175.391     100.000  -21706.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP18
+
+
+  17    19175.391     100.000  -24394.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP19
+
+
+  18    19175.391     100.000  -26162.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP20
+
+
+  19    22823.391     100.000  -26162.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP21
+
+
+  20    21863.391     100.000   -8458.645    7.210       0      0  FSJ
+
+ $GROUP DP22
+
+
+  21    24743.391     100.000  -25882.641    7.210       0      0  FSJ
+
+ $GROUP DP23
+
+
+  22    24167.391     100.000  -21706.641    7.210       0      0  FSJ
+
+ 
+ $GROUP DP24
+
+
+  23    24167.391     100.000  -15946.640    7.210       0      0  FSJ
+
+ 
+ $GROUP DP25
+
+
+  24    24167.391     100.000   -8458.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP26
+
+
+  25    25703.391     100.000   -8458.645    7.210       0      0  FSJ
+
+ 
+ $GROUP DP27
+
+
+  26    30695.391     100.000  -15946.640    7.210       0      0  FSJ
+
+ 
+ $GROUP DP28
+
+
+  27    29543.391     100.000  -20362.641    7.210       0      0  FSJ
+
+ 
+ $GROUP G01
+
+
+  28    19175.391     100.000   -8842.645    7.210       0      0  FSJ
+  29    19175.391     100.000  -12682.640   21.630       0      0  FSJ #  3839.995   14.25
+  30    18785.391     100.000  -14218.640   28.730       0      0  FSJ #  1584.738  -14.25
+  31    18785.391     100.000  -17674.641   28.730       0      0  FSJ #  3456.001  -14.25
+  32    19175.391     100.000  -19210.641   21.630       0      0  FSJ #  1584.738   14.25
+  33    19175.391     100.000  -21322.641    7.210       0      0  FSJ #  2112.000
+
+ 
+ $GROUP G02
+
+
+  34    19175.391     100.000  -22090.641    7.210       0      0  FSJ
+  35    19175.391     100.000  -24010.641    7.210       0      0  FSJ #  1920.000
+
+ 
+ $GROUP G03
+
+
+  36    19175.391     100.000  -24778.641    7.210       0      0  FSJ
+  37    19175.391     100.000  -25778.641    7.210       0      0  FSJ #  1000.000
+
+ $GROUP G04
+
+
+  38    19175.391     100.000  -26546.641    7.210       0      0  FSJ
+  39    19175.391     100.000  -28810.641   14.420       0      0  FSJ #  2264.000   34.99
+  40    17831.391     100.000  -30730.641   14.420       0      0  FSJ #  2343.659   55.01
+  41    15527.390     100.000  -30730.641   14.420       0      0  FSJ #  2304.001   55.01
+  42    14183.390     100.000  -28810.641   14.420       0      0  FSJ #  2343.659   34.99
+  43    14183.390     100.000  -24778.641    7.210       0      0  FSJ #  4032.000
+
+ $GROUP G05
+
+
+  44    14183.390     100.000  -24010.641    7.210       0      0  FSJ
+  45    14183.390     100.000  -23818.641    7.210       0      0  FSJ #   192.000
+
+ $GROUP G06
+
+
+  46    14183.390     100.000  -23050.641    7.210       0      0  FSJ
+  47    14183.390     100.000  -19978.641   21.630       0      0  FSJ #  3072.000    9.46
+  48    14567.390     100.000  -17674.641   28.730       0      0  FSJ #  2335.781   -9.46
+  49    14567.390     100.000  -14218.640   28.730       0      0  FSJ #  3456.001  -14.25
+  50    14177.390     100.000  -12682.640   21.630       0      0  FSJ #  1584.738   14.25
+  51    14177.390     100.000  -10570.640    7.210       0      0  FSJ #  2112.000
+
+ 
+ $GROUP G07
+
+
+  52    14179.220     100.000   -9802.503    7.210       0      0  FSJ
+  53    14179.220     100.000   -7892.645    7.210       0      0  FSJ #  1909.858
+
+ 
+ $GROUP G08
+
+
+  54    14183.390     100.000   -7060.571    7.210       0      0  FSJ
+  55    14183.390     100.000   -6154.645    7.210       0      0  FSJ #   905.926
+
+ 
+ $GROUP G09
+
+
+  56    14183.390     100.000   -5386.645   10.000       0      0  FSJ
+  57    14183.390     100.000   -3082.645   10.000       0      0  FSJ #  2304.000   34.99
+  58    15527.390     100.000   -1162.645   10.000       0      0  FSJ #  2343.659   55.01
+  59    17831.391     100.000   -1162.645   10.000       0      0  FSJ #  2304.001   55.01
+  60    19175.391     100.000   -3082.645   10.000       0      0  FSJ #  2343.659   34.99
+  61    19175.391     100.000   -7114.645   10.000       0      0  FSJ #  4032.000
+
+ 
+ $GROUP G10
+
+
+  62    19175.391     100.000   -7882.645    7.210       0      0  FSJ
+  63    19175.391     100.000   -8074.645    7.210       0      0  FSJ #   192.000
+
+ 
+ $GROUP G11
+
+
+  64    19559.391     100.000   -8458.645    7.210       0      0  FSJ
+  65    21479.391     100.000   -8458.645    7.210       0      0  FSJ #  1920.000
+
+ 
+ $GROUP G12
+
+
+  66    21970.061     100.000   -8074.645    7.210       0      0  FSJ
+  67    22823.430     100.000   -5002.728   10.810       0      0  FSJ #  3188.246  -15.53
+  68    22823.430     100.000   -2314.645   10.810       0      0  FSJ #  2688.083   45.00
+  69    23783.391     100.000   -1354.645   10.810       0      0  FSJ #  1357.617   90.00
+  70    24743.391     100.000   -2314.645   10.810       0      0  FSJ #  1357.645   45.00
+  71    24743.391     100.000   -5002.645   10.810       0      0  FSJ #  2688.000  -26.49
+  72    25703.391     100.000   -6928.645   10.810       0      0  FSJ #  2151.993  -63.51
+  73    27239.391     100.000   -6928.645   10.810       0      0  FSJ #  1536.000  -59.19
+  74    27815.391     100.000   -5962.645   10.810       0      0  FSJ #  1124.692   14.19
+  75    30695.391     100.000   -3082.645   10.810       0      0  FSJ #  4072.935   45.00
+  76    32231.391     100.000   -3082.645   10.810       0      0  FSJ #  1536.000   90.00
+  77    32231.391     100.000   -4618.645   10.810       0      0  FSJ #  1536.000   45.00
+  78    28967.391     100.000   -7882.645    7.210       0      0  FSJ #  4615.993   34.99
+  79    26087.391     100.000   -8390.880    7.210       0      0  FSJ #  2924.500
+
+ 
+ $GROUP G13
+
+
+  80    26087.391     100.000   -8732.931    7.210       0      0  FSJ
+  81    27239.391     100.000   -9555.787   10.810       0      0  FSJ #  1415.697   -0.00
+  82    28391.391     100.000  -10378.640   22.530       0      0  FSJ #  1415.694    9.46
+  83    30695.391     100.000  -12682.640   22.530       0      0  FSJ #  3258.348   45.00
+  84    30695.391     100.000  -15562.640    7.210       0      0  FSJ #  2880.000
+
+ $GROUP G14
+
+
+  85    30695.391     100.000  -16330.640    7.210       0      0  FSJ
+  86    30695.391     100.000  -19210.641   14.420       0      0  FSJ #  2880.001   45.00
+  87    29814.920     100.000  -20091.119    7.210       0      0  FSJ #  1245.179
+
+ $GROUP G15
+
+
+  88    28967.391     100.000  -22282.641    7.210       0      0  FSJ
+  89    28967.391     100.000  -24060.439    7.210       0      0  FSJ #  1777.799  -45.44
+  90    32231.391     100.000  -27274.641   14.420       0      0  FSJ #  4580.915   45.44
+  91    32231.391     100.000  -28810.641   14.420       0      0  FSJ #  1536.000   90.00
+  92    30695.391     100.000  -28810.641   14.420       0      0  FSJ #  1536.000   44.20
+  93    27785.520     100.000  -25980.439   14.420       0      0  FSJ #  4059.235   -5.74
+  94    27239.391     100.000  -25546.641   14.420       0      0  FSJ #   697.451  -38.46
+  95    25895.391     100.000  -25546.641    7.210       0      0  FSJ #  1344.000  -16.26
+  96    25127.391     100.000  -25770.641    7.210       0      0  FSJ #   800.000
+
+ $GROUP G16
+
+
+  97    24743.391     100.000  -26266.641    7.210       0      0  FSJ
+  98    24743.391     100.000  -29578.641   12.200       0      0  FSJ #  3312.000   45.00
+  99    23783.391     100.000  -30538.641   12.200       0      0  FSJ #  1357.645   90.00
+ 100    22823.391     100.000  -29578.641   12.200       0      0  FSJ #  1357.645   45.00
+ 101    22823.391     100.000  -26546.641    7.210       0      0  FSJ #  3032.000
+
+ $GROUP G17
+
+
+ 102    22439.391     100.000  -26162.641    7.210       0      0  FSJ
+ 103    19559.391     100.000  -26162.641    7.210       0      0  FSJ #  2880.000
+
+ 
+ $GROUP G18
+
+
+ 104    13799.390     100.000  -23434.641    7.210       0      0  FSJ
+ 105    11879.390     100.000  -23434.641    7.210       0      0  FSJ #  1920.000
+
+ 
+ $GROUP G19
+
+
+ 106    11388.720     100.000  -23818.641    7.210       0      0  FSJ
+ 107    10535.390     100.000  -26890.641   14.420       0      0  FSJ #  3188.316  -15.52
+ 108    10535.390     100.000  -29578.641   14.420       0      0  FSJ #  2688.000   45.00
+ 109     9575.391     100.000  -30538.641   14.420       0      0  FSJ #  1357.644   90.00
+ 110     8615.391     100.000  -29578.641   14.420       0      0  FSJ #  1357.645   45.00
+ 111     8615.391     100.000  -26890.641    8.450       0      0  FSJ #  2688.000  -26.57
+ 112     7655.357     100.000  -24970.730   14.420       0      0  FSJ #  2146.560  -63.43
+ 113     6119.391     100.000  -24970.730   14.420       0      0  FSJ #  1535.966  -56.54
+ 114     5515.573     100.000  -25884.279   14.420       0      0  FSJ #  1095.065   10.12
+ 115     2697.874     100.000  -28845.131   14.420       0      0  FSJ #  4087.306   46.42
+ 116     1092.908     100.000  -28845.131   14.420       0      0  FSJ #  1604.966   90.00
+ 117     1092.908     100.000  -27240.160   14.420       0      0  FSJ #  1604.971   46.33
+ 118     4422.081     100.000  -24061.789    7.210       0      0  FSJ #  4602.764   32.70
+ 119     6887.391     100.000  -23583.609    7.210       0      0  FSJ #  2511.257
+
+ 
+ $GROUP G20
+
+
+ 120     6887.391     100.000  -22817.900    7.210       0      0  FSJ
+ 121     4967.391     100.000  -21514.641   10.810       0      0  FSJ #  2320.536   10.83
+ 122     2663.391     100.000  -19210.641   10.810       0      0  FSJ #  3258.348   45.00
+ 123     2663.391     100.000  -16330.640    7.210       0      0  FSJ #  2880.001
+
+ 
+ $GROUP G21
+
+
+ 124     2663.391     100.000  -15576.830    7.210       0      0  FSJ
+ 125     2663.391     100.000  -12682.640   14.420       0      0  FSJ #  2894.190   45.00
+ 126     4152.804     100.000  -11193.230    7.210       0      0  FSJ #  2106.345
+
+ 
+ $GROUP G22
+
+
+ 127     4404.557     100.000   -7860.700    7.210       0      0  FSJ
+ 128     1127.391     100.000   -4643.055   14.420       0      0  FSJ #  4592.718   45.53
+ 129     1127.391     100.000   -3082.645   14.420       0      0  FSJ #  1560.410   90.00
+ 130     2663.391     100.000   -3082.645   14.420       0      0  FSJ #  1536.000   45.00
+ 131     5543.391     100.000   -5962.645   14.420       0      0  FSJ #  4072.935  -11.31
+ 132     6119.391     100.000   -6346.645   10.810       0      0  FSJ #   692.266  -33.69
+ 133     7655.391     100.000   -6346.645    7.210       0      0  FSJ #  1536.000
+
+ 
+ $GROUP G23
+
+
+ 134     8615.391     100.000   -5626.645    7.210       0      0  FSJ
+ 135     8615.391     100.000   -2314.645   12.200       0      0  FSJ #  3312.000   45.00
+ 136     9575.391     100.000   -1354.645   12.200       0      0  FSJ #  1357.645   90.00
+ 137    10408.530     100.000   -2187.779   12.200       0      0  FSJ #  1178.233    0.00
+ 138    10535.390     100.000   -2314.645   12.200       0      0  FSJ #   179.411   45.00
+ 139    10535.390     100.000   -5386.645    7.210       0      0  FSJ #  3072.000
+
+ $GROUP G24
+
+
+ 140    10919.390     100.000   -5770.645    7.210       0      0  FSJ
+ 141    13798.720     100.000   -5770.645    7.210       0      0  FSJ #  2879.330
+
+ $GROUP G25
+
+
+ 142    11111.390     100.000  -23434.641    7.210       0      0  FSJ
+ 143     9575.391     100.000  -23434.641    7.210       0      0  FSJ #  1535.999
+
+ $GROUP G26
+
+
+ 144     8807.391     100.000  -23434.641    7.210       0      0  FSJ
+ 145     7655.391     100.000  -23434.641    7.210       0      0  FSJ #  1152.000
+
+ $GROUP G27
+
+
+ 146     9191.391     100.000  -23050.641   14.420       0      0  FSJ
+ 147     9191.391     100.000  -16330.560   14.420       0      0  FSJ #  6720.081
+
+ $GROUP G28
+
+
+ 148     9191.391     100.000  -15562.650   14.420       0      0  FSJ
+ 149     9191.391     100.000  -10570.640   14.420       0      0  FSJ #  4992.011
+
+ 
+ $GROUP G29
+
+
+ 150     6119.391     100.000  -11332.640    7.210       0      0  FSJ
+ 151     7655.391     100.000  -10570.640    9.390       0      0  FSJ #  1714.625    7.95
+ 152     8807.391     100.000  -10186.640    7.210       0      0  FSJ #  1214.314
+
+ 
+ $GROUP G30
+
+
+ 153     9575.298     100.000  -10186.640   14.420       0      0  FSJ
+ 154    13794.890     100.000  -10186.640   14.420       0      0  FSJ #  4219.592
+
+ 
+ $GROUP G31
+
+
+ 155     8807.298     100.203  -15946.650   14.420       0      0  FSJ
+ 156     3047.391     100.203  -15946.650   14.420       0      0  FSJ #  5759.907
+
+ 
+ $GROUP G32
+
+
+ 157    22247.391     100.000   -8458.645    7.210       0      0  FSJ
+ 158    23783.391     100.000   -8458.645    7.210       0      0  FSJ #  1536.000
+
+ 
+ $GROUP G33
+
+
+ 159    24551.391     100.000   -8458.645    7.210       0      0  FSJ
+ 160    25319.391     100.000   -8458.645    7.210       0      0  FSJ #   768.000
+
+ $GROUP G34
+
+
+ 161    24167.391     100.000   -8842.645   14.420       0      0  FSJ
+ 162    24167.391     100.000  -15562.640   14.420       0      0  FSJ #  6719.995
+
+ $GROUP G35
+
+
+ 163    24167.391     100.000  -16330.640   14.420       0      0  FSJ
+ 164    24167.391     100.000  -21322.641   14.420       0      0  FSJ #  4992.001
+
+ $GROUP G36
+
+
+ 165    27815.391     100.000  -20746.641    7.210       0      0  FSJ
+ 166    27239.391     100.000  -20746.641    9.390       0      0  FSJ #   576.000  -20.56
+ 167    25703.391     100.000  -21322.641    7.210       0      0  FSJ #  1640.449    6.52
+ 168    24551.391     100.000  -21610.641    7.210       0      0  FSJ #  1187.454
+
+ $GROUP G37
+
+
+ 169    23783.391     100.000  -21706.641   14.420       0      0  FSJ
+ 170    19559.391     100.000  -21706.641   14.420       0      0  FSJ #  4224.000
+
+ $GROUP G38
+
+
+ 171    24551.391     100.000  -15946.640   14.420       0      0  FSJ
+ 172    30311.391     100.000  -15946.640   14.420       0      0  FSJ #  5760.000
+
+ $GROUP G39
+ $ONEWAY: PREV
+
+ 173     5543.391     100.000   -9226.645    7.210       0      0  FSJ
+ 174     7463.391     244.000   -8458.645   16.900       0      0  FSJ #  2072.911   -4.76
+ 175     8999.391     388.000   -7690.645   11.270       0      0  FSJ #  1723.326   26.57
+ 176     9191.391     424.000   -7690.645   11.270       0      0  FSJ #   195.346   -9.46
+ 177    10343.390     532.000   -7498.645   11.270       0      0  FSJ #  1172.872    9.46
+ 178    11183.390     580.000   -7498.645   11.270       0      0  FSJ #   841.370    0.00
+ 179    13727.390     580.000   -7498.645   11.270       0      0  FSJ #  2544.000    0.00
+ 180    13799.390     664.000   -7498.645   11.270       0      0  FSJ #   110.635    0.00
+ 181    19559.391     664.000   -7498.645    7.210       0      0  FSJ #  5760.001   26.57
+ 182    21479.340     100.000   -8458.722    7.210       0      0  FSJ #  2219.470
+
+ 
+ $GROUP G40
+
+
+ 183     9191.391     100.000   -5770.645    7.210       0      0  FSJ
+ 184    10151.390     100.000   -5770.645    7.210       0      0  FSJ #   959.999
+
+ 
+ $GROUP G41
+ $ONEWAY: PREV
+
+ 185    27623.391     136.000  -22282.641    7.210       0      0  FSJ
+ 186    26855.391     172.000  -23050.641   16.900       0      0  FSJ #  1086.712   23.20
+ 187    25895.391     244.000  -23434.641   11.270       0      0  FSJ #  1036.455   -4.76
+ 188    23975.391     424.000  -24394.641   11.270       0      0  FSJ #  2154.159   26.57
+ 189    23783.391     460.000  -24394.641   11.270       0      0  FSJ #   195.346    0.00
+ 190    23015.391     532.000  -24394.641   11.270       0      0  FSJ #   771.368    0.00
+ 191    22175.391     580.000  -24394.641   11.270       0      0  FSJ #   841.370    0.00
+ 192    19631.391     580.000  -24394.641   11.270       0      0  FSJ #  2544.000    0.00
+ 193    19559.391     664.000  -24394.641   11.270       0      0  FSJ #   110.635    0.00
+ 194    13799.390     664.000  -24394.641    7.210       0      0  FSJ #  5760.001   26.57
+ 195    11879.390     100.066  -23434.641    7.210       0      0  FSJ #  2219.464
+
+ 
+ $GROUP G42
+
+
+ 196    24359.391     100.000  -25994.641    7.210       0      0  FSJ
+ 197    23783.391     100.000  -26162.641    7.210       0      0  FSJ #   600.000   16.26
+ 198    23207.391     100.000  -26162.641    7.210       0      0  FSJ #   576.000
+
+ 
+ $GROUP G43
+
+
+ 199    18791.391     100.000  -24394.641    7.210       0      0  FSJ
+ 200    14567.390     100.000  -24394.641    7.210       0      0  FSJ #  4224.001
+
+#
+###############################################################################
+
+[GOBJ]
+# Global objects.
+# KMP/GOBJ syntax & semantics: https://szs.wiimm.de/doc/kmp/gobj
+
+@REVISION          = 7601
+@GOBJ-HEAD-VALUE   = 0
+@AUTO-ENEMY-ITEM   =   0	# mode$test ? <item$star,item$mega> : 0
+@AUTO-OBJECT-NAME  =   0
+@KCL-FALL-WIDTH    =   0	# set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD  =   0	# add this height or vector before falling
+@KCL-FALL-POST-ADD =   0	# add this height or vector after success
+@KCL-FALL-TYPES    = KCL$DRIVE	# bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+@SORT-OBJECTS      = SORT$OFF	# SORT$GROUPING SORT$ANGLE SORT$TINY
+
+# Object statistics:
+##-----------------------------------------------------------------------------------
+##count id/hex name               characteristics
+##-----------------------------------------------------------------------------------
+##  41   0x65  itembox            no route, solid, found in tracks + arenas + other files
+##  62   0x73  coin               no route, solid, found in arenas
+##-----------------------------------------------------------------------------------
+
+#GOBJ#
+#------------------------------------------------------------------------------------
+#     obj-id ______position/rotation/scale______  _________settings_________   route
+# idx /unknw        x           y           z     #1/#5  #2/#6  #3/#7  #4/#8 /p-flag
+#------------------------------------------------------------------------------------
+## o$itembox = 0x65 = 101, no route, solid, found in tracks + arenas + other files
+## Description: Spinning box with a question mark in it. If touched it snaps and
+## an item lottery begins; after the lottery the item shown is gotten.
+## File names:  itembox(B)
+## Setting #1:  Unknown
+## Setting #2:  Item type (player)
+## Setting #3:  Item type (enemy)
+## Setting #4:  Unknown
+## Setting #6:  Timing lottery
+## Setting #8:  Unknown
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o0   0x65    6251.369     121.990  -26295.490      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o1   0x65    7065.482     121.990  -22993.520      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o2   0x65    8390.492     121.990  -22173.270      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o3   0x65    2396.397     121.990  -19081.580      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o4   0x65    8327.396     121.990  -19460.160      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o5   0x65    2403.227     121.990   -5098.062      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o6   0x65    6792.490     121.990   -7151.104      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o7   0x65   10119.840     121.990   -4814.883      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o8   0x65    9553.479     121.990   -9416.531      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+   o9   0x65    9482.685     121.990  -13451.820      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o10   0x65    3748.323     121.990  -12389.900      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o11   0x65   11464.930     121.990  -20814.461      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o12   0x65   10827.780     121.990  -27823.119      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o13   0x65   12597.650     146.990  -25628.490      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o14   0x65   13801.150     121.990  -28389.480      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o15   0x65   19606.311     121.990  -28885.039      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o16   0x65   14509.100     121.990  -18336.650      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o17   0x65   20031.080     121.990  -17345.520      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o18   0x65   18969.160     121.990  -14867.710      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o19   0x65   19110.750     121.990  -10761.630      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o20   0x65   14367.510     121.990   -3328.196      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o21   0x65   15146.250     146.990   -7363.488      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o22   0x65   20668.230     121.990   -6584.748      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o23   0x65   22862.859     121.990   -8354.611      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o24   0x65   23146.039     121.990   -3682.170      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o25   0x65   21305.381     121.990  -20248.100      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o26   0x65   21093.000     601.991  -24000.211      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o27   0x65   24986.699     121.990  -27752.330      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o28   0x65   23641.600     121.990  -11540.370      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o29   0x65   25765.439     121.990   -7859.050      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o30   0x65   29375.961     121.990  -27256.770      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o31   0x65   32349.330     121.990  -28601.859      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o32   0x65   23995.570     121.990   -7575.872      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o33   0x65   29446.760     121.990  -24000.211      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o34   0x65   28314.039     121.990  -20106.510      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o35   0x65   31145.830     121.990  -19256.980      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o36   0x65   31358.211     121.990  -16920.760      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o37   0x65   29942.320     121.990  -15292.480      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o38   0x65   29729.930     121.990  -13027.050      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o39   0x65   29871.520     121.990  -10266.070      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$itembox, S1234-6-8, no route, solid, found in tracks + arenas + other files
+  o40   0x65   28738.811     121.990   -4744.088      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+## o$coin = 0x73 = 115, no route, solid, found in arenas
+## Description: Present in all battle courses in Coin Runners mode and in some
+## tournaments, when touched it disappears and the player gets one coin. Some
+## coins don't appear at the start of the battle but show up later. See
+## Object/coin for details.
+## File names:  coin(BE)
+## Setting #2:  Start or respawn place. See Coin for details.
+## Setting #3:  Spawn behavior. See Coin for details.
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o41   0x73   13053.930     267.028  -10005.870      0      0      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o42   0x73    4083.962     250.000  -24668.170      0      4      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o43   0x73    3971.494     250.000  -21125.420      0      8      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o44   0x73    8920.098     250.000  -20506.840      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o45   0x73    4027.728     250.000  -15951.880      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o46   0x73    8976.332     250.000  -15951.880      0     20      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o47   0x73    4365.133     250.000  -11621.850      0     24      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o48   0x73    9482.438     250.000  -11621.850      0     28      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o49   0x73    4477.601     250.000   -7066.886      0     32      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o50   0x73    9594.907     250.000   -5604.798      0     36      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o51   0x73    6783.200     357.082   -8585.207      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o52   0x73    8357.756     489.195   -7966.632      0      1      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o53   0x73   10044.780     663.377   -7572.993      0      5      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o54   0x73   15218.320     814.001   -7179.354      0      9      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o55   0x73   16118.070     250.000   -7910.397      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o56   0x73   14262.340     381.940   -9428.719      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o57   0x73   14262.340     250.000  -15277.070      0     21      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o58   0x73    9819.844     250.000  -25061.811      0     25      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o59   0x73   14655.980     250.000  -27536.109      0     29      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o60   0x73   14374.810     250.000  -29504.301      0     33      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o61   0x73   17480.430     250.000  -30727.551      0     37      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o62   0x73   17926.051     250.000  -23419.289      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o63   0x73   18460.801     814.001  -24310.539      0      2      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o64   0x73   19262.930     250.000  -20923.789      0      6      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o65   0x73   18906.430     250.000  -16289.280      0     10      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o66   0x73   19352.051     250.000   -5950.771      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o67   0x73   22293.180     250.000   -7198.523      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o68   0x73   23006.180     688.245  -24310.539      0     22      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o69   0x73   24610.439     522.322  -23954.039      0     26      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o70   0x73   26482.061     353.923  -23062.789      0     30      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o71   0x73   23095.311     250.000  -26449.539      0     34      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o72   0x73   30492.689     250.000  -25469.170      0     38      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o73   0x73   29690.570     250.000  -20923.789      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o74   0x73   30136.189     250.000  -16378.410      0      3      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o75   0x73   28888.439     250.000  -10852.650      0      7      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o76   0x73   28264.570     250.000   -5950.771      0     11      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o77   0x73   24788.689     250.000  -11298.280      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o78   0x73   25145.189     250.000  -16021.910      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o79   0x73   25323.439     250.000  -20032.539      0     23      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o80   0x73    8645.631     250.000  -28591.740      0     27      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o81   0x73   10273.910     250.000  -29724.449      0     31      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o82   0x73    5813.848     250.000  -15990.300      0     35      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o83   0x73    9919.934     250.000  -18609.699      0     39      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o84   0x73    9424.371     250.000  -17618.580      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o85   0x73    3307.264     250.000   -3099.453      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o86   0x73    4339.891     250.000   -4132.080      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o87   0x73    9582.457     250.000   -1510.797      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o88   0x73   18717.230     250.000  -29709.449      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o89   0x73   15460.490     250.000  -24864.051      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o90   0x73   14586.720     250.000  -23116.520      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o91   0x73   19908.721     250.000   -4370.378      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o92   0x73   18717.230     250.000   -5879.602      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o93   0x73   18320.070     814.001   -7388.825      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o94   0x73   24039.230     250.000   -1749.094      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o95   0x73   22927.170     250.000   -2463.990      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o96   0x73   19193.830     250.000  -18271.119      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o97   0x73   29996.689     250.000  -24466.881      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o98   0x73   31108.750     250.000  -25896.670      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+  o99   0x73   27057.680     250.000  -16364.730      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+ o100   0x73   29361.230     250.000  -17238.490      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+ o101   0x73   31108.750     250.000  -11201.600      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+# o$coin, S-23-----, no route, solid, found in arenas
+ o102   0x73   32220.811     250.000   -4767.542      0  65535      0      0      -1
+    >      0       0.000       0.000       0.000      0      0      0      0    0x3f
+    >              1.000       1.000       1.000
+#------------------------------------------------------------------------------------
+
+#
+###############################################################################
+
+[ITPH]
+# Item route points header: Divide item points into groups.
+# KMP/ITPH syntax & semantics: https://szs.wiimm.de/doc/kmp/itph
+
+#######################################################################
+## This complete section is only informative and ignored on reading, ##
+## because it will be created while scanning the [ITPT] section.     ##
+#######################################################################
+
+# values never used:
+  # @REVISION        = 7601
+  # @ITPH-HEAD-VALUE = 0
+
+#ITPH#
+#-----------------------------------------------------------------------------#-------
+#     ___range___  _________prev__________  _________next__________           # group
+#idx  beg end len   #1  #2  #3  #4  #5  #6   #1  #2  #3  #4  #5  #6  unknown  # name
+#-----------------------------------------------------------------------------#-------
+
+#
+###############################################################################
+
+[ITPT]
+# Item Points: Routes of red shells and bullet bill
+# KMP/ITPT syntax & semantics: https://szs.wiimm.de/doc/kmp/itpt
+
+@REVISION           = 7601
+@ITPT-HEAD-VALUE    = 0
+@ITPH-HEAD-VALUE    = 0
+@AUTO-FILL          =   0.0      # >1 (e.g. 5000): create more points if distance is larger
+@AUTO-GROUP-NAME    =   0
+@ROTATE-GROUP-LINKS =   0
+@KCL-FALL-WIDTH     =   0        # set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD   =   0        # add this height or vector before falling
+@KCL-FALL-POST-ADD  =   0        # add this height or vector after success
+@KCL-FALL-TYPES     = KCL$DRIVE  # bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+@ROUTE-OBJECT       = mode$showrt & 2 ? -1 : 0  # 0=off, -1=use default, >0=object id
+@ROUTE-OBJECT-SHIFT = $NONE      # v3(0)  # add vector to position
+@ROUTE-OBJECT-SCALE = $NONE      # v3(1)  # define vector scale
+
+# Column 'flag' is optional and ususally only used internally.
+# Syntax:   FLAGS_STRING   or   '(' EXPRESSION ')'
+#   F (F$FALL): Point can be used for FALL-DOWN functionality.
+#   S (F$SNAP): Point can be used for SNAP functionality (ignored by ITPT).
+#   J (F$JGPT): Point can be used for automatic JGPT creation.
+# Remove the letter or replace it by '-' to disable a feature.
+# If the column is missed, all options are enabled by default.
+
+# If you enable EXPORT-FLAGS (set it to 1), the flags are exported using the
+# lowest byte of WIDTH FACTOR. The factor needs only 2 or 3 digits, so this
+# has no disadvantage on the width factors. 5 of the 8 bits are used to verify
+# changes by other tools on import. If at least 1 of these bit of all points
+# is wrong, import is canceled.
+@EXPORT-FLAGS = 0  # 0=disabled, 1=enabled (overridden by option --export-flags)
+
+# Route options. See section [ENPT] for details.
+@SHOW-OPTIONS = 0   # >0: force printing of all route options
+@AUTO-CONNECT = AC$PREV | ACF$FIX
+
+#ITPT#
+#----------------------------------------------------------------------#-------------------
+#      _____________position_____________    width     properties      #  distance   horiz
+#idx         x           y           z       factor     #1     #2 flag #   to prev   angle
+#----------------------------------------------------------------------#-------------------
+
+#
+###############################################################################
+
+[JGPT]
+# Respawn positions
+# KMP/JGPT syntax & semantics: https://szs.wiimm.de/doc/kmp/jgpt
+
+@REVISION           = 7601
+@JGPT-HEAD-VALUE    = 0
+@AUTO-ID            = 1
+
+# Activate automatic Y-correction (KCL fall)
+@KCL-FALL-WIDTH     =   0        # set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD   =   0        # add this height or vector before falling
+@KCL-FALL-POST-ADD  =   0        # add this height or vector after success
+@KCL-FALL-TYPES     = KCL$DRIVE  # bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+
+# Snap to nearest point of the enemy route and add the vector.
+# Activate it with something like: vy(200) => 200 units higher than the enemy point
+@HSNAP-TO-ENPT      = $NONE      # horizontal snap without adjust, y-rotation
+@SNAP-TO-ENPT       = $NONE      # 3D snap, y-rotation
+@SNAP2-TO-ENPT      = $NONE      # 3D snap, x- and y-rotation
+
+# Show points in the track by using objects
+# Values: 0=off, -1=use default (block of ghost value), >0=force object with 'id'
+@ROUTE-OBJECT       = mode$showrt & 4 ? -1 : 0  
+@ROUTE-OBJECT-SHIFT = $NONE      # v3(0)  # add vector to position
+@ROUTE-OBJECT-SCALE = $NONE      # v3(1)  # define vector scale
+
+# Automatic definition of respawn points
+@AUTO-DEFINE	= 0		# 0 | SECT$ENPT | SECT$ITPT
+@AUTO-DISTANCE	= 1000.0	# minimal distance to other JGPT
+@AUTO-ADJUST	= vy(100)	# add this value to each auto-JGPT
+@AUTO-REMOVE	= 0		# 0|1|2
+
+# Column 'flag' is optional and only used internally.
+# Syntax:   FLAGS_STRING   or   '(' EXPRESSION ')'
+#   F (F$FALL): Point can be used for FALL-DOWN functionality.
+#   S (F$SNAP): Point can be used for SNAP functionality.
+# Remove the letter or replace it by '-' to disable a feature.
+# If the column is missed, all options are enabled by default.
+
+# If you enable EXPORT-FLAGS (set it to 1), the flags are exported using the
+# lowest byte of ROTATION.x. The rotation value needs only 4 or 5 digits, so
+# this has no disadvantage on the scale factors. 5 of the 8 bits are used to
+# verify changes by other tools on import. If at least 1 of these bits of all
+# points is wrong, import is canceled.
+@EXPORT-FLAGS = 0  # 0=disabled, 1=enabled (overridden by option --export-flags)
+
+#JGPT#
+#------------------------------------------------------------------------------------
+#      _____________position_____________ _______rotation________ related      flags
+# idx        x           y           z        x       y       z       id effect
+#------------------------------------------------------------------------------------
+   j0   31303.869     267.028   -3995.636    0.00 -135.00    0.00      0 0xffff  FS  # unused
+   j1   31231.830     267.028  -27803.869    0.00  -45.00    0.00      1 0xffff  FS  # unused
+   j2   23826.961     267.028  -29590.609    0.00    0.00    0.00      2 0xffff  FS  # unused
+   j3   19054.660     267.028  -29009.920    0.00    0.00    0.00      3 0xffff  FS  # unused
+   j4   31224.609     267.028  -15832.750    0.00  -90.00    0.00      4 0xffff  FS  # unused
+   j5   23851.471     267.028   -2342.907    0.00  180.00    0.00      5 0xffff  FS  # unused
+   j6    9612.345     267.028  -29460.961    0.00    0.00    0.00      6 0xffff  FS  # unused
+   j7    2269.437     267.028  -16015.790    0.00   90.00    0.00      7 0xffff  FS  # unused
+   j8    2170.025     267.028   -4134.005    0.00  135.00    0.00      8 0xffff  FS  # unused
+   j9    9443.748     267.028   -2659.949    0.00  180.00    0.00      9 0xffff  FS  # unused
+  j10   14560.460     267.028  -28746.270    0.00    0.00    0.00     10 0xffff  FS  # unused
+  j11    1922.167     267.028  -28120.910    0.00   45.00    0.00     11 0xffff  FS  # unused
+
+#
+###############################################################################
+
+[KTPT]
+# Kart Points: Starting positions of the racers
+# KMP/KTPT syntax & semantics: https://szs.wiimm.de/doc/kmp/ktpt
+
+@REVISION          = 7601
+@KTPT-HEAD-VALUE   = 0
+@KCL-FALL-WIDTH    =   0	# set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD  =   0	# add this height or vector before falling
+@KCL-FALL-POST-ADD =   0	# add this height or vector after success
+@KCL-FALL-TYPES    = KCL$DRIVE	# bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+
+#KTPT#
+#--------------------------------------------------------------------------------
+#     _____________position______________  _______rotation_______  player
+#idx         x           y           z         x       y       z    index unknown
+#--------------------------------------------------------------------------------
+   0    31303.869     267.028   -3995.636     0.00 -135.00    0.00     9      0
+   1    31231.830     267.028  -27803.869     0.00  -45.00    0.00     6      0
+   2    23826.961     267.028  -29590.609     0.00    0.00    0.00     7      0
+   3    19054.660     267.028  -29009.920     0.00    0.00    0.00     8      0
+   4    31224.609     267.028  -15832.750     0.00  -90.00    0.00    11      0
+   5    23851.471     267.028   -2342.907     0.00  180.00    0.00    10      0
+   6     9612.345     267.028  -29460.961     0.00    0.00    0.00     1      0
+   7     2269.437     267.028  -16015.790     0.00   90.00    0.00     3      0
+   8     2170.025     267.028   -4134.005     0.00  135.00    0.00     4      0
+   9     9443.748     267.028   -2659.949     0.00  180.00    0.00     5      0
+  10    14560.460     267.028  -28746.270     0.00    0.00    0.00     2      0
+  11     1922.167     267.028  -28120.910     0.00   45.00    0.00     0      0
+
+#
+###############################################################################
+
+[MSPT]
+# End battle positions
+# KMP/MSPT syntax & semantics: https://szs.wiimm.de/doc/kmp/mspt
+
+@REVISION           = 7601
+@MSPT-HEAD-VALUE    = 0
+@AUTO-ID            = 1
+
+# Activate automatic Y-correction (KCL fall)
+@KCL-FALL-WIDTH     =   0        # set to a value >0 (e.g. 200) to enable KCL falling
+@KCL-FALL-PRE-ADD   =   0        # add this height or vector before falling
+@KCL-FALL-POST-ADD  =   0        # add this height or vector after success
+@KCL-FALL-TYPES     = KCL$DRIVE  # bit field of recognized KCL types
+	# Best values are:
+	#  - KCL$BORDER: All KCL types except effects.
+	#  - KCL$DRIVE:  All driveable types like road, boost, ramp, water, ...
+
+# Snap to nearest point of the enemy route and add the vector.
+# Activate it with something like: vy(200) => 200 units higher than the enemy point
+@HSNAP-TO-ENPT      = $NONE      # horizontal snap without adjust, y-rotation
+@SNAP-TO-ENPT       = $NONE      # 3D snap, y-rotation
+@SNAP2-TO-ENPT      = $NONE      # 3D snap, x- and y-rotation
+
+# Show points in the track by using objects
+# Values: 0=off, -1=use default (block of ghost value), >0=force object with 'id'
+@ROUTE-OBJECT       = mode$showrt & 16 ? -1 : 0  
+@ROUTE-OBJECT-SHIFT = $NONE      # v3(0)  # add vector to position
+@ROUTE-OBJECT-SCALE = $NONE      # v3(1)  # define vector scale
+
+#MSPT#
+#-------------------------------------------------------------------------------
+#      _____________position_____________ _______rotation________ related
+# idx        x           y           z        x       y       z       id effect
+#-------------------------------------------------------------------------------
+   m0    2980.000     267.028  -15914.000    0.00   90.00    0.00      0 0xffff
+   m1   30500.000     267.028  -15914.000    0.00  -90.00    0.00      1 0xffff
+   m2    9616.037     267.028  -28510.711    0.00    0.00    0.00      2 0xffff
+   m3   23794.410     267.028   -3455.980    0.00  180.00    0.00      3 0xffff
+
+#
+###############################################################################
+
+[POTI]
+# Routes
+# KMP/POTI syntax & semantics: https://szs.wiimm.de/doc/kmp/poti
+
+@REVISION        = 7601
+@AUTO-ROUTE-NAME = 0
+
+# If a route is closed, 3 global variables are defined for the route.
+# 'NAME' is a placeholder for the route name (before renaming happens):
+#   NAME.len      = Total route distance over all points.
+#   NAME.time     = Total route time in 1/60 seconds calculated by the sum of
+#                   all distances and the associated speed values.
+#   NAME.time.set = Same value as 'NAME.time' (but see below).
+
+# These 15 commands that are computed after closing a route in this order:
+#	@KCL-FALL-WIDTH     = CUBE_WIDTH
+#	@KCL-FALL-PRE-ADD   = HEIGHT_OR_VECTOR
+#	@KCL-FALL-POST-ADD  = HEIGHT_OR_VECTOR
+#	@KCL-FALL-TYPES     = TYPEMASK
+#	@XSS                = X1OLD,X1NEW, X2OLD,X2NEW
+#	@YSS                = Y1OLD,Y1NEW, Y2OLD,Y2NEW
+#	@ZSS		    = Z1OLD,Z1NEW, Z2OLD,Z2NEW
+#	@SCALE              = FACTOR [ORIGIN]
+#	@SHIFT              = DELTA
+#	@HROTATE            = DEGREE [ORIGIN]
+#	@REVERSE-ORDER	    = 0|1
+#	@SET-ROUTE-TIME     = SECONDS
+#	@ROUTE-OBJECT       = 0=OFF | -1=USE_DEFAULT_SETTINGS | >0=OBJECT_ID
+#	                    # Example: mode$showrt & 32 ? -1 : 0
+#	@ROUTE-OBJECT-SHIFT = VECTOR
+#	@ROUTE-OBJECT-SCALE = VECTOR
+# The commands are reset after closing a route.
+
+#POTI#
+#------------------------------------------------------#--------------------------
+#      _____________position_____________  value  un-  # seconds+distance   horiz
+#idx         x           y           z     1/60s known #      to next       angle
+#------------------------------------------------------#--------------------------
+
+ $ROUTE r0, settings: 1 1 # section 1
+	# CAME reference: c0
+
+   # @set-route-time = c0.came.time  # in 1/60 sec
+
+   0    29543.391    3752.000  -23049.359   200     0  #   0.86 10288.165
+   1    19559.391    1664.000  -24393.359   100     0  #   0.96  5760.001    7.67
+   2    13799.390    1664.000  -24393.359   100     0  #   1.07  6422.062    8.62
+   3     7463.391    1244.000  -23433.359   100     0  #   0.80  4812.465   31.49
+   4     3815.391     600.000  -20361.359   100     0  #   1.47  8831.999   49.90
+   5     3815.391     600.000  -11529.360   100     0  #   1.01  6031.313   63.43
+   6     9191.391    1100.000   -8841.355   100     0  #   1.05  6317.887   64.13
+   7    14183.390    1600.000  -12681.360    60     0  #   1.17  4202.996   15.03
+   8    16679.391    2484.000  -15945.360     0     0  #
+                                                 #TOTAL#   8.39 52666.888
+
+ $ROUTE r1, settings: 0 1 # section 2
+	# CAME reference: c1
+
+   # @set-route-time = c1.came.time  # in 1/60 sec
+
+   0    23800.000    5000.000   19500.000    20     0  #   8.16  9796.556
+   1    14800.000    8500.000   21150.000    20     0  #
+                                                 #TOTAL#   8.16  9796.556
+
+ $ROUTE r2, settings: 0 1 # section 3
+	# CAME reference: c2
+
+   # @set-route-time = c2.came.time  # in 1/60 sec
+
+   0        0.000    3700.000   13000.000    30     0  #   7.50 13500.000
+   1        0.000    3700.000    -500.000    30     0  #
+                                                 #TOTAL#   7.50 13500.000
+
+#
+###############################################################################
+
+[STGI]
+# Stage information
+# KMP/STGI syntax & semantics: https://szs.wiimm.de/doc/kmp/stgi
+
+@REVISION        = 7601
+@STGI-HEAD-VALUE = 0
+
+#STGI#
+#-----------------------------------------------------------------------------
+# Write a floating point number (a '.' is mandatory) instead of the
+# 2 last bytes, and it will be rounded and accepted as speed modifier.
+#-----------------------------------------------------------------#-----------
+#     byte  byte  byte  byte      u32     byte   byte  byte byte  #  last 2
+#     laps  pole narrow flare    flare    flare  pad       or     # bytes as
+#idx  1..9  1=rt  if 1  1=on     color    alpha    0   speed mod  # speed mod
+#-----------------------------------------------------------------#-----------
+  s0     3    0     0     1     0xe6e6e6  0x4b     0      0    0  #    -
+
+#
+###############################################################################
+
+[END]
+# This section is ignored.
+

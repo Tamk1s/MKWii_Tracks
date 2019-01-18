@@ -1,0 +1,2956 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='76.8 38.4 1075.2 1100.8' preserveAspectRatio='xMidYMid'>
+<defs>
+	            <style type='text/css'><![CDATA[
+		            line {
+			            stroke: rgb(255,0,0);
+			            stroke-width: 2;
+			            /*marker-end: url(#tail);
+			            marker-start: url(#head);*/
+		            }
+                    line:hover {
+			            stroke: rgb(255,255,255);
+                        stroke-width: 4;
+			            marker-end: url(#tail);
+			            marker-start: url(#head);
+                    }
+                    line.unwall {
+                        stroke: rgb(128,128,128);
+                    }
+                    line.decal {
+                        stroke: rgb(0,255,0);
+                    }
+                    line.step {
+                        stroke: rgb(255,255,0);
+                    }
+		            g {
+			            fill: rgb(255,255,255);
+			            stroke: rgb(255,255,255);
+		            }
+                    g line {
+                        marker-start: none;
+                        marker-end: none;
+                    }
+                    g.location-HUMAN,
+                    g.location-HUMAN line {
+                        fill: rgb(255,255,255);
+                        stroke: rgb(255,255,255);
+                    }
+                    g.location-ROBOT,
+                    g.location-ROBOT line {
+                        fill: rgb(255,0,0);
+                        stroke: rgb(255,0,0);
+                    }
+                    g.location-FLAG,
+                    g.location-FLAG line {
+                        fill: rgb(255,255,0);
+                        stroke: rgb(255,255,0);
+                    }
+                    g.location-POD,
+                    g.location-POD line {
+                        fill: rgb(0,255,0);
+                        stroke: rgb(0,255,0);
+                    }
+                    g.location-BEACON,
+                    g.location-BEACON line {
+                        fill: rgb(0,255,255);
+                        stroke: rgb(0,255,255);
+                    }
+                    g>text {
+                        fill: transparent;
+                        stroke: transparent;
+                    }
+                    g:hover>text {
+                        stroke: rgb(255,255,255);
+                    }
+                    g.location line {
+                        stroke: rgb(255,255,255);
+                    }
+	            ]]></style>
+	            <marker id='head' orient='auto' markerWidth='1' markerHeight='4' refX='0' refY='4'>
+		            <line x1='0' y1='0' x2='0' y2='4' stroke='blue'/>
+	            </marker>
+	            <marker id='tail' orient='auto' markerWidth='4' markerHeight='8' refX='4' refY='4'>
+		            <path d='M0,0 V8 L4,4 Z' fill='blue' />
+	            </marker>
+                <line id='facing-East'  stroke='white' x1='0' y1='0' x2='20'  y2='0'    />
+                <line id='facing-South' stroke='white' x1='0' y1='0' x2='0'    y2='20' />
+                <line id='facing-West'  stroke='white' x1='0' y1='0' x2='-20' y2='0'    />
+                <line id='facing-North' stroke='white' x1='0' y1='0' x2='0'    y2='-20'  />
+            </defs>
+            
+<line x1='76.8' y1='38.4' x2='1075.2' y2='1100.8' style='stroke:rgb(0,0,255);stroke-width:1'/>>
+<rect x='76.8' y='38.4' width='998.4' height='1062.4' style='fill:rgb(0,0,0);stroke:rgb(0,0,255);stroke-width:1'/>>
+
+                <foreignObject x='-73.2' y='39.4' width='150' height='300'>
+	                <p style='text-color:black;background:white;border:solid 1px blue;' xmlns='http://www.w3.org/1999/xhtml'>
+		                Display statics:<br />
+		                <label><input type='checkbox' checked='checked' id='showwalls' /> Walls</label><br />
+		                <label><input type='checkbox' checked='checked' id='showunwalls' /> Unwalls</label><br />
+		                <label><input type='checkbox' checked='checked' id='showdecals' /> Decals</label><br />
+		                <label><input type='checkbox' checked='checked' id='showsteps' /> Steps</label><br />
+		                Display locations:<br />
+		                <label><input type='checkbox' checked='checked' /> Human spawn</label><br />
+		                <label><input type='checkbox' checked='checked' /> Robot spawn</label><br />
+		                <label><input type='checkbox' checked='checked' /> Flags</label><br />
+		                <label><input type='checkbox' checked='checked' /> Pods</label><br />
+		                <label><input type='checkbox' checked='checked' /> Beacons</label><br />
+	                </p>
+                </foreignObject>
+<line x1='793.6' y1='614.4' x2='857.6' y2='550.4' class='wall' id='static-0000' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.6' y1='550.4' x2='857.6' y2='460.8' class='wall' id='static-0001' title='        	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.6' y1='460.8' x2='796.8' y2='400' class='wall' id='static-0002' title='        	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='396.8' x2='640' y2='396.8' class='wall' id='static-0003' title='        	        	WBASE_04	WBASE_04	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='550.4' x2='704' y2='614.4' class='wall' id='static-0004' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.8' y1='550.4' x2='972.8' y2='345.6' class='wall' id='static-0005' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.8' y1='345.6' x2='1075.2' y2='243.2' class='wall' id='static-0006' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1075.2' y1='243.2' x2='1075.2' y2='128' class='wall' id='static-0007' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1075.2' y1='128' x2='1075.2' y2='76.8' class='step' id='static-0008' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1075.2' y1='76.8' x2='1036.8' y2='38.4' class='step' id='static-0009' title='CBASE_00	        	WBASE_00	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1036.8' y1='38.4' x2='985.6' y2='38.4' class='step' id='static-000a' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='985.6' y1='38.4' x2='947.2' y2='76.8' class='step' id='static-000b' title='CBASE_00	        	WBASE_00	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='947.2' y1='76.8' x2='947.2' y2='128' class='step' id='static-000c' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='947.2' y1='128' x2='870.4' y2='128' class='wall' id='static-000d' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='870.4' y1='128' x2='870.4' y2='51.2' class='step' id='static-000e' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='870.4' y1='51.2' x2='793.6' y2='51.2' class='step' id='static-000f' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='51.2' x2='793.6' y2='128' class='step' id='static-0010' title='CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='128' x2='588.8' y2='128' class='wall' id='static-0011' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='588.8' y1='128' x2='563.2' y2='76.8' class='wall' id='static-0012' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='76.8' x2='512' y2='51.2' class='wall' id='static-0013' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='512' y1='51.2' x2='448' y2='51.2' class='wall' id='static-0014' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='51.2' x2='396.8' y2='76.8' class='wall' id='static-0015' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='396.8' y1='76.8' x2='371.2' y2='128' class='wall' id='static-0016' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.2' y1='128' x2='371.2' y2='192' class='wall' id='static-0017' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.2' y1='192' x2='396.8' y2='243.2' class='wall' id='static-0018' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='396.8' y1='243.2' x2='448' y2='268.8' class='wall' id='static-0019' title='        	        	WBASE_00	WBASE_02	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='268.8' x2='345.6' y2='320' class='wall' id='static-001a' title='        	        	WBASE_09	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='320' x2='345.6' y2='256' class='wall' id='static-001b' title='        	        	WBASE_09	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='256' x2='243.2' y2='153.6' class='wall' id='static-001c' title='        	        	WBASE_09	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='153.6' x2='192' y2='204.8' class='wall' id='static-001d' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='204.8' x2='192' y2='140.8' class='wall' id='static-001e' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='140.8' x2='128' y2='140.8' class='wall' id='static-001f' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='128' y1='140.8' x2='128' y2='268.8' class='wall' id='static-0020' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='128' y1='268.8' x2='76.8' y2='320' class='wall' id='static-0021' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='768' x2='640' y2='768' class='wall' id='static-0022' title='        	        	WBASE_00	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='678.4' x2='793.6' y2='768' class='wall' id='static-0023' title='        	        	WBASE_05	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='771.2' x2='793.6' y2='857.6' class='wall' id='static-0024' title='        	        	WBASE_05	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1011.2' y1='768' x2='934.4' y2='691.2' class='wall' id='static-0025' title='        	        	WBASE_04	WBASE_08	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1011.2' y1='857.6' x2='1011.2' y2='768' class='wall' id='static-0026' title='        	        	WBASE_04	WBASE_08	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='947.2' y1='921.6' x2='1011.2' y2='857.6' class='wall' id='static-0027' title='        	        	WBASE_04	WBASE_07	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832' y1='1036.8' x2='947.2' y2='1036.8' class='wall' id='static-0028' title='        	        	WBASE_04	WBASE_07	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='678.4' y1='1100.8' x2='832' y2='947.2' class='wall' id='static-0029' title='        	        	WBASE_00	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='1100.8' x2='678.4' y2='1100.8' class='wall' id='static-002a' title='        	        	WBASE_00	WBASE_01	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='908.8' x2='640' y2='908.8' class='wall' id='static-002b' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='524.8' y1='832' x2='563.2' y2='908.8' class='wall' id='static-002c' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='268.8' x2='524.8' y2='268.8' class='unwall' id='static-002d' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='76.8' y1='320' x2='76.8' y2='409.6' class='wall' id='static-002e' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='76.8' y1='409.6' x2='140.8' y2='473.6' class='wall' id='static-002f' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='140.8' y1='473.6' x2='192' y2='473.6' class='wall' id='static-0030' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='473.6' x2='192' y2='524.8' class='wall' id='static-0031' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='524.8' x2='115.2' y2='576' class='wall' id='static-0032' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='115.2' y1='576' x2='76.8' y2='652.8' class='wall' id='static-0033' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='486.4' x2='307.2' y2='422.4' class='wall' id='static-0034' title='        	        	WBASE_10	WBASE_11	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='524.8' x2='243.2' y2='486.4' class='wall' id='static-0035' title='        	        	WBASE_09	WBASE_11	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='524.8' x2='243.2' y2='524.8' class='wall' id='static-0036' title='        	        	WBASE_02	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='422.4' x2='377.6' y2='422.4' class='wall' id='static-0037' title='        	        	WBASE_00	WBASE_11	        	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.2' y1='563.2' x2='294.4' y2='524.8' class='wall' id='static-0038' title='        	        	WBASE_05	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='832' x2='524.8' y2='832' class='wall' id='static-0039' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='998.4' x2='332.8' y2='921.6' class='wall' id='static-003a' title='        	        	WBASE_08	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.4' y1='1075.2' x2='332.8' y2='1075.2' class='wall' id='static-003b' title='        	        	WBASE_00	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.4' y1='1011.2' x2='166.4' y2='1075.2' class='wall' id='static-003c' title='        	        	WBASE_00	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='76.8' y1='652.8' x2='76.8' y2='742.4' class='wall' id='static-003d' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='76.8' y1='742.4' x2='115.2' y2='819.2' class='wall' id='static-003e' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='115.2' y1='819.2' x2='192' y2='857.6' class='wall' id='static-003f' title='        	        	WBASE_04	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='857.6' x2='102.4' y2='947.2' class='wall' id='static-0040' title='        	        	WBASE_00	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='102.4' y1='947.2' x2='166.4' y2='1011.2' class='wall' id='static-0041' title='        	        	WBASE_00	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='985.6' x2='537.6' y2='985.6' class='wall' id='static-0042' title='        	        	WBASE_06	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='486.4' y1='1062.4' x2='563.2' y2='1100.8' class='wall' id='static-0043' title='        	        	WBASE_00	WBASE_01	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='1075.2' x2='345.6' y2='1062.4' class='wall' id='static-0044' title='        	        	WBASE_00	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='1062.4' x2='486.4' y2='1062.4' class='wall' id='static-0045' title='        	        	WBASE_00	WBASE_01	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='1011.2' x2='332.8' y2='998.4' class='wall' id='static-0046' title='        	        	WBASE_06	WBASE_05	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='486.4' y1='1011.2' x2='345.6' y2='1011.2' class='wall' id='static-0047' title='        	        	WBASE_06	WBASE_05	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='537.6' y1='985.6' x2='486.4' y2='1011.2' class='wall' id='static-0048' title='        	        	WBASE_07	WBASE_05	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='412.8' y1='681.6' x2='336' y2='758.4' class='wall' id='static-0049' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='691.2' x2='934.4' y2='588.8' class='wall' id='static-004a' title='        	        	WBASE_04	WBASE_08	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='601.6' x2='883.2' y2='652.8' class='wall' id='static-004b' title='        	        	WBASE_05	WBASE_06	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='588.8' x2='972.8' y2='550.4' class='wall' id='static-004c' title='        	        	WBASE_04	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='550.4' y1='550.4' x2='640' y2='550.4' class='wall' id='static-004d' title='        	        	WBASE_06	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.6' y1='550.4' x2='883.2' y2='576' class='wall' id='static-004e' title='        	        	WBASE_05	WBASE_06	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='601.6' x2='371.2' y2='563.2' class='wall' id='static-004f' title='        	        	WBASE_05	WBASE_04	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='947.2' y1='1036.8' x2='947.2' y2='921.6' class='wall' id='static-0050' title='        	        	WBASE_04	WBASE_07	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832' y1='947.2' x2='832' y2='1036.8' class='wall' id='static-0051' title='        	        	WBASE_04	WBASE_07	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='769.6' x2='270.4' y2='819.2' class='step' id='static-0052' title='        	STEPS_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='270.4' y1='819.2' x2='345.6' y2='894.4' class='step' id='static-0053' title='        	STEPS_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='894.4' x2='395.2' y2='844.8' class='step' id='static-0054' title='        	STEPS_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='921.6' x2='422.4' y2='844.8' class='step' id='static-0055' title='        	FBASE_01	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='422.4' y1='844.8' x2='332.8' y2='755.2' class='step' id='static-0056' title='        	FBASE_01	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='742.4' x2='243.2' y2='819.2' class='step' id='static-0057' title='        	FBASE_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='1062.4' x2='345.6' y2='1011.2' class='unwall' id='static-0058' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='384' y1='601.6' x2='409.6' y2='601.6' class='unwall' id='static-0059' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='678.4' x2='384' y2='678.4' class='unwall' id='static-005a' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='912' x2='640' y2='908.8' class='wall' id='static-005b' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='564.8' y1='912' x2='640' y2='912' class='wall' id='static-005c' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='908.8' x2='564.8' y2='912' class='wall' id='static-005d' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='985.6' x2='640' y2='982.4' class='wall' id='static-005e' title='        	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='982.4' x2='544' y2='982.4' class='wall' id='static-005f' title='        	        	WBASE_00	WBASE_05	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='544' y1='982.4' x2='537.6' y2='985.6' class='wall' id='static-0060' title='        	        	WBASE_06	WBASE_05	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='601.6' x2='412.8' y2='598.4' class='wall' id='static-0061' title='        	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='412.8' y1='598.4' x2='384' y2='569.6' class='wall' id='static-0062' title='        	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='384' y1='569.6' x2='371.2' y2='563.2' class='wall' id='static-0063' title='        	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='755.2' x2='336' y2='758.4' class='wall' id='static-0064' title='        	        	WBASE_00	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='678.4' x2='332.8' y2='755.2' class='wall' id='static-0065' title='        	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='412.8' y1='681.6' x2='409.6' y2='678.4' class='wall' id='static-0066' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='384' x2='307.2' y2='422.4' class='unwall' id='static-0067' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='791.2' y1='396' x2='791.2' y2='319.2' class='step' id='static-0068' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='778.4' y1='396' x2='778.4' y2='332' class='step' id='static-0069' title='STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='765.6' y1='396' x2='765.6' y2='332' class='step' id='static-006a' title='STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='740' y1='396' x2='740' y2='319.2' class='step' id='static-006b' title='STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='727.2' y1='396' x2='727.2' y2='319.2' class='step' id='static-006c' title='STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='714.4' y1='396' x2='714.4' y2='332' class='step' id='static-006d' title='STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='688.8' y1='396' x2='688.8' y2='319.2' class='step' id='static-006e' title='STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	STEPS_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='778.4' y1='396' x2='791.2' y2='396' class='step' id='static-006f' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='791.2' y1='319.2' x2='778.4' y2='332' class='step' id='static-0070' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='765.6' y1='396' x2='778.4' y2='396' class='step' id='static-0071' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='778.4' y1='332' x2='765.6' y2='332' class='step' id='static-0072' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='740' y1='396' x2='765.6' y2='396' class='step' id='static-0073' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='765.6' y1='332' x2='740' y2='319.2' class='step' id='static-0074' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='727.2' y1='396' x2='740' y2='396' class='step' id='static-0075' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='740' y1='319.2' x2='727.2' y2='319.2' class='step' id='static-0076' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='714.4' y1='396' x2='727.2' y2='396' class='step' id='static-0077' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='727.2' y1='319.2' x2='714.4' y2='332' class='step' id='static-0078' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='688.8' y1='396' x2='714.4' y2='396' class='step' id='static-0079' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='714.4' y1='332' x2='688.8' y2='319.2' class='step' id='static-007a' title='STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='688.8' y1='293.6' x2='535.2' y2='216.8' class='step' id='static-007b' title='STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='535.2' y1='216.8' x2='535.2' y2='319.2' class='step' id='static-007c' title='STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='535.2' y1='319.2' x2='688.8' y2='396' class='step' id='static-007d' title='STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='688.8' y1='319.2' x2='688.8' y2='293.6' class='step' id='static-007e' title='STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='688.8' y1='319.2' x2='688.8' y2='396' class='wall' id='static-007f' title='        	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='796.8' y1='400' x2='640' y2='400' class='wall' id='static-0080' title='        	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='400' x2='640' y2='396.8' class='wall' id='static-0081' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='796.8' y1='400' x2='793.6' y2='396.8' class='wall' id='static-0082' title='        	        	WBASE_00	WBASE_04	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='372.8' y1='419.2' x2='310.4' y2='419.2' class='wall' id='static-0083' title='        	        	WBASE_00	WBASE_09	        	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='310.4' y1='419.2' x2='307.2' y2='422.4' class='wall' id='static-0084' title='        	        	WBASE_00	WBASE_09	        	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='377.6' y1='422.4' x2='372.8' y2='419.2' class='wall' id='static-0085' title='        	        	WBASE_00	WBASE_04	        	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1075.2' y1='128' x2='947.2' y2='128' class='wall' id='static-0086' title='        	        	WBASE_04	WBASE_04	        	CBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='870.4' y1='128' x2='793.6' y2='128' class='wall' id='static-0087' title='        	        	WBASE_04	WBASE_04	        	CBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='896' x2='793.6' y2='857.6' class='unwall' id='static-0088' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='790.4' y1='771.2' x2='790.4' y2='857.6' class='wall' id='static-0089' title='        	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='771.2' x2='790.4' y2='771.2' class='wall' id='static-008a' title='        	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='790.4' y1='857.6' x2='793.6' y2='857.6' class='wall' id='static-008b' title='        	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='768' x2='793.6' y2='771.2' class='wall' id='static-008c' title='        	        	WBASE_05	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.6' y1='771.2' x2='640' y2='771.2' class='wall' id='static-008d' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='768' x2='640' y2='771.2' class='wall' id='static-008e' title='        	        	WBASE_00	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='636.8' y1='547.2' x2='640' y2='550.4' class='wall' id='static-008f' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='553.6' y1='547.2' x2='636.8' y2='547.2' class='wall' id='static-0090' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='550.4' y1='550.4' x2='553.6' y2='547.2' class='wall' id='static-0091' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='384' y1='1024' x2='371.2' y2='1024' class='unwall' id='static-0092' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.2' y1='1024' x2='371.2' y2='1049.6' class='unwall' id='static-0093' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.2' y1='1049.6' x2='384' y2='1049.6' class='unwall' id='static-0094' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='384' y1='1049.6' x2='384' y2='1024' class='unwall' id='static-0095' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.8' y1='1024' x2='448' y2='1024' class='unwall' id='static-0096' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='1024' x2='448' y2='1049.6' class='unwall' id='static-0097' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='1049.6' x2='460.8' y2='1049.6' class='unwall' id='static-0098' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.8' y1='1049.6' x2='460.8' y2='1024' class='unwall' id='static-0099' title='  SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='716.8' x2='281.6' y2='716.8' class='unwall' id='static-009a' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='281.6' y1='716.8' x2='281.6' y2='729.6' class='unwall' id='static-009b' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='281.6' y1='729.6' x2='294.4' y2='729.6' class='unwall' id='static-009c' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='729.6' x2='294.4' y2='716.8' class='unwall' id='static-009d' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='704' x2='294.4' y2='704' class='unwall' id='static-009e' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='704' x2='294.4' y2='716.8' class='unwall' id='static-009f' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='716.8' x2='307.2' y2='716.8' class='unwall' id='static-00a0' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='716.8' x2='307.2' y2='704' class='unwall' id='static-00a1' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='691.2' x2='307.2' y2='691.2' class='unwall' id='static-00a2' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='691.2' x2='307.2' y2='704' class='unwall' id='static-00a3' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='704' x2='320' y2='704' class='unwall' id='static-00a4' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='704' x2='320' y2='691.2' class='unwall' id='static-00a5' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='678.4' x2='320' y2='678.4' class='unwall' id='static-00a6' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='678.4' x2='320' y2='691.2' class='unwall' id='static-00a7' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='691.2' x2='332.8' y2='691.2' class='unwall' id='static-00a8' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='691.2' x2='332.8' y2='678.4' class='unwall' id='static-00a9' title='HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='908.8' x2='166.4' y2='908.8' class='unwall' id='static-00aa' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.4' y1='908.8' x2='166.4' y2='934.4' class='unwall' id='static-00ab' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.4' y1='934.4' x2='192' y2='934.4' class='unwall' id='static-00ac' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='934.4' x2='192' y2='908.8' class='unwall' id='static-00ad' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='537.6' x2='192' y2='537.6' class='unwall' id='static-00ae' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='537.6' x2='192' y2='550.4' class='unwall' id='static-00af' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192' y1='550.4' x2='243.2' y2='550.4' class='unwall' id='static-00b0' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='550.4' x2='243.2' y2='537.6' class='unwall' id='static-00b1' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='985.6' y1='153.6' x2='972.8' y2='153.6' class='unwall' id='static-00b2' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.8' y1='153.6' x2='972.8' y2='166.4' class='unwall' id='static-00b3' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.8' y1='166.4' x2='985.6' y2='166.4' class='unwall' id='static-00b4' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='985.6' y1='166.4' x2='985.6' y2='153.6' class='unwall' id='static-00b5' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='204.8' x2='921.6' y2='204.8' class='unwall' id='static-00b6' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='921.6' y1='204.8' x2='921.6' y2='217.6' class='unwall' id='static-00b7' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='921.6' y1='217.6' x2='934.4' y2='217.6' class='unwall' id='static-00b8' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='217.6' x2='934.4' y2='204.8' class='unwall' id='static-00b9' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='819.2' y1='166.4' x2='806.4' y2='166.4' class='unwall' id='static-00ba' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='806.4' y1='166.4' x2='806.4' y2='179.2' class='unwall' id='static-00bb' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='806.4' y1='179.2' x2='819.2' y2='179.2' class='unwall' id='static-00bc' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='819.2' y1='179.2' x2='819.2' y2='166.4' class='unwall' id='static-00bd' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='870.4' y1='307.2' x2='857.6' y2='307.2' class='unwall' id='static-00be' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.6' y1='307.2' x2='857.6' y2='320' class='unwall' id='static-00bf' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.6' y1='320' x2='870.4' y2='320' class='unwall' id='static-00c0' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='870.4' y1='320' x2='870.4' y2='307.2' class='unwall' id='static-00c1' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='755.2' y1='243.2' x2='742.4' y2='243.2' class='unwall' id='static-00c2' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='742.4' y1='243.2' x2='742.4' y2='256' class='unwall' id='static-00c3' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='742.4' y1='256' x2='755.2' y2='256' class='unwall' id='static-00c4' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='755.2' y1='256' x2='755.2' y2='243.2' class='unwall' id='static-00c5' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='371.2' x2='921.6' y2='371.2' class='unwall' id='static-00c6' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='921.6' y1='371.2' x2='921.6' y2='384' class='unwall' id='static-00c7' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='921.6' y1='384' x2='934.4' y2='384' class='unwall' id='static-00c8' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934.4' y1='384' x2='934.4' y2='371.2' class='unwall' id='static-00c9' title='  SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='627.2' y1='294.4' x2='614.4' y2='294.4' class='unwall' id='static-00ca' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='614.4' y1='294.4' x2='614.4' y2='307.2' class='unwall' id='static-00cb' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='614.4' y1='307.2' x2='627.2' y2='307.2' class='unwall' id='static-00cc' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='627.2' y1='307.2' x2='627.2' y2='294.4' class='unwall' id='static-00cd' title='  SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='576' y1='179.2' x2='563.2' y2='179.2' class='unwall' id='static-00ce' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='179.2' x2='563.2' y2='192' class='unwall' id='static-00cf' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='192' x2='576' y2='192' class='unwall' id='static-00d0' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='576' y1='192' x2='576' y2='179.2' class='unwall' id='static-00d1' title='  SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='896' y1='473.6' x2='883.2' y2='473.6' class='unwall' id='static-00d2' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='473.6' x2='883.2' y2='486.4' class='unwall' id='static-00d3' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='486.4' x2='896' y2='486.4' class='unwall' id='static-00d4' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='896' y1='486.4' x2='896' y2='473.6' class='unwall' id='static-00d5' title='  SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='268.8' x2='230.4' y2='268.8' class='unwall' id='static-00d6' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='230.4' y1='268.8' x2='230.4' y2='281.6' class='unwall' id='static-00d7' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='230.4' y1='281.6' x2='243.2' y2='281.6' class='unwall' id='static-00d8' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='281.6' x2='243.2' y2='268.8' class='unwall' id='static-00d9' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='268.8' y1='294.4' x2='256' y2='294.4' class='unwall' id='static-00da' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='256' y1='294.4' x2='256' y2='307.2' class='unwall' id='static-00db' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='256' y1='307.2' x2='268.8' y2='307.2' class='unwall' id='static-00dc' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='268.8' y1='307.2' x2='268.8' y2='294.4' class='unwall' id='static-00dd' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='320' x2='281.6' y2='320' class='unwall' id='static-00de' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='281.6' y1='320' x2='281.6' y2='332.8' class='unwall' id='static-00df' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='281.6' y1='332.8' x2='294.4' y2='332.8' class='unwall' id='static-00e0' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='294.4' y1='332.8' x2='294.4' y2='320' class='unwall' id='static-00e1' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='345.6' x2='307.2' y2='345.6' class='unwall' id='static-00e2' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='345.6' x2='307.2' y2='358.4' class='unwall' id='static-00e3' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='358.4' x2='320' y2='358.4' class='unwall' id='static-00e4' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='320' y1='358.4' x2='320' y2='345.6' class='unwall' id='static-00e5' title='FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='742.4' y1='678.4' x2='729.6' y2='678.4' class='unwall' id='static-00e6' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='729.6' x2='716.8' y2='691.2' class='unwall' id='static-00e7' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='704' y1='704' x2='691.2' y2='704' class='unwall' id='static-00e8' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='691.2' y1='704' x2='691.2' y2='729.6' class='unwall' id='static-00e9' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='691.2' y1='729.6' x2='704' y2='729.6' class='unwall' id='static-00ea' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='742.4' y1='716.8' x2='742.4' y2='678.4' class='unwall' id='static-00eb' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='716.8' x2='742.4' y2='716.8' class='unwall' id='static-00ec' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='678.4' x2='729.6' y2='716.8' class='unwall' id='static-00ed' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='704' y1='691.2' x2='704' y2='729.6' class='unwall' id='static-00ee' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='691.2' x2='704' y2='691.2' class='unwall' id='static-00ef' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='921.6' x2='716.8' y2='921.6' class='unwall' id='static-00f0' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='921.6' x2='716.8' y2='934.4' class='unwall' id='static-00f1' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='934.4' x2='729.6' y2='934.4' class='unwall' id='static-00f2' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='934.4' x2='729.6' y2='921.6' class='unwall' id='static-00f3' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='832' x2='716.8' y2='832' class='unwall' id='static-00f4' title='  SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='832' x2='716.8' y2='844.8' class='unwall' id='static-00f5' title='  SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='844.8' x2='729.6' y2='844.8' class='unwall' id='static-00f6' title='  SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='844.8' x2='729.6' y2='832' class='unwall' id='static-00f7' title='  SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='627.2' y1='832' x2='614.4' y2='832' class='unwall' id='static-00f8' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='614.4' y1='832' x2='614.4' y2='844.8' class='unwall' id='static-00f9' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='614.4' y1='844.8' x2='627.2' y2='844.8' class='unwall' id='static-00fa' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='627.2' y1='844.8' x2='627.2' y2='832' class='unwall' id='static-00fb' title='  SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='896.4' y1='1036.4' x2='922' y2='1036.4' class='wall' id='static-00fc' title='        	        	WBASE_03	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='438' y1='826.8' x2='489.2' y2='826.8' class='wall' id='static-00fd' title='        	        	DECAL_09	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='620.4' y1='550.8' x2='594.8' y2='550.8' class='decal' id='static-00fe' title='        	        	DECAL_03	DECAL_03	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='858' y1='505.2' x2='858' y2='511.6' class='decal' id='static-00ff' title='        	        	DECAL_06	DECAL_06	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='313.6' y1='534' x2='336.4' y2='545.2' class='decal' id='static-0100' title='        	        	DECAL_03	DECAL_03	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1074.8' y1='217.6' x2='1074.8' y2='153.6' class='wall' id='static-0101' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='395.2' y1='844.8' x2='320' y2='769.6' class='step' id='static-0102' title='        	STEPS_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='336' y1='1001.6' x2='336' y2='912' class='wall' id='static-0103' title='        	        	WBASE_08	WBASE_05	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='998.4' x2='336' y2='1001.6' class='wall' id='static-0104' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='336' y1='912' x2='332.8' y2='908.8' class='wall' id='static-0105' title='        	        	WBASE_00	WBASE_05	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='704' y1='729.6' x2='716.8' y2='729.6' class='unwall' id='static-0106' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='678.4' x2='716.8' y2='678.4' class='unwall' id='static-0107' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='729.6' x2='729.6' y2='729.6' class='unwall' id='static-0108' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='716.8' y1='678.4' x2='716.8' y2='729.6' class='unwall' id='static-0109' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='729.6' y1='729.6' x2='729.6' y2='678.4' class='unwall' id='static-010a' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='704' y1='729.6' x2='704' y2='704' class='unwall' id='static-010b' title='HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='397.2' y1='77.2' x2='371.6' y2='128' class='wall' id='static-010c' title='        	        	WBASE_11	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='448' y1='51.6' x2='397.2' y2='77.2' class='wall' id='static-010d' title='        	        	WBASE_11	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='512' y1='51.6' x2='448' y2='51.6' class='wall' id='static-010e' title='        	        	WBASE_11	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='562.4' y1='76.8' x2='512' y2='51.6' class='wall' id='static-010f' title='        	        	WBASE_11	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.6' y1='128' x2='371.6' y2='192' class='wall' id='static-0110' title='        	        	WBASE_11	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.6' y1='192' x2='397.2' y2='243.2' class='wall' id='static-0111' title='        	        	WBASE_11	WBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='761.6' y1='128.4' x2='710.4' y2='128.4' class='wall' id='static-0112' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='793.2' y1='128.4' x2='761.6' y2='128.4' class='wall' id='static-0113' title='        	        	WBASE_09	WBASE_04	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='671.6' y1='128.4' x2='620.4' y2='128.4' class='wall' id='static-0114' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='620.4' y1='128.4' x2='589.2' y2='128.4' class='wall' id='static-0115' title='        	        	WBASE_09	WBASE_04	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='710.4' y1='128.4' x2='671.6' y2='128.4' class='wall' id='static-0116' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='877.6' y1='128.4' x2='871.2' y2='128.4' class='decal' id='static-0117' title='        	        	DECAL_06	DECAL_06	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1074.8' y1='243.2' x2='1074.8' y2='217.6' class='wall' id='static-0118' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1074.8' y1='153.6' x2='1074.8' y2='128' class='wall' id='static-0119' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.4' y1='345.6' x2='1074.8' y2='243.2' class='wall' id='static-011a' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934' y1='588.8' x2='972.4' y2='550.4' class='wall' id='static-011b' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='934' y1='691.2' x2='934' y2='588.8' class='wall' id='static-011c' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1010.8' y1='768' x2='934' y2='691.2' class='wall' id='static-011d' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1010.8' y1='793.6' x2='1010.8' y2='768' class='wall' id='static-011e' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1010.8' y1='832' x2='1010.8' y2='793.6' class='wall' id='static-011f' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='1010.8' y1='857.6' x2='1010.8' y2='832' class='wall' id='static-0120' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='946.8' y1='921.6' x2='1010.8' y2='857.6' class='wall' id='static-0121' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='946.8' y1='985.6' x2='946.8' y2='947.2' class='wall' id='static-0122' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='946.8' y1='947.2' x2='946.8' y2='921.6' class='wall' id='static-0123' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='946.8' y1='1011.2' x2='946.8' y2='985.6' class='wall' id='static-0124' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='946.8' y1='1036.4' x2='946.8' y2='1011.2' class='wall' id='static-0125' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='858' y1='1036.4' x2='896.4' y2='1036.4' class='wall' id='static-0126' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='922' y1='1036.4' x2='946.8' y2='1036.4' class='wall' id='static-0127' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832.4' y1='1036.4' x2='858' y2='1036.4' class='wall' id='static-0128' title='        	        	WBASE_03	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832.4' y1='947.2' x2='832.4' y2='979.2' class='wall' id='static-0129' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832.4' y1='979.2' x2='832.4' y2='1004.8' class='wall' id='static-012a' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832.4' y1='1004.8' x2='832.4' y2='1036.4' class='wall' id='static-012b' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.4' y1='409.6' x2='972.4' y2='345.6' class='wall' id='static-012c' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.4' y1='550.4' x2='972.4' y2='486.4' class='wall' id='static-012d' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='972.4' y1='486.4' x2='972.4' y2='409.6' class='wall' id='static-012e' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='853.2' y1='455.6' x2='857.6' y2='460' class='decal' id='static-012f' title='        	        	DECAL_06	DECAL_06	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='854' y1='458' x2='799.6' y2='403.6' class='decal' id='static-0130' title='        	        	DECAL_04	DECAL_04	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='645.2' y1='554.8' x2='699.6' y2='609.2' class='decal' id='static-0131' title='        	        	DECAL_04	DECAL_04	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='404.8' y1='827.2' x2='522.4' y2='827.2' class='wall' id='static-0132' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='524.8' y1='832' x2='522.4' y2='827.2' class='wall' id='static-0133' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='404.8' y1='827.2' x2='409.6' y2='832' class='wall' id='static-0134' title='        	        	WBASE_00	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='742.4' y1='771.6' x2='691.2' y2='771.6' class='decal' id='static-0135' title='        	        	DECAL_08	DECAL_08	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='691.2' y1='767.6' x2='742.4' y2='767.6' class='wall' id='static-0136' title='        	        	DECAL_09	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='486.4' y1='1062' x2='520.8' y2='1079.2' class='wall' id='static-0137' title='        	        	WBASE_07	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='640' y1='1100.4' x2='678.4' y2='1100.4' class='wall' id='static-0138' title='        	        	WBASE_07	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='756' y1='1022' x2='792.4' y2='986' class='decal' id='static-0139' title='        	        	DECAL_08	DECAL_08	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='838.8' y1='722' x2='874.8' y2='686' class='decal' id='static-013a' title='        	        	DECAL_08	DECAL_08	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.8' y1='1074.8' x2='256' y2='1074.8' class='wall' id='static-013b' title='        	        	WBASE_06	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.8' y1='1023.6' x2='166.8' y2='1074.8' class='wall' id='static-013c' title='        	        	WBASE_08	WBASE_05	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='166.8' y1='1011.2' x2='166.8' y2='1023.6' class='wall' id='static-013d' title='        	        	WBASE_06	WBASE_05	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='103.6' y1='948' x2='166.8' y2='1011.2' class='wall' id='static-013e' title='        	        	WBASE_07	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='185.2' y1='864.8' x2='103.6' y2='946.4' class='wall' id='static-013f' title='        	        	WBASE_07	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='102.8' y1='947.2' x2='103.6' y2='948' class='wall' id='static-0140' title='        	        	WBASE_06	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='103.6' y1='946.4' x2='102.8' y2='947.2' class='wall' id='static-0141' title='        	        	WBASE_06	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192.4' y1='857.6' x2='185.2' y2='864.8' class='wall' id='static-0142' title='        	        	WBASE_06	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='798.4' y1='608.8' x2='852.8' y2='554.4' class='decal' id='static-0143' title='        	        	DECAL_04	DECAL_04	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='736' y1='614' x2='761.6' y2='614' class='unwall' id='static-0144' title='        	        	WBASE_01	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='744.4' y1='400.8' x2='718.8' y2='400.8' class='unwall' id='static-0145' title='        	        	WBASE_01	WBASE_01	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='857.2' y1='518.4' x2='857.2' y2='492.8' class='unwall' id='static-0146' title='        	        	WBASE_01	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='642' y1='396.4' x2='654.8' y2='396.4' class='decal' id='static-0147' title='        	        	DECAL_02	DECAL_02	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='524.8' y1='268.8' x2='524.8' y2='396.8' class='unwall' id='static-0148' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='524.8' y1='396.8' x2='640' y2='396.8' class='unwall' id='static-0149' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='320' x2='345.6' y2='384' class='unwall' id='static-014a' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='384' x2='307.2' y2='384' class='unwall' id='static-014b' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='384' y1='678.4' x2='384' y2='601.6' class='unwall' id='static-014c' title='FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832' y1='947.2' x2='832' y2='896' class='unwall' id='static-014d' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='832' y1='896' x2='793.6' y2='896' class='unwall' id='static-014e' title='FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.6' y1='546.8' x2='614.8' y2='546.8' class='wall' id='static-014f' title='        	        	DECAL_09	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='921.6' y1='128.4' x2='896' y2='128.4' class='decal' id='static-0150' title='        	        	DECAL_05	DECAL_05	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='652.8' x2='883.2' y2='678.4' class='wall' id='static-0151' title='        	        	WBASE_05	WBASE_08	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='883.2' y1='576' x2='883.2' y2='601.6' class='wall' id='static-0152' title='        	        	WBASE_05	WBASE_08	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='704' y1='614.4' x2='793.6' y2='614.4' class='wall' id='static-0153' title='        	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='786.8' y1='614.8' x2='761.2' y2='614.8' class='decal' id='static-0154' title='        	        	DECAL_03	DECAL_03	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='808' y1='600.8' x2='803.6' y2='605.2' class='decal' id='static-0155' title='        	        	DECAL_07	DECAL_07	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='682' y1='593.6' x2='677.6' y2='588.8' class='decal' id='static-0156' title='        	        	DECAL_07	DECAL_07	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='696' y1='1081.6' x2='732.4' y2='1045.6' class='decal' id='static-0157' title='        	        	DECAL_08	DECAL_08	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='563.2' y1='1100.4' x2='601.6' y2='1100.4' class='wall' id='static-0158' title='        	        	WBASE_07	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='601.6' y1='1100.4' x2='640' y2='1100.4' class='wall' id='static-0159' title='        	        	WBASE_06	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='520.8' y1='1079.2' x2='563.2' y2='1100.4' class='wall' id='static-015a' title='        	        	WBASE_06	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='345.6' y1='1062' x2='486.4' y2='1062' class='wall' id='static-015b' title='        	        	WBASE_06	WBASE_00	FBASE_01	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='1074.8' x2='345.6' y2='1062' class='wall' id='static-015c' title='        	        	WBASE_06	WBASE_03	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='256' y1='1074.8' x2='332.8' y2='1074.8' class='wall' id='static-015d' title='        	        	WBASE_08	WBASE_00	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='495.6' y1='832.4' x2='444.4' y2='832.4' class='wall' id='static-015e' title='        	        	DECAL_09	WBASE_00	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='554.8' y1='893.2' x2='543.6' y2='870.8' class='decal' id='static-015f' title='        	        	DECAL_03	DECAL_03	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='602' y1='908.4' x2='614.8' y2='908.4' class='decal' id='static-0160' title='        	        	DECAL_02	DECAL_02	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='374.4' y1='721.2' x2='356' y2='739.6' class='unwall' id='static-0161' title='        	        	WBASE_01	WBASE_01	FBASE_01	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='115.6' y1='819.2' x2='192.4' y2='857.6' class='wall' id='static-0162' title='        	        	WBASE_05	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='81.2' y1='750.4' x2='115.6' y2='819.2' class='wall' id='static-0163' title='        	        	WBASE_02	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='652.8' x2='77.2' y2='729.6' class='wall' id='static-0164' title='        	        	WBASE_02	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='742.4' x2='81.2' y2='750.4' class='wall' id='static-0165' title='        	        	WBASE_05	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='115.6' y1='576' x2='77.2' y2='652.8' class='wall' id='static-0166' title='        	        	WBASE_05	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192.4' y1='524.8' x2='115.6' y2='576' class='wall' id='static-0167' title='        	        	WBASE_05	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='192.4' y1='473.2' x2='192.4' y2='524.8' class='wall' id='static-0168' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='371.6' y1='715.6' x2='390' y2='697.2' class='decal' id='static-0169' title='        	        	DECAL_05	DECAL_05	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='140.8' y1='473.2' x2='192.4' y2='473.2' class='wall' id='static-016a' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='409.6' x2='140.8' y2='473.2' class='wall' id='static-016b' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='332.8' x2='77.2' y2='409.6' class='wall' id='static-016c' title='        	        	WBASE_03	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='128.4' y1='268.8' x2='77.2' y2='320' class='wall' id='static-016d' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='128.4' y1='204.8' x2='128.4' y2='268.8' class='wall' id='static-016e' title='        	        	WBASE_10	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='128.4' y1='141.2' x2='128.4' y2='204.8' class='wall' id='static-016f' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='196.4' y1='200.8' x2='192' y2='205.2' class='decal' id='static-0170' title='        	        	DECAL_06	DECAL_06	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='172.8' y1='141.2' x2='147.2' y2='141.2' class='decal' id='static-0171' title='        	        	DECAL_05	DECAL_05	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='921.6' x2='332.8' y2='908.8' class='wall' id='static-0172' title='        	        	WBASE_06	WBASE_00	FBASE_00	FBASE_01'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='729.6' x2='77.2' y2='742.4' class='wall' id='static-0173' title='        	        	WBASE_05	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='77.2' y1='320' x2='77.2' y2='332.8' class='wall' id='static-0174' title='        	        	WBASE_09	WBASE_04	FBASE_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='533.2' y1='847.6' x2='544.4' y2='870' class='decal' id='static-0175' title='        	        	DECAL_03	DECAL_03	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='243.2' y1='819.2' x2='332.8' y2='908.8' class='step' id='static-0176' title='        	FBASE_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='755.2' x2='320' y2='742.4' class='step' id='static-0177' title='        	FBASE_00	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='332.8' y1='908.8' x2='345.6' y2='921.6' class='step' id='static-0178' title='        	FBASE_01	WBASE_00	WBASE_04	STEPS_00	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<!-- Static strings 0000:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0001:         	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00 -->
+<!-- Static strings 0002:         	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00 -->
+<!-- Static strings 0003:         	        	WBASE_04	WBASE_04	FBASE_00	FBASE_00 -->
+<!-- Static strings 0004:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0005:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0006:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0007:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0008: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 0009: CBASE_00	        	WBASE_00	WBASE_00	FBASE_00	         -->
+<!-- Static strings 000a: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 000b: CBASE_00	        	WBASE_00	WBASE_00	FBASE_00	         -->
+<!-- Static strings 000c: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 000d:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 000e: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 000f: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 0010: CBASE_00	        	WBASE_12	WBASE_12	FBASE_00	         -->
+<!-- Static strings 0011:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0012:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0013:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0014:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0015:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0016:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0017:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0018:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 0019:         	        	WBASE_00	WBASE_02	FBASE_00	         -->
+<!-- Static strings 001a:         	        	WBASE_09	WBASE_00	FBASE_01	         -->
+<!-- Static strings 001b:         	        	WBASE_09	WBASE_00	FBASE_00	         -->
+<!-- Static strings 001c:         	        	WBASE_09	WBASE_00	FBASE_00	         -->
+<!-- Static strings 001d:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 001e:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 001f:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0020:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0021:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0022:         	        	WBASE_00	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 0023:         	        	WBASE_05	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 0024:         	        	WBASE_05	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0025:         	        	WBASE_04	WBASE_08	FBASE_00	         -->
+<!-- Static strings 0026:         	        	WBASE_04	WBASE_08	FBASE_00	         -->
+<!-- Static strings 0027:         	        	WBASE_04	WBASE_07	FBASE_00	         -->
+<!-- Static strings 0028:         	        	WBASE_04	WBASE_07	FBASE_00	         -->
+<!-- Static strings 0029:         	        	WBASE_00	WBASE_00	FBASE_01	         -->
+<!-- Static strings 002a:         	        	WBASE_00	WBASE_01	FBASE_01	         -->
+<!-- Static strings 002b:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 002c:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 002d: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 002e:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 002f:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0030:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0031:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0032:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0033:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0034:         	        	WBASE_10	WBASE_11	FBASE_00	FBASE_01 -->
+<!-- Static strings 0035:         	        	WBASE_09	WBASE_11	FBASE_00	FBASE_01 -->
+<!-- Static strings 0036:         	        	WBASE_02	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 0037:         	        	WBASE_00	WBASE_11	        	FBASE_01 -->
+<!-- Static strings 0038:         	        	WBASE_05	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 0039:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 003a:         	        	WBASE_08	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 003b:         	        	WBASE_00	WBASE_03	FBASE_00	         -->
+<!-- Static strings 003c:         	        	WBASE_00	WBASE_03	FBASE_00	         -->
+<!-- Static strings 003d:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 003e:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 003f:         	        	WBASE_04	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0040:         	        	WBASE_00	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0041:         	        	WBASE_00	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0042:         	        	WBASE_06	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0043:         	        	WBASE_00	WBASE_01	FBASE_01	         -->
+<!-- Static strings 0044:         	        	WBASE_00	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0045:         	        	WBASE_00	WBASE_01	FBASE_01	         -->
+<!-- Static strings 0046:         	        	WBASE_06	WBASE_05	FBASE_00	FBASE_01 -->
+<!-- Static strings 0047:         	        	WBASE_06	WBASE_05	FBASE_01	FBASE_01 -->
+<!-- Static strings 0048:         	        	WBASE_07	WBASE_05	FBASE_01	FBASE_01 -->
+<!-- Static strings 0049:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 004a:         	        	WBASE_04	WBASE_08	FBASE_00	         -->
+<!-- Static strings 004b:         	        	WBASE_05	WBASE_06	FBASE_00	FBASE_01 -->
+<!-- Static strings 004c:         	        	WBASE_04	WBASE_03	FBASE_00	         -->
+<!-- Static strings 004d:         	        	WBASE_06	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 004e:         	        	WBASE_05	WBASE_06	FBASE_00	FBASE_01 -->
+<!-- Static strings 004f:         	        	WBASE_05	WBASE_04	FBASE_00	FBASE_01 -->
+<!-- Static strings 0050:         	        	WBASE_04	WBASE_07	FBASE_00	         -->
+<!-- Static strings 0051:         	        	WBASE_04	WBASE_07	FBASE_00	         -->
+<!-- Static strings 0052:         	STEPS_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0053:         	STEPS_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0054:         	STEPS_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0055:         	FBASE_01	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0056:         	FBASE_01	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0057:         	FBASE_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0058: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 0059: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 005a: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 005b:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 005c:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 005d:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 005e:         	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01 -->
+<!-- Static strings 005f:         	        	WBASE_00	WBASE_05	FBASE_00	FBASE_01 -->
+<!-- Static strings 0060:         	        	WBASE_06	WBASE_05	FBASE_00	FBASE_01 -->
+<!-- Static strings 0061:         	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0062:         	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0063:         	        	WBASE_03	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0064:         	        	WBASE_00	WBASE_00	FBASE_01	         -->
+<!-- Static strings 0065:         	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00 -->
+<!-- Static strings 0066:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0067: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0068: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0069: STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00 -->
+<!-- Static strings 006a: STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00 -->
+<!-- Static strings 006b: STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00 -->
+<!-- Static strings 006c: STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00 -->
+<!-- Static strings 006d: STEPS_00	        	WBASE_00	WBASE_00	        	STEPS_00 -->
+<!-- Static strings 006e: STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	STEPS_00 -->
+<!-- Static strings 006f: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0070: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0071: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0072: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0073: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0074: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0075: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0076: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0077: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0078: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0079: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 007a: STEPS_00	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 007b: STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	         -->
+<!-- Static strings 007c: STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	         -->
+<!-- Static strings 007d: STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	         -->
+<!-- Static strings 007e: STEPS_00	        	WBASE_00	WBASE_00	CBASE_00	         -->
+<!-- Static strings 007f:         	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0080:         	        	WBASE_00	WBASE_04	FBASE_01	FBASE_00 -->
+<!-- Static strings 0081:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0082:         	        	WBASE_00	WBASE_04	FBASE_00	FBASE_00 -->
+<!-- Static strings 0083:         	        	WBASE_00	WBASE_09	        	FBASE_01 -->
+<!-- Static strings 0084:         	        	WBASE_00	WBASE_09	        	FBASE_01 -->
+<!-- Static strings 0085:         	        	WBASE_00	WBASE_04	        	FBASE_01 -->
+<!-- Static strings 0086:         	        	WBASE_04	WBASE_04	        	CBASE_00 -->
+<!-- Static strings 0087:         	        	WBASE_04	WBASE_04	        	CBASE_00 -->
+<!-- Static strings 0088: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0089:         	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01 -->
+<!-- Static strings 008a:         	        	WBASE_00	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 008b:         	        	WBASE_00	WBASE_06	FBASE_00	FBASE_01 -->
+<!-- Static strings 008c:         	        	WBASE_05	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 008d:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 008e:         	        	WBASE_00	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 008f:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0090:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0091:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0092:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0093:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0094:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0095:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0096:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0097:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0098:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 0099:   SLED_R	FBASE_01	  SLED_R	FBASE_01	  SLED_R	FBASE_01 -->
+<!-- Static strings 009a: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 009b: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 009c: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 009d: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 009e: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 009f: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a0: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a1: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a2: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a3: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a4: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a5: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a6: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a7: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a8: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00a9: HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00	HOLD_PAD	FBASE_00 -->
+<!-- Static strings 00aa: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00ab: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00ac: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00ad: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00ae:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00af:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00b0:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00b1:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00b2:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00b3:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00b4:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00b5:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00b6:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00b7:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00b8:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00b9:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00ba:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00bb:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00bc:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00bd:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00be:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00bf:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00c0:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00c1:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00c2:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c3:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c4:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c5:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c6:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c7:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c8:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00c9:   SLED_L	FBASE_00	  SLED_L	FBASE_00	  SLED_L	FBASE_00 -->
+<!-- Static strings 00ca:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00cb:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00cc:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00cd:   SLED_R	FBASE_00	  SLED_R	FBASE_00	  SLED_R	FBASE_00 -->
+<!-- Static strings 00ce:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00cf:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00d0:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00d1:   SLED_D	FBASE_00	  SLED_D	FBASE_00	  SLED_D	FBASE_00 -->
+<!-- Static strings 00d2:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00d3:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00d4:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00d5:   SLED_U	FBASE_00	  SLED_U	FBASE_00	  SLED_U	FBASE_00 -->
+<!-- Static strings 00d6: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00d7: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00d8: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00d9: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00da: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00db: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00dc: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00dd: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00de: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00df: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e0: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e1: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e2: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e3: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e4: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e5: FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00	FLAG_PAD	FBASE_00 -->
+<!-- Static strings 00e6: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00e7: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	         -->
+<!-- Static strings 00e8: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00e9: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00ea: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00eb: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00ec: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00ed: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	         -->
+<!-- Static strings 00ee: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00ef: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 00f0:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00f1:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00f2:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00f3:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00f4:   SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01 -->
+<!-- Static strings 00f5:   SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01 -->
+<!-- Static strings 00f6:   SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01 -->
+<!-- Static strings 00f7:   SLED_L	FBASE_01	  SLED_L	FBASE_01	  SLED_L	FBASE_01 -->
+<!-- Static strings 00f8:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00f9:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00fa:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00fb:   SLED_U	FBASE_01	  SLED_U	FBASE_01	  SLED_U	FBASE_01 -->
+<!-- Static strings 00fc:         	        	WBASE_03	WBASE_03	FBASE_00	         -->
+<!-- Static strings 00fd:         	        	DECAL_09	WBASE_00	        	         -->
+<!-- Static strings 00fe:         	        	DECAL_03	DECAL_03	        	         -->
+<!-- Static strings 00ff:         	        	DECAL_06	DECAL_06	        	         -->
+<!-- Static strings 0100:         	        	DECAL_03	DECAL_03	        	         -->
+<!-- Static strings 0101:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0102:         	STEPS_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0103:         	        	WBASE_08	WBASE_05	FBASE_01	FBASE_01 -->
+<!-- Static strings 0104:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 0105:         	        	WBASE_00	WBASE_05	FBASE_01	         -->
+<!-- Static strings 0106: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 0107: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 0108: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 0109: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 010a: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01 -->
+<!-- Static strings 010b: HOLD_PAD	FBASE_01	HOLD_PAD	FBASE_01	HOLD_PAD	         -->
+<!-- Static strings 010c:         	        	WBASE_11	WBASE_00	FBASE_00	         -->
+<!-- Static strings 010d:         	        	WBASE_11	WBASE_00	FBASE_00	         -->
+<!-- Static strings 010e:         	        	WBASE_11	WBASE_00	FBASE_00	         -->
+<!-- Static strings 010f:         	        	WBASE_11	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0110:         	        	WBASE_11	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0111:         	        	WBASE_11	WBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 0112:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0113:         	        	WBASE_09	WBASE_04	FBASE_00	FBASE_00 -->
+<!-- Static strings 0114:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0115:         	        	WBASE_09	WBASE_04	FBASE_00	FBASE_00 -->
+<!-- Static strings 0116:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0117:         	        	DECAL_06	DECAL_06	        	         -->
+<!-- Static strings 0118:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0119:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011a:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011b:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011c:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011d:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011e:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 011f:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0120:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0121:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0122:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0123:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0124:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0125:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0126:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0127:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0128:         	        	WBASE_03	WBASE_03	FBASE_00	         -->
+<!-- Static strings 0129:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012a:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012b:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012c:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012d:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012e:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 012f:         	        	DECAL_06	DECAL_06	        	         -->
+<!-- Static strings 0130:         	        	DECAL_04	DECAL_04	        	         -->
+<!-- Static strings 0131:         	        	DECAL_04	DECAL_04	        	         -->
+<!-- Static strings 0132:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0133:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0134:         	        	WBASE_00	WBASE_00	FBASE_01	         -->
+<!-- Static strings 0135:         	        	DECAL_08	DECAL_08	        	         -->
+<!-- Static strings 0136:         	        	DECAL_09	WBASE_00	        	         -->
+<!-- Static strings 0137:         	        	WBASE_07	WBASE_00	FBASE_01	         -->
+<!-- Static strings 0138:         	        	WBASE_07	WBASE_00	FBASE_01	         -->
+<!-- Static strings 0139:         	        	DECAL_08	DECAL_08	        	         -->
+<!-- Static strings 013a:         	        	DECAL_08	DECAL_08	        	         -->
+<!-- Static strings 013b:         	        	WBASE_06	WBASE_00	FBASE_00	         -->
+<!-- Static strings 013c:         	        	WBASE_08	WBASE_05	FBASE_00	         -->
+<!-- Static strings 013d:         	        	WBASE_06	WBASE_05	FBASE_00	         -->
+<!-- Static strings 013e:         	        	WBASE_07	WBASE_00	FBASE_00	         -->
+<!-- Static strings 013f:         	        	WBASE_07	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0140:         	        	WBASE_06	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0141:         	        	WBASE_06	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0142:         	        	WBASE_06	WBASE_00	FBASE_00	         -->
+<!-- Static strings 0143:         	        	DECAL_04	DECAL_04	        	         -->
+<!-- Static strings 0144:         	        	WBASE_01	WBASE_00	        	         -->
+<!-- Static strings 0145:         	        	WBASE_01	WBASE_01	        	         -->
+<!-- Static strings 0146:         	        	WBASE_01	WBASE_00	        	         -->
+<!-- Static strings 0147:         	        	DECAL_02	DECAL_02	        	         -->
+<!-- Static strings 0148: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 0149: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 014a: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 014b: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_00	FBASE_00 -->
+<!-- Static strings 014c: FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01 -->
+<!-- Static strings 014d: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 014e: FBASE_01	FBASE_00	FBASE_01	FBASE_00	FBASE_01	FBASE_00 -->
+<!-- Static strings 014f:         	        	DECAL_09	WBASE_00	        	         -->
+<!-- Static strings 0150:         	        	DECAL_05	DECAL_05	        	         -->
+<!-- Static strings 0151:         	        	WBASE_05	WBASE_08	FBASE_00	FBASE_01 -->
+<!-- Static strings 0152:         	        	WBASE_05	WBASE_08	FBASE_00	FBASE_01 -->
+<!-- Static strings 0153:         	        	WBASE_00	WBASE_00	FBASE_01	FBASE_01 -->
+<!-- Static strings 0154:         	        	DECAL_03	DECAL_03	        	         -->
+<!-- Static strings 0155:         	        	DECAL_07	DECAL_07	        	         -->
+<!-- Static strings 0156:         	        	DECAL_07	DECAL_07	        	         -->
+<!-- Static strings 0157:         	        	DECAL_08	DECAL_08	        	         -->
+<!-- Static strings 0158:         	        	WBASE_07	WBASE_00	FBASE_01	         -->
+<!-- Static strings 0159:         	        	WBASE_06	WBASE_00	FBASE_01	         -->
+<!-- Static strings 015a:         	        	WBASE_06	WBASE_00	FBASE_01	         -->
+<!-- Static strings 015b:         	        	WBASE_06	WBASE_00	FBASE_01	         -->
+<!-- Static strings 015c:         	        	WBASE_06	WBASE_03	FBASE_00	         -->
+<!-- Static strings 015d:         	        	WBASE_08	WBASE_00	FBASE_00	         -->
+<!-- Static strings 015e:         	        	DECAL_09	WBASE_00	        	         -->
+<!-- Static strings 015f:         	        	DECAL_03	DECAL_03	        	         -->
+<!-- Static strings 0160:         	        	DECAL_02	DECAL_02	        	         -->
+<!-- Static strings 0161:         	        	WBASE_01	WBASE_01	FBASE_01	FBASE_01 -->
+<!-- Static strings 0162:         	        	WBASE_05	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0163:         	        	WBASE_02	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0164:         	        	WBASE_02	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0165:         	        	WBASE_05	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0166:         	        	WBASE_05	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0167:         	        	WBASE_05	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0168:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0169:         	        	DECAL_05	DECAL_05	        	         -->
+<!-- Static strings 016a:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 016b:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 016c:         	        	WBASE_03	WBASE_04	FBASE_00	         -->
+<!-- Static strings 016d:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 016e:         	        	WBASE_10	WBASE_04	FBASE_00	         -->
+<!-- Static strings 016f:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0170:         	        	DECAL_06	DECAL_06	        	         -->
+<!-- Static strings 0171:         	        	DECAL_05	DECAL_05	        	         -->
+<!-- Static strings 0172:         	        	WBASE_06	WBASE_00	FBASE_00	FBASE_01 -->
+<!-- Static strings 0173:         	        	WBASE_05	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0174:         	        	WBASE_09	WBASE_04	FBASE_00	         -->
+<!-- Static strings 0175:         	        	DECAL_03	DECAL_03	        	         -->
+<!-- Static strings 0176:         	FBASE_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0177:         	FBASE_00	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static strings 0178:         	FBASE_01	WBASE_00	WBASE_04	STEPS_00	         -->
+<!-- Static numerics 0000: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0001: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0002: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0003: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0004: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0005: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0006: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0007: 0000	0300	0000	0000	00	00	01	0005	00	0000	0400	 -->
+<!-- Static numerics 0008: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0009: 0000	0200	0000	0000	00	00	01	0005	00	0400	0c3e	 -->
+<!-- Static numerics 000a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000b: 0000	0200	0000	0000	00	00	01	0005	00	0c3e	0400	 -->
+<!-- Static numerics 000c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000d: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0010: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0011: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0012: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0013: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0014: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0015: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0016: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0017: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0018: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0019: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001a: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001b: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001c: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001d: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001e: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001f: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0020: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0021: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0022: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0023: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0024: 0000	0200	0000	0000	00	00	01	0005	00	0040	0000	 -->
+<!-- Static numerics 0025: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0026: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0027: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0028: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0029: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 002a: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 002b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 002c: 0000	0200	0000	0000	00	00	01	0005	00	0047	006b	 -->
+<!-- Static numerics 002d: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 002e: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 002f: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0030: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0031: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0032: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0033: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0034: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0035: 0000	0200	0000	0000	00	00	01	0005	00	0000	0100	 -->
+<!-- Static numerics 0036: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0037: 0000	0200	0000	0000	00	00	01	0005	00	0000	0112	 -->
+<!-- Static numerics 0038: 0000	0200	0000	0000	00	00	01	0005	00	011e	0000	 -->
+<!-- Static numerics 0039: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003b: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003c: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003d: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003e: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 003f: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0040: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0041: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0042: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0043: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0044: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0045: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0046: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0047: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0048: 0000	0200	0000	0000	00	00	01	0005	00	0028	0028	 -->
+<!-- Static numerics 0049: 0000	0200	0000	0000	00	00	01	0005	00	0000	005a	 -->
+<!-- Static numerics 004a: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 004b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 004c: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 004d: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 004e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 004f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0050: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0051: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0052: ffa0	ffd0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0053: ffa0	ffd0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0054: ffa0	ffd0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0055: ffd0	0000	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0056: ffd0	0000	0000	0000	00	00	01	0005	00	016a	0b50	 -->
+<!-- Static numerics 0057: ffd0	0000	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0058: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0059: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 005a: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 005b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 005c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 005d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0720	 -->
+<!-- Static numerics 005e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 005f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0060: 0000	0200	0000	0000	00	00	01	0005	00	0478	0000	 -->
+<!-- Static numerics 0061: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0062: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0063: 0000	0200	0000	0000	00	00	01	0005	00	0000	06b5	 -->
+<!-- Static numerics 0064: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0065: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0066: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0067: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0068: 0000	0030	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0069: 0030	0060	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006a: 0060	0090	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006b: 0090	00c0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006c: 00c0	00f0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006d: 00f0	0120	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006e: 0120	0140	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 006f: 0000	0030	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0070: 0000	0030	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0071: 0000	0060	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0072: 0000	0060	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0073: 0000	0090	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0074: 0000	0090	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0075: 0000	00c0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0076: 0000	00c0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0077: 0000	00f0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0078: 0000	00f0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0079: 0000	0120	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007a: 0000	0120	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007b: 0120	0140	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007c: 0120	0140	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007d: 0120	0140	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007e: 0120	0140	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 007f: 0000	0120	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0080: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0081: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0082: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0083: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0084: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0085: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0086: 0200	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0087: 0200	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0088: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0089: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 008a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 008b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 008c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0700	 -->
+<!-- Static numerics 008d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 008e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 008f: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0090: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0091: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0092: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0093: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0094: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0095: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0096: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0097: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0098: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0099: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009a: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009b: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009c: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009d: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009e: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 009f: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00a9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00aa: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ab: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ac: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ad: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ae: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00af: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00b9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ba: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00bb: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00bc: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00bd: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00be: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00bf: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00c9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ca: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00cb: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00cc: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00cd: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ce: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00cf: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00d9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00da: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00db: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00dc: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00dd: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00de: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00df: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00e9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ea: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00eb: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ec: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ed: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ee: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00ef: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f0: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f1: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f2: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f3: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f4: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f5: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f6: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f7: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f8: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00f9: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00fa: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00fb: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 00fc: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 00fd: 0080	0180	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 00fe: 0010	024c	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 00ff: 0060	0260	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0100: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0101: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0102: ffa0	ffd0	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0103: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0104: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0105: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0106: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0107: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0108: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0109: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 010a: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 010b: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 010c: 0000	0200	0000	0000	00	00	01	0005	00	0078	0000	 -->
+<!-- Static numerics 010d: 0000	0200	0000	0000	00	00	01	0005	00	00e9	0000	 -->
+<!-- Static numerics 010e: 0000	0200	0000	0000	00	00	01	0005	00	015a	0000	 -->
+<!-- Static numerics 010f: 0000	0200	0000	0000	00	00	01	0005	00	005a	0000	 -->
+<!-- Static numerics 0110: 0000	0200	0000	0000	00	00	01	0005	00	0178	048a	 -->
+<!-- Static numerics 0111: 0000	0200	0000	0000	00	00	01	0005	00	0100	0000	 -->
+<!-- Static numerics 0112: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0113: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0114: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0115: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0116: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0117: 0060	0260	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0118: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0119: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 011f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0120: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0121: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0122: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0123: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0124: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0125: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0126: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0127: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0128: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0129: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 012f: 0060	0260	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0130: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0131: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0132: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0133: 0000	0200	0000	0000	00	00	01	0005	00	06fc	0000	 -->
+<!-- Static numerics 0134: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0135: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0136: 0080	0180	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0137: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0138: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0139: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 013a: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 013b: 0000	0200	0000	0000	00	00	01	0005	00	0000	04f8	 -->
+<!-- Static numerics 013c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 013d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 013e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 013f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0140: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0141: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0142: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0143: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0144: 0080	0280	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0145: 0080	0280	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0146: 0080	0280	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0147: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0148: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0149: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014a: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014b: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014c: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014d: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014e: 0000	0000	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 014f: 0080	0180	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0150: 0080	0280	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0151: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0152: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0153: 0000	0300	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0154: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0155: 0040	0240	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0156: 0040	0240	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0157: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0158: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0159: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 015a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 015b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 015c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 015d: 0000	0200	0000	0000	00	00	01	0005	00	0000	04f8	 -->
+<!-- Static numerics 015e: 0080	0180	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 015f: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0160: 0020	0120	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0161: 0000	0200	0000	0000	00	00	00	0005	00	0000	0000	 -->
+<!-- Static numerics 0162: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0163: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0164: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0165: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0166: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0167: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0168: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0169: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016a: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016b: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016c: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016d: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016e: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 016f: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0170: 0020	0220	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0171: 0040	0240	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0172: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0173: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0174: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0175: 0000	0200	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0176: ffd0	0000	0000	0000	00	00	01	0005	00	0b50	016a	 -->
+<!-- Static numerics 0177: ffd0	0000	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0178: ffd0	0000	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<g class='location-HUMAN'>
+	<use xlink:href='#facing-West' x='504.55' y='95.2' />
+	<circle r='8.000073295871' cx='504.55' cy='95.2' title='HUMAN_00' />
+	<text x='513.55' y='95.2'>HUMAN_00</text>
+</g>
+<g class='location-HUMAN'>
+	<use xlink:href='#facing-East' x='107.9' y='380.8' />
+	<circle r='8.000073295871' cx='107.9' cy='380.8' title='HUMAN_01' />
+	<text x='116.9' y='380.8'>HUMAN_01</text>
+</g>
+<g class='location-HUMAN'>
+	<use xlink:href='#facing-East' x='104.7' y='685.45' />
+	<circle r='8.000073295871' cx='104.7' cy='685.45' title='HUMAN_02' />
+	<text x='113.7' y='685.45'>HUMAN_02</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='847.35' y='587.1' />
+	<circle r='8.000073295871' cx='847.35' cy='587.1' title='ROBOT_00' />
+	<text x='856.35' y='587.1'>ROBOT_00</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='736.25' y='796.55' />
+	<circle r='8.000073295871' cx='736.25' cy='796.55' title='ROBOT_01' />
+	<text x='745.25' y='796.55'>ROBOT_01</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-South' x='422.05' y='177.7' />
+	<circle r='8.000073295871' cx='422.05' cy='177.7' title='ROBOT_02' />
+	<text x='431.05' y='177.7'>ROBOT_02</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-South' x='114.2' y='707.7' />
+	<circle r='8.000073295871' cx='114.2' cy='707.7' title='ROBOT_03' />
+	<text x='123.2' y='707.7'>ROBOT_03</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='996.45' y='247.5' />
+	<circle r='8.000073295871' cx='996.45' cy='247.5' title='ROBOT_04' />
+	<text x='1005.45' y='247.5'>ROBOT_04</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='967.9' y='291.95' />
+	<circle r='8.000073295871' cx='967.9' cy='291.95' title='ROBOT_05' />
+	<text x='976.9' y='291.95'>ROBOT_05</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='120.6' y='618.8' />
+	<circle r='8.000073295871' cx='120.6' cy='618.8' title='ROBOT_06' />
+	<text x='129.6' y='618.8'>ROBOT_06</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='818.75' y='403' />
+	<circle r='8.000073295871' cx='818.75' cy='403' title='ROBOT_07' />
+	<text x='827.75' y='403'>ROBOT_07</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='811.1' y='69.8' />
+	<circle r='8.00000076349866' cx='811.1' cy='69.8' title='FLAG_HUMAN_10' />
+	<text x='820.1' y='69.8'>FLAG_HUMAN_10</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='717.2' y='304.65' />
+	<circle r='8.00000076349866' cx='717.2' cy='304.65' title='FLAG_HUMAN_01' />
+	<text x='726.2' y='304.65'>FLAG_HUMAN_01</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='725.5' y='590.25' />
+	<circle r='8.00000076349866' cx='725.5' cy='590.25' title='FLAG_HUMAN_02' />
+	<text x='734.5' y='590.25'>FLAG_HUMAN_02</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='628.35' y='574.4' />
+	<circle r='8.00000076349866' cx='628.35' cy='574.4' title='FLAG_HUMAN_03' />
+	<text x='637.35' y='574.4'>FLAG_HUMAN_03</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='818.75' y='761.6' />
+	<circle r='8.00000076349866' cx='818.75' cy='761.6' title='FLAG_HUMAN_04' />
+	<text x='827.75' y='761.6'>FLAG_HUMAN_04</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='555.35' y='1082.15' />
+	<circle r='8.00000076349866' cx='555.35' cy='1082.15' title='FLAG_HUMAN_05' />
+	<text x='564.35' y='1082.15'>FLAG_HUMAN_05</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='491.9' y='856.85' />
+	<circle r='8.00000076349866' cx='491.9' cy='856.85' title='FLAG_HUMAN_06' />
+	<text x='500.9' y='856.85'>FLAG_HUMAN_06</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='152.3' y='907.6' />
+	<circle r='8.00000076349866' cx='152.3' cy='907.6' title='FLAG_HUMAN_07' />
+	<text x='161.3' y='907.6'>FLAG_HUMAN_07</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='149.15' y='161.85' />
+	<circle r='8.00000076349866' cx='149.15' cy='161.85' title='FLAG_HUMAN_08' />
+	<text x='158.15' y='161.85'>FLAG_HUMAN_08</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='406.15' y='701.35' />
+	<circle r='8.00000076349866' cx='406.15' cy='701.35' title='FLAG_HUMAN_09' />
+	<text x='415.15' y='701.35'>FLAG_HUMAN_09</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='656.9' y='349.05' />
+	<circle r='8.00000076349866' cx='656.9' cy='349.05' title='FLAG_ROBOT_10' />
+	<text x='665.9' y='349.05'>FLAG_ROBOT_10</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='549' y='107.9' />
+	<circle r='8.00000076349866' cx='549' cy='107.9' title='FLAG_ROBOT_01' />
+	<text x='558' y='107.9'>FLAG_ROBOT_01</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='320.5' y='447.45' />
+	<circle r='8.00000076349866' cx='320.5' cy='447.45' title='FLAG_ROBOT_02' />
+	<text x='329.5' y='447.45'>FLAG_ROBOT_02</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='352.35' y='698.15' />
+	<circle r='8.00000076349866' cx='352.35' cy='698.15' title='FLAG_ROBOT_03' />
+	<text x='361.35' y='698.15'>FLAG_ROBOT_03</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='130.1' y='945.7' />
+	<circle r='8.00000076349866' cx='130.1' cy='945.7' title='FLAG_ROBOT_04' />
+	<text x='139.1' y='945.7'>FLAG_ROBOT_04</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='380.8' y='980.6' />
+	<circle r='8.00000076349866' cx='380.8' cy='980.6' title='FLAG_ROBOT_05' />
+	<text x='389.8' y='980.6'>FLAG_ROBOT_05</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='850.5' y='1006' />
+	<circle r='8.00000076349866' cx='850.5' cy='1006' title='FLAG_ROBOT_06' />
+	<text x='859.5' y='1006'>FLAG_ROBOT_06</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='971.1' y='79.3' />
+	<circle r='8.00000076349866' cx='971.1' cy='79.3' title='FLAG_ROBOT_07' />
+	<text x='980.1' y='79.3'>FLAG_ROBOT_07</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='311' y='251.4' />
+	<circle r='8.00000076349866' cx='311' cy='251.4' title='FLAG_ROBOT_00' />
+	<text x='320' y='251.4'>FLAG_ROBOT_00</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='368.1' y='768' />
+	<circle r='8.00000076349866' cx='368.1' cy='768' title='FLAG_ROBOT_09' />
+	<text x='377.1' y='768'>FLAG_ROBOT_09</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='574.4' y='272.9' />
+	<circle r='8.000317615441' cx='574.4' cy='272.9' title='POD_RANDOM_00' />
+	<text x='583.4' y='272.9'>POD_RANDOM_00</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='596.6' y='320.5' />
+	<circle r='8.000073295871' cx='596.6' cy='320.5' title='POD_RANDOM_01' />
+	<text x='605.6' y='320.5'>POD_RANDOM_01</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='409.35' y='145.95' />
+	<circle r='8.000073295871' cx='409.35' cy='145.95' title='POD_RANDOM_02' />
+	<text x='418.35' y='145.95'>POD_RANDOM_02</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='625.15' y='174.5' />
+	<circle r='8.000073295871' cx='625.15' cy='174.5' title='POD_RANDOM_03' />
+	<text x='634.15' y='174.5'>POD_RANDOM_03</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='815.6' y='145.95' />
+	<circle r='8.000073295871' cx='815.6' cy='145.95' title='POD_RANDOM_04' />
+	<text x='824.6' y='145.95'>POD_RANDOM_04</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='825.1' y='260.2' />
+	<circle r='8.000073295871' cx='825.1' cy='260.2' title='POD_RANDOM_05' />
+	<text x='834.1' y='260.2'>POD_RANDOM_05</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='1009.15' y='184.05' />
+	<circle r='8.000073295871' cx='1009.15' cy='184.05' title='POD_RANDOM_06' />
+	<text x='1018.15' y='184.05'>POD_RANDOM_06</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='888.55' y='390.3' />
+	<circle r='8.000073295871' cx='888.55' cy='390.3' title='POD_RANDOM_07' />
+	<text x='897.55' y='390.3'>POD_RANDOM_07</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='885.4' y='545.85' />
+	<circle r='8.000073295871' cx='885.4' cy='545.85' title='POD_RANDOM_08' />
+	<text x='894.4' y='545.85'>POD_RANDOM_08</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='936.15' y='723.55' />
+	<circle r='8.000073295871' cx='936.15' cy='723.55' title='POD_RANDOM_09' />
+	<text x='945.15' y='723.55'>POD_RANDOM_09</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='812.4' y='831.45' />
+	<circle r='8.000073295871' cx='812.4' cy='831.45' title='POD_RANDOM_10' />
+	<text x='821.4' y='831.45'>POD_RANDOM_10</text>
+</g>
+<g class='location-POD-RANDOM'>
+	<use xlink:href='#facing-East' x='936.15' y='885.4' />
+	<circle r='8.000073295871' cx='936.15' cy='885.4' title='POD-RANDOM_11' />
+	<text x='945.15' y='885.4'>POD-RANDOM_11</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='875.9' y='961.55' />
+	<circle r='8.000073295871' cx='875.9' cy='961.55' title='POD_RANDOM_12' />
+	<text x='884.9' y='961.55'>POD_RANDOM_12</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='761.65' y='945.7' />
+	<circle r='8.000073295871' cx='761.65' cy='945.7' title='POD_RANDOM_13' />
+	<text x='770.65' y='945.7'>POD_RANDOM_13</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='679.1' y='802.9' />
+	<circle r='8.000073295871' cx='679.1' cy='802.9' title='POD_RANDOM_14' />
+	<text x='688.1' y='802.9'>POD_RANDOM_14</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='590.25' y='875.9' />
+	<circle r='8.000073295871' cx='590.25' cy='875.9' title='POD_RANDOM_15' />
+	<text x='599.25' y='875.9'>POD_RANDOM_15</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='599.8' y='1015.5' />
+	<circle r='8.000073295871' cx='599.8' cy='1015.5' title='POD_RANDOM_16' />
+	<text x='608.8' y='1015.5'>POD_RANDOM_16</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='403' y='1028.2' />
+	<circle r='8.000073295871' cx='403' cy='1028.2' title='POD_RANDOM_17' />
+	<text x='412' y='1028.2'>POD_RANDOM_17</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='479.2' y='923.5' />
+	<circle r='8.000073295871' cx='479.2' cy='923.5' title='POD_RANDOM_18' />
+	<text x='488.2' y='923.5'>POD_RANDOM_18</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='304.65' y='920.3' />
+	<circle r='8.000073295871' cx='304.65' cy='920.3' title='POD_RANDOM_19' />
+	<text x='313.65' y='920.3'>POD_RANDOM_19</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='260.2' y='1047.25' />
+	<circle r='8.000073295871' cx='260.2' cy='1047.25' title='POD_RANDOM_20' />
+	<text x='269.2' y='1047.25'>POD_RANDOM_20</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='155.5' y='812.4' />
+	<circle r='8.000073295871' cx='155.5' cy='812.4' title='POD_RANDOM_21' />
+	<text x='164.5' y='812.4'>POD_RANDOM_21</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='244.35' y='695' />
+	<circle r='8.000073295871' cx='244.35' cy='695' title='POD_RANDOM_22' />
+	<text x='253.35' y='695'>POD_RANDOM_22</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='165' y='587.1' />
+	<circle r='8.000073295871' cx='165' cy='587.1' title='POD_RANDOM_23' />
+	<text x='174' y='587.1'>POD_RANDOM_23</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='326.85' y='574.4' />
+	<circle r='8.000073295871' cx='326.85' cy='574.4' title='POD_RANDOM_24' />
+	<text x='335.85' y='574.4'>POD_RANDOM_24</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='165' y='441.1' />
+	<circle r='8.000073295871' cx='165' cy='441.1' title='POD_RANDOM_25' />
+	<text x='174' y='441.1'>POD_RANDOM_25</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='139.6' y='314.15' />
+	<circle r='8.000073295871' cx='139.6' cy='314.15' title='POD_RANDOM_26' />
+	<text x='148.6' y='314.15'>POD_RANDOM_26</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='225.3' y='215.8' />
+	<circle r='8.000073295871' cx='225.3' cy='215.8' title='POD_RANDOM_27' />
+	<text x='234.3' y='215.8'>POD_RANDOM_27</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='422.05' y='311' />
+	<circle r='8.000073295871' cx='422.05' cy='311' title='POD_RANDOM_28' />
+	<text x='431.05' y='311'>POD_RANDOM_28</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='526.8' y='428.4' />
+	<circle r='8.000073295871' cx='526.8' cy='428.4' title='POD_RANDOM_29' />
+	<text x='535.8' y='428.4'>POD_RANDOM_29</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='666.4' y='526.8' />
+	<circle r='8.000073295871' cx='666.4' cy='526.8' title='POD_RANDOM_30' />
+	<text x='675.4' y='526.8'>POD_RANDOM_30</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='733.05' y='431.6' />
+	<circle r='8.000073295871' cx='733.05' cy='431.6' title='POD_RANDOM_31' />
+	<text x='742.05' y='431.6'>POD_RANDOM_31</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='831.45' y='622' />
+	<circle r='8.000073295871' cx='831.45' cy='622' title='POD_RANDOM_32' />
+	<text x='840.45' y='622'>POD_RANDOM_32</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='768' y='707.7' />
+	<circle r='8.000073295871' cx='768' cy='707.7' title='POD_RANDOM_33' />
+	<text x='777' y='707.7'>POD_RANDOM_33</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='622' y='653.75' />
+	<circle r='8.000073295871' cx='622' cy='653.75' title='POD_RANDOM_34' />
+	<text x='631' y='653.75'>POD_RANDOM_34</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='479.2' y='612.45' />
+	<circle r='8.000073295871' cx='479.2' cy='612.45' title='POD_RANDOM_35' />
+	<text x='488.2' y='612.45'>POD_RANDOM_35</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='479.2' y='720.35' />
+	<circle r='8.000073295871' cx='479.2' cy='720.35' title='POD_RANDOM_36' />
+	<text x='488.2' y='720.35'>POD_RANDOM_36</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='380.8' y='514.1' />
+	<circle r='8.000073295871' cx='380.8' cy='514.1' title='POD_RANDOM_37' />
+	<text x='389.8' y='514.1'>POD_RANDOM_37</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='428.4' y='238' />
+	<circle r='8.000073295871' cx='428.4' cy='238' title='POD_RANDOM_38' />
+	<text x='437.4' y='238'>POD_RANDOM_38</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='641.05' y='748.95' />
+	<circle r='8.000073295871' cx='641.05' cy='748.95' title='POD_RANDOM_39' />
+	<text x='650.05' y='748.95'>POD_RANDOM_39</text>
+</g>
+<g class='location-POD'>
+	<use xlink:href='#facing-East' x='399.85' y='404.6' />
+	<circle r='8.000073295871' cx='399.85' cy='404.6' title='POD_RANDOM_11' />
+	<text x='408.85' y='404.6'>POD_RANDOM_11</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='306.3' y='493.25' />
+	<circle r='8.000073295871' cx='306.3' cy='493.25' title='ROBOT_08' />
+	<text x='315.3' y='493.25'>ROBOT_08</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='235.8' y='965.35' />
+	<circle r='8.000073295871' cx='235.8' cy='965.35' title='ROBOT_09' />
+	<text x='244.8' y='965.35'>ROBOT_09</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='866.9' y='527.5' />
+	<circle r='8.000073295871' cx='866.9' cy='527.5' title='ROBOT_10' />
+	<text x='875.9' y='527.5'>ROBOT_10</text>
+</g>
+<g class='location-10'>
+	<use xlink:href='#facing-East' x='220.55' y='668.45' />
+	<circle r='8.000073295871' cx='220.55' cy='668.45' title='10' />
+	<text x='229.55' y='668.45'>10</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='375.4' y='319.1' />
+	<circle r='8.000073295871' cx='375.4' cy='319.1' title='ROBOT_11' />
+	<text x='384.4' y='319.1'>ROBOT_11</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-North' x='262.7' y='608.5' />
+	<circle r='8.000073295871' cx='262.7' cy='608.5' title='ROBOT_12' />
+	<text x='271.7' y='608.5'>ROBOT_12</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='179.8' y='734.6' />
+	<circle r='8.000073295871' cx='179.8' cy='734.6' title='ROBOT_13' />
+	<text x='188.8' y='734.6'>ROBOT_13</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='648.3' y='794.15' />
+	<circle r='8.000073295871' cx='648.3' cy='794.15' title='ROBOT_14' />
+	<text x='657.3' y='794.15'>ROBOT_14</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='498.8' y='344.4' />
+	<circle r='8.000073295871' cx='498.8' cy='344.4' title='ROBOT_15' />
+	<text x='507.8' y='344.4'>ROBOT_15</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='286.55' y='404.1' />
+	<circle r='8.000073295871' cx='286.55' cy='404.1' title='ROBOT_16' />
+	<text x='295.55' y='404.1'>ROBOT_16</text>
+</g>
+<g class='location-ROBOT'>
+	<use xlink:href='#facing-East' x='912.75' y='307.05' />
+	<circle r='8.000073295871' cx='912.75' cy='307.05' title='ROBOT_17' />
+	<text x='921.75' y='307.05'>ROBOT_17</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='198.25' y='370.6' />
+	<circle r='8' cx='198.25' cy='370.6' title='BEACON_60' />
+	<text x='207.25' y='370.6'>BEACON_60</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='205.7' y='496.75' />
+	<circle r='8' cx='205.7' cy='496.75' title='BEACON_59' />
+	<text x='214.7' y='496.75'>BEACON_59</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='240.6' y='529.85' />
+	<circle r='8' cx='240.6' cy='529.85' title='BEACON_58' />
+	<text x='249.6' y='529.85'>BEACON_58</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='277' y='552.5' />
+	<circle r='8' cx='277' cy='552.5' title='BEACON_57' />
+	<text x='286' y='552.5'>BEACON_57</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='226' y='866.8' />
+	<circle r='8' cx='226' cy='866.8' title='BEACON_54' />
+	<text x='235' y='866.8'>BEACON_54</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='686.75' y='1018.4' />
+	<circle r='8' cx='686.75' cy='1018.4' title='BEACON_49' />
+	<text x='695.75' y='1018.4'>BEACON_49</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='685.55' y='944.4' />
+	<circle r='8' cx='685.55' cy='944.4' title='BEACON_48' />
+	<text x='694.55' y='944.4'>BEACON_48</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='678.4' y='857.25' />
+	<circle r='8' cx='678.4' cy='857.25' title='BEACON_47' />
+	<text x='687.4' y='857.25'>BEACON_47</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='527.5' y='950.4' />
+	<circle r='8' cx='527.5' cy='950.4' title='BEACON_46' />
+	<text x='536.5' y='950.4'>BEACON_46</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='385.95' y='891.85' />
+	<circle r='8' cx='385.95' cy='891.85' title='BEACON_44' />
+	<text x='394.95' y='891.85'>BEACON_44</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='327.45' y='833.35' />
+	<circle r='8.0499633520645' cx='327.45' cy='833.35' title='BEACON_42' />
+	<text x='336.45' y='833.35'>BEACON_42</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='249.8' y='752.9' />
+	<circle r='8' cx='249.8' cy='752.9' title='BEACON_40' />
+	<text x='258.8' y='752.9'>BEACON_40</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='562.6' y='710.4' />
+	<circle r='8' cx='562.6' cy='710.4' title='BEACON_38' />
+	<text x='571.6' y='710.4'>BEACON_38</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='463.8' y='547.9' />
+	<circle r='8' cx='463.8' cy='547.9' title='BEACON_37' />
+	<text x='472.8' y='547.9'>BEACON_37</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='475' y='395.3' />
+	<circle r='8' cx='475' cy='395.3' title='BEACON_35' />
+	<text x='484' y='395.3'>BEACON_35</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='682' y='209.05' />
+	<circle r='8' cx='682' cy='209.05' title='BEACON_33' />
+	<text x='691' y='209.05'>BEACON_33</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='870.6' y='212.65' />
+	<circle r='8' cx='870.6' cy='212.65' title='BEACON_32' />
+	<text x='879.6' y='212.65'>BEACON_32</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='530.65' y='242.7' />
+	<circle r='8' cx='530.65' cy='242.7' title='BEACON_27' />
+	<text x='539.65' y='242.7'>BEACON_27</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='901.6' y='353.5' />
+	<circle r='8' cx='901.6' cy='353.5' title='BEACON_25' />
+	<text x='910.6' y='353.5'>BEACON_25</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='913.55' y='478.85' />
+	<circle r='8' cx='913.55' cy='478.85' title='BEACON_24' />
+	<text x='922.55' y='478.85'>BEACON_24</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='912.35' y='640' />
+	<circle r='8' cx='912.35' cy='640' title='BEACON_23' />
+	<text x='921.35' y='640'>BEACON_23</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='908.8' y='773.7' />
+	<circle r='8' cx='908.8' cy='773.7' title='BEACON_22' />
+	<text x='917.8' y='773.7'>BEACON_22</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='807.3' y='905' />
+	<circle r='8' cx='807.3' cy='905' title='BEACON_20' />
+	<text x='816.3' y='905'>BEACON_20</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='603.2' y='449' />
+	<circle r='8' cx='603.2' cy='449' title='BEACON_19' />
+	<text x='612.2' y='449'>BEACON_19</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='711.8' y='652.1' />
+	<circle r='8' cx='711.8' cy='652.1' title='BEACON_15' />
+	<text x='720.8' y='652.1'>BEACON_15</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='445.65' y='761.75' />
+	<circle r='8' cx='445.65' cy='761.75' title='BEACON_11' />
+	<text x='454.65' y='761.75'>BEACON_11</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='817.05' y='315.1' />
+	<circle r='8' cx='817.05' cy='315.1' title='BEACON_07' />
+	<text x='826.05' y='315.1'>BEACON_07</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='784.55' y='352.55' />
+	<circle r='8.0000366479355' cx='784.55' cy='352.55' title='BEACON_06' />
+	<text x='793.55' y='352.55'>BEACON_06</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='753.25' y='351.2' />
+	<circle r='8.0001099438065' cx='753.25' cy='351.2' title='BEACON_04' />
+	<text x='762.25' y='351.2'>BEACON_04</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='721.85' y='349.4' />
+	<circle r='8.0001832396775' cx='721.85' cy='349.4' title='BEACON_02' />
+	<text x='730.85' y='349.4'>BEACON_02</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='576' y='298.15' />
+	<circle r='8.00024431957' cx='576' cy='298.15' title='BEACON_00' />
+	<text x='585' y='298.15'>BEACON_00</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='631.75' y='279.5' />
+	<circle r='8.00024431957' cx='631.75' cy='279.5' title='FLAG_ROBOT_08' />
+	<text x='640.75' y='279.5'>FLAG_ROBOT_08</text>
+</g>
+<g class='location-FLAG'>
+	<use xlink:href='#facing-East' x='915.6' y='933.35' />
+	<circle r='8.00000076349866' cx='915.6' cy='933.35' title='FLAG_HUMAN_00' />
+	<text x='924.6' y='933.35'>FLAG_HUMAN_00</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='333.4' y='395.45' />
+	<circle r='8' cx='333.4' cy='395.45' title='BEACON_61' />
+	<text x='342.4' y='395.45'>BEACON_61</text>
+</g>
+<g class='location-BEACON'>
+	<use xlink:href='#facing-East' x='363.7' y='635.5' />
+	<circle r='8' cx='363.7' cy='635.5' title='BEACON_62' />
+	<text x='372.7' y='635.5'>BEACON_62</text>
+</g>
+<!-- BSP 0000: 0007	0008	0087	0008 -->
+<!-- BSP 0001: 0001	0002	0143	00ff -->
+<!-- BSP 0002: 0002	0080	0146	0082 -->
+<!-- BSP 0003: 0003	0068	0145	0149 -->
+<!-- BSP 0004: 0004	0022	ffff	0156 -->
+<!-- BSP 0005: 0005	011b	012e	ffff -->
+<!-- BSP 0006: 0006	0025	017c	011c -->
+<!-- BSP 0007: 0000	0001	012f	013a -->
+<!-- BSP 0008: 0008	ffff	ffff	ffff -->
+<!-- BSP 0009: 0009	000a	0086	ffff -->
+<!-- BSP 000a: 000a	000b	0016	ffff -->
+<!-- BSP 000b: 000b	ffff	ffff	ffff -->
+<!-- BSP 000c: 000c	000d	000b	0015 -->
+<!-- BSP 000d: 000d	000e	ffff	010c -->
+<!-- BSP 000e: 000e	000f	0014	ffff -->
+<!-- BSP 000f: 000f	ffff	ffff	ffff -->
+<!-- BSP 0010: 0010	0011	ffff	010d -->
+<!-- BSP 0011: 0011	0012	ffff	0013 -->
+<!-- BSP 0012: 0012	010e	010f	ffff -->
+<!-- BSP 0013: 0013	0012	0012	ffff -->
+<!-- BSP 0014: 0014	0013	0010	000f -->
+<!-- BSP 0015: 0015	0014	000d	ffff -->
+<!-- BSP 0016: 0016	0015	000c	ffff -->
+<!-- BSP 0017: 0017	0018	0019	00de -->
+<!-- BSP 0018: 0018	0110	0111	ffff -->
+<!-- BSP 0019: 0019	0018	0018	ffff -->
+<!-- BSP 001a: 001a	001b	014b	00e0 -->
+<!-- BSP 001b: 001b	001c	00dc	ffff -->
+<!-- BSP 001c: 001c	00d9	00dd	ffff -->
+<!-- BSP 001d: 001d	001e	0170	0021 -->
+<!-- BSP 001e: 001e	001f	0020	ffff -->
+<!-- BSP 001f: 001f	016e	0171	ffff -->
+<!-- BSP 0020: 0020	001f	001f	ffff -->
+<!-- BSP 0021: 0021	0020	ffff	001e -->
+<!-- BSP 0022: 0022	004d	008e	0136 -->
+<!-- BSP 0023: 0023	ffff	ffff	ffff -->
+<!-- BSP 0024: 0024	002b	014e	008c -->
+<!-- BSP 0025: 0025	0026	0120	004c -->
+<!-- BSP 0026: 0026	011e	011f	ffff -->
+<!-- BSP 0027: 0027	0028	0152	0050 -->
+<!-- BSP 0028: 0028	00fc	0128	ffff -->
+<!-- BSP 0029: 0029	002b	0151	012b -->
+<!-- BSP 002a: 002a	002b	003d	ffff -->
+<!-- BSP 002b: 002b	005c	ffff	005c -->
+<!-- BSP 002c: 002c	0039	0160	0177 -->
+<!-- BSP 002d: 002d	00e2	ffff	014a -->
+<!-- BSP 002e: 002e	ffff	ffff	ffff -->
+<!-- BSP 002f: 002f	0030	0174	ffff -->
+<!-- BSP 0030: 0030	0031	016b	0031 -->
+<!-- BSP 0031: 0031	ffff	ffff	ffff -->
+<!-- BSP 0032: 0032	0033	0166	ffff -->
+<!-- BSP 0033: 0033	ffff	ffff	ffff -->
+<!-- BSP 0034: 0034	0037	0067	0085 -->
+<!-- BSP 0035: 0035	0037	00d8	0148 -->
+<!-- BSP 0036: 0036	0037	008f	0168 -->
+<!-- BSP 0037: 0037	0083	0084	ffff -->
+<!-- BSP 0038: 0038	0039	00b0	0100 -->
+<!-- BSP 0039: 0039	005d	0134	015f -->
+<!-- BSP 003a: 003a	0103	0176	0172 -->
+<!-- BSP 003b: 003b	003c	015c	ffff -->
+<!-- BSP 003c: 003c	013b	015d	ffff -->
+<!-- BSP 003d: 003d	003c	001d	002e -->
+<!-- BSP 003e: 003e	0163	0163	ffff -->
+<!-- BSP 003f: 003f	0040	0165	0141 -->
+<!-- BSP 0040: 0040	013f	013f	ffff -->
+<!-- BSP 0041: 0041	0046	0142	ffff -->
+<!-- BSP 0042: 0042	005f	ffff	005f -->
+<!-- BSP 0043: 0043	0045	015a	0045 -->
+<!-- BSP 0044: 0044	ffff	ffff	ffff -->
+<!-- BSP 0045: 0045	ffff	ffff	ffff -->
+<!-- BSP 0046: 0046	0048	0140	0178 -->
+<!-- BSP 0047: 0047	0048	0058	0060 -->
+<!-- BSP 0048: 0048	0052	ffff	0057 -->
+<!-- BSP 0049: 0049	005a	ffff	00a9 -->
+<!-- BSP 004a: 004a	ffff	ffff	ffff -->
+<!-- BSP 004b: 004b	004d	ffff	00d3 -->
+<!-- BSP 004c: 004c	004a	0005	004a -->
+<!-- BSP 004d: 004d	0061	0091	010b -->
+<!-- BSP 004e: 004e	0155	ffff	0155 -->
+<!-- BSP 004f: 004f	0052	0167	014f -->
+<!-- BSP 0050: 0050	0028	0028	ffff -->
+<!-- BSP 0051: 0051	0129	012a	ffff -->
+<!-- BSP 0052: 0052	0053	0055	ffff -->
+<!-- BSP 0053: 0053	0054	0102	ffff -->
+<!-- BSP 0054: 0054	ffff	ffff	ffff -->
+<!-- BSP 0055: 0055	0054	0053	ffff -->
+<!-- BSP 0056: 0056	005a	ffff	0161 -->
+<!-- BSP 0057: 0057	0055	0052	ffff -->
+<!-- BSP 0058: 0058	0045	003b	0092 -->
+<!-- BSP 0059: 0059	005a	ffff	005e -->
+<!-- BSP 005a: 005a	0064	0169	014c -->
+<!-- BSP 005b: 005b	00f0	ffff	0138 -->
+<!-- BSP 005c: 005c	ffff	ffff	ffff -->
+<!-- BSP 005d: 005d	ffff	ffff	ffff -->
+<!-- BSP 005e: 005e	005d	0047	005b -->
+<!-- BSP 005f: 005f	ffff	ffff	ffff -->
+<!-- BSP 0060: 0060	005f	0042	002c -->
+<!-- BSP 0061: 0061	0062	0063	00fe -->
+<!-- BSP 0062: 0062	ffff	ffff	ffff -->
+<!-- BSP 0063: 0063	0062	0062	ffff -->
+<!-- BSP 0064: 0064	0065	0066	ffff -->
+<!-- BSP 0065: 0065	ffff	ffff	ffff -->
+<!-- BSP 0066: 0066	0065	0065	ffff -->
+<!-- BSP 0067: 0067	ffff	ffff	ffff -->
+<!-- BSP 0068: 0068	0069	00d0	ffff -->
+<!-- BSP 0069: 0069	006a	007f	0070 -->
+<!-- BSP 006a: 006a	006b	00c4	0072 -->
+<!-- BSP 006b: 006b	006c	0078	0074 -->
+<!-- BSP 006c: 006c	006d	006d	0076 -->
+<!-- BSP 006d: 006d	ffff	ffff	ffff -->
+<!-- BSP 006e: 006e	007b	007d	007e -->
+<!-- BSP 006f: 006f	0070	0116	0147 -->
+<!-- BSP 0070: 0070	ffff	ffff	ffff -->
+<!-- BSP 0071: 0071	0073	ffff	0079 -->
+<!-- BSP 0072: 0072	ffff	ffff	ffff -->
+<!-- BSP 0073: 0073	0075	ffff	0077 -->
+<!-- BSP 0074: 0074	ffff	ffff	ffff -->
+<!-- BSP 0075: 0075	ffff	ffff	ffff -->
+<!-- BSP 0076: 0076	ffff	ffff	ffff -->
+<!-- BSP 0077: 0077	0075	ffff	0075 -->
+<!-- BSP 0078: 0078	0076	006c	007a -->
+<!-- BSP 0079: 0079	0077	ffff	0073 -->
+<!-- BSP 007a: 007a	ffff	ffff	ffff -->
+<!-- BSP 007b: 007b	007c	00cd	ffff -->
+<!-- BSP 007c: 007c	00ca	00cc	ffff -->
+<!-- BSP 007d: 007d	007c	007b	ffff -->
+<!-- BSP 007e: 007e	ffff	ffff	ffff -->
+<!-- BSP 007f: 007f	007e	006a	006e -->
+<!-- BSP 0080: 0080	0130	0130	ffff -->
+<!-- BSP 0081: 0081	ffff	ffff	ffff -->
+<!-- BSP 0082: 0082	ffff	ffff	ffff -->
+<!-- BSP 0083: 0083	ffff	ffff	ffff -->
+<!-- BSP 0084: 0084	0083	0083	ffff -->
+<!-- BSP 0085: 0085	0084	0037	ffff -->
+<!-- BSP 0086: 0086	0016	ffff	000a -->
+<!-- BSP 0087: 0087	0086	002a	0009 -->
+<!-- BSP 0088: 0088	0089	008d	ffff -->
+<!-- BSP 0089: 0089	008b	008b	0135 -->
+<!-- BSP 008a: 008a	ffff	ffff	ffff -->
+<!-- BSP 008b: 008b	ffff	ffff	ffff -->
+<!-- BSP 008c: 008c	008b	ffff	0036 -->
+<!-- BSP 008d: 008d	008b	0089	008a -->
+<!-- BSP 008e: 008e	008d	0088	ffff -->
+<!-- BSP 008f: 008f	008e	0144	0004 -->
+<!-- BSP 0090: 0090	ffff	ffff	ffff -->
+<!-- BSP 0091: 0091	0090	ffff	0090 -->
+<!-- BSP 0092: 0092	0093	015b	0096 -->
+<!-- BSP 0093: 0093	0094	0099	ffff -->
+<!-- BSP 0094: 0094	0095	0097	0098 -->
+<!-- BSP 0095: 0095	ffff	ffff	ffff -->
+<!-- BSP 0096: 0096	ffff	ffff	ffff -->
+<!-- BSP 0097: 0097	0095	ffff	0095 -->
+<!-- BSP 0098: 0098	ffff	ffff	ffff -->
+<!-- BSP 0099: 0099	0098	0094	ffff -->
+<!-- BSP 009a: 009a	009c	009c	ffff -->
+<!-- BSP 009b: 009b	009c	009d	0173 -->
+<!-- BSP 009c: 009c	ffff	ffff	ffff -->
+<!-- BSP 009d: 009d	009c	009a	ffff -->
+<!-- BSP 009e: 009e	009f	00a1	00a8 -->
+<!-- BSP 009f: 009f	00a0	00a0	ffff -->
+<!-- BSP 00a0: 00a0	ffff	ffff	ffff -->
+<!-- BSP 00a1: 00a1	00a0	009f	ffff -->
+<!-- BSP 00a2: 00a2	00a3	00a5	ffff -->
+<!-- BSP 00a3: 00a3	00a4	00a4	ffff -->
+<!-- BSP 00a4: 00a4	ffff	ffff	ffff -->
+<!-- BSP 00a5: 00a5	00a4	00a3	ffff -->
+<!-- BSP 00a6: 00a6	00a7	00a7	ffff -->
+<!-- BSP 00a7: 00a7	ffff	ffff	ffff -->
+<!-- BSP 00a8: 00a8	00a7	00a6	00a2 -->
+<!-- BSP 00a9: 00a9	00a8	009e	005a -->
+<!-- BSP 00aa: 00aa	00ab	00ad	ffff -->
+<!-- BSP 00ab: 00ab	00ac	00ac	ffff -->
+<!-- BSP 00ac: 00ac	ffff	ffff	ffff -->
+<!-- BSP 00ad: 00ad	00ac	00ab	ffff -->
+<!-- BSP 00ae: 00ae	00af	00b1	ffff -->
+<!-- BSP 00af: 00af	ffff	ffff	ffff -->
+<!-- BSP 00b0: 00b0	00af	00ae	0059 -->
+<!-- BSP 00b1: 00b1	00af	00af	ffff -->
+<!-- BSP 00b2: 00b2	00b3	00d5	0119 -->
+<!-- BSP 00b3: 00b3	00b4	0101	00b9 -->
+<!-- BSP 00b4: 00b4	00b5	00b5	ffff -->
+<!-- BSP 00b5: 00b5	ffff	ffff	ffff -->
+<!-- BSP 00b6: 00b6	ffff	ffff	ffff -->
+<!-- BSP 00b7: 00b7	00b8	00b8	00c7 -->
+<!-- BSP 00b8: 00b8	00b6	00b3	0006 -->
+<!-- BSP 00b9: 00b9	00b6	00b6	ffff -->
+<!-- BSP 00ba: 00ba	00bb	00c1	0117 -->
+<!-- BSP 00bb: 00bb	00bc	00c0	ffff -->
+<!-- BSP 00bc: 00bc	00bd	00bd	00bf -->
+<!-- BSP 00bd: 00bd	ffff	ffff	ffff -->
+<!-- BSP 00be: 00be	ffff	ffff	ffff -->
+<!-- BSP 00bf: 00bf	00be	00be	ffff -->
+<!-- BSP 00c0: 00c0	00bf	00bc	ffff -->
+<!-- BSP 00c1: 00c1	00c0	00bb	ffff -->
+<!-- BSP 00c2: 00c2	00c3	00c5	ffff -->
+<!-- BSP 00c3: 00c3	ffff	ffff	ffff -->
+<!-- BSP 00c4: 00c4	00c3	00c2	006b -->
+<!-- BSP 00c5: 00c5	00c3	00c3	ffff -->
+<!-- BSP 00c6: 00c6	00c8	00c9	ffff -->
+<!-- BSP 00c7: 00c7	ffff	ffff	ffff -->
+<!-- BSP 00c8: 00c8	ffff	ffff	ffff -->
+<!-- BSP 00c9: 00c9	00c8	00c8	ffff -->
+<!-- BSP 00ca: 00ca	00cb	00cb	ffff -->
+<!-- BSP 00cb: 00cb	ffff	ffff	ffff -->
+<!-- BSP 00cc: 00cc	00cb	00ca	ffff -->
+<!-- BSP 00cd: 00cd	00cc	007c	ffff -->
+<!-- BSP 00ce: 00ce	00cf	00d1	ffff -->
+<!-- BSP 00cf: 00cf	ffff	ffff	ffff -->
+<!-- BSP 00d0: 00d0	00cf	00ce	0069 -->
+<!-- BSP 00d1: 00d1	00cf	00cf	ffff -->
+<!-- BSP 00d2: 00d2	00d4	00d4	ffff -->
+<!-- BSP 00d3: 00d3	00d1	ffff	0024 -->
+<!-- BSP 00d4: 00d4	ffff	ffff	ffff -->
+<!-- BSP 00d5: 00d5	00d4	00d2	00b7 -->
+<!-- BSP 00d6: 00d6	00d7	00d7	ffff -->
+<!-- BSP 00d7: 00d7	ffff	ffff	ffff -->
+<!-- BSP 00d8: 00d8	00d7	00d6	ffff -->
+<!-- BSP 00d9: 00d9	00da	ffff	00db -->
+<!-- BSP 00da: 00da	ffff	ffff	ffff -->
+<!-- BSP 00db: 00db	00da	00da	ffff -->
+<!-- BSP 00dc: 00dc	00db	001c	ffff -->
+<!-- BSP 00dd: 00dd	00db	00d9	ffff -->
+<!-- BSP 00de: 00de	00dd	00df	001b -->
+<!-- BSP 00df: 00df	00e1	00e1	ffff -->
+<!-- BSP 00e0: 00e0	00df	0017	ffff -->
+<!-- BSP 00e1: 00e1	ffff	ffff	ffff -->
+<!-- BSP 00e2: 00e2	00e3	00e5	ffff -->
+<!-- BSP 00e3: 00e3	00e4	00e4	ffff -->
+<!-- BSP 00e4: 00e4	ffff	ffff	ffff -->
+<!-- BSP 00e5: 00e5	00e4	00e3	ffff -->
+<!-- BSP 00e6: 00e6	00e7	010a	0107 -->
+<!-- BSP 00e7: 00e7	00ee	0106	0109 -->
+<!-- BSP 00e8: 00e8	00e9	00ea	ffff -->
+<!-- BSP 00e9: 00e9	ffff	ffff	ffff -->
+<!-- BSP 00ea: 00ea	00e9	00e9	ffff -->
+<!-- BSP 00eb: 00eb	00ec	00ed	ffff -->
+<!-- BSP 00ec: 00ec	ffff	ffff	ffff -->
+<!-- BSP 00ed: 00ed	00ec	00ec	ffff -->
+<!-- BSP 00ee: 00ee	00ef	00ef	ffff -->
+<!-- BSP 00ef: 00ef	ffff	ffff	ffff -->
+<!-- BSP 00f0: 00f0	00f1	0157	ffff -->
+<!-- BSP 00f1: 00f1	00f2	0139	ffff -->
+<!-- BSP 00f2: 00f2	00f3	00f3	ffff -->
+<!-- BSP 00f3: 00f3	ffff	ffff	ffff -->
+<!-- BSP 00f4: 00f4	00f5	00f7	ffff -->
+<!-- BSP 00f5: 00f5	00f6	00f6	ffff -->
+<!-- BSP 00f6: 00f6	ffff	ffff	ffff -->
+<!-- BSP 00f7: 00f7	00f6	00f5	ffff -->
+<!-- BSP 00f8: 00f8	00f9	0175	ffff -->
+<!-- BSP 00f9: 00f9	00fa	00fb	ffff -->
+<!-- BSP 00fa: 00fa	ffff	ffff	ffff -->
+<!-- BSP 00fb: 00fb	00fa	00fa	ffff -->
+<!-- BSP 00fc: 00fc	0126	ffff	0127 -->
+<!-- BSP 00fd: 00fd	0132	ffff	0133 -->
+<!-- BSP 00fe: 00fe	00ea	00e8	ffff -->
+<!-- BSP 00ff: 00ff	ffff	ffff	ffff -->
+<!-- BSP 0100: 0100	ffff	ffff	ffff -->
+<!-- BSP 0101: 0101	00b5	00b4	ffff -->
+<!-- BSP 0102: 0102	0054	0054	ffff -->
+<!-- BSP 0103: 0103	0104	0105	ffff -->
+<!-- BSP 0104: 0104	ffff	ffff	ffff -->
+<!-- BSP 0105: 0105	0104	0104	ffff -->
+<!-- BSP 0106: 0106	00ef	00ee	ffff -->
+<!-- BSP 0107: 0107	ffff	ffff	ffff -->
+<!-- BSP 0108: 0108	ffff	ffff	ffff -->
+<!-- BSP 0109: 0109	0108	0108	ffff -->
+<!-- BSP 010a: 010a	0109	00e7	00eb -->
+<!-- BSP 010b: 010b	010a	0061	00e6 -->
+<!-- BSP 010c: 010c	0014	000e	ffff -->
+<!-- BSP 010d: 010d	0013	0011	ffff -->
+<!-- BSP 010e: 010e	ffff	ffff	ffff -->
+<!-- BSP 010f: 010f	010e	010e	ffff -->
+<!-- BSP 0110: 0110	ffff	ffff	ffff -->
+<!-- BSP 0111: 0111	0110	0110	ffff -->
+<!-- BSP 0112: 0112	0113	ffff	0115 -->
+<!-- BSP 0113: 0113	0114	ffff	0114 -->
+<!-- BSP 0114: 0114	ffff	ffff	ffff -->
+<!-- BSP 0115: 0115	0114	ffff	0113 -->
+<!-- BSP 0116: 0116	0115	0068	0112 -->
+<!-- BSP 0117: 0117	ffff	ffff	ffff -->
+<!-- BSP 0118: 0118	011a	011a	ffff -->
+<!-- BSP 0119: 0119	ffff	0150	ffff -->
+<!-- BSP 011a: 011a	ffff	ffff	ffff -->
+<!-- BSP 011b: 011b	ffff	ffff	ffff -->
+<!-- BSP 011c: 011c	011b	ffff	0025 -->
+<!-- BSP 011d: 011d	0121	017b	ffff -->
+<!-- BSP 011e: 011e	ffff	ffff	ffff -->
+<!-- BSP 011f: 011f	011e	ffff	011e -->
+<!-- BSP 0120: 0120	011f	011d	0026 -->
+<!-- BSP 0121: 0121	ffff	ffff	ffff -->
+<!-- BSP 0122: 0122	0123	ffff	0125 -->
+<!-- BSP 0123: 0123	0124	ffff	0124 -->
+<!-- BSP 0124: 0124	ffff	ffff	ffff -->
+<!-- BSP 0125: 0125	0124	ffff	0123 -->
+<!-- BSP 0126: 0126	ffff	ffff	ffff -->
+<!-- BSP 0127: 0127	0126	ffff	0126 -->
+<!-- BSP 0128: 0128	0127	0122	00fc -->
+<!-- BSP 0129: 0129	ffff	ffff	ffff -->
+<!-- BSP 012a: 012a	0129	ffff	0129 -->
+<!-- BSP 012b: 012b	012a	ffff	0051 -->
+<!-- BSP 012c: 012c	012d	ffff	012d -->
+<!-- BSP 012d: 012d	ffff	ffff	ffff -->
+<!-- BSP 012e: 012e	012d	011b	012c -->
+<!-- BSP 012f: 012f	0117	00ba	0001 -->
+<!-- BSP 0130: 0130	ffff	ffff	ffff -->
+<!-- BSP 0131: 0131	ffff	ffff	ffff -->
+<!-- BSP 0132: 0132	ffff	ffff	ffff -->
+<!-- BSP 0133: 0133	0132	0132	ffff -->
+<!-- BSP 0134: 0134	0133	00fd	ffff -->
+<!-- BSP 0135: 0135	00f7	00f4	ffff -->
+<!-- BSP 0136: 0136	010b	004d	ffff -->
+<!-- BSP 0137: 0137	ffff	ffff	ffff -->
+<!-- BSP 0138: 0138	00f3	00f0	ffff -->
+<!-- BSP 0139: 0139	00f3	00f2	ffff -->
+<!-- BSP 013a: 013a	004e	004e	0023 -->
+<!-- BSP 013b: 013b	ffff	ffff	ffff -->
+<!-- BSP 013c: 013c	013d	ffff	013d -->
+<!-- BSP 013d: 013d	ffff	ffff	ffff -->
+<!-- BSP 013e: 013e	ffff	ffff	ffff -->
+<!-- BSP 013f: 013f	ffff	ffff	ffff -->
+<!-- BSP 0140: 0140	013e	00aa	013e -->
+<!-- BSP 0141: 0141	013f	ffff	0040 -->
+<!-- BSP 0142: 0142	0141	0046	003f -->
+<!-- BSP 0143: 0143	0130	0002	ffff -->
+<!-- BSP 0144: 0144	0153	0131	0154 -->
+<!-- BSP 0145: 0145	0081	ffff	017d -->
+<!-- BSP 0146: 0146	0130	0080	ffff -->
+<!-- BSP 0147: 0147	0079	0071	ffff -->
+<!-- BSP 0148: 0148	0147	0003	001a -->
+<!-- BSP 0149: 0149	0147	006f	ffff -->
+<!-- BSP 014a: 014a	00e5	ffff	00e2 -->
+<!-- BSP 014b: 014b	014a	0034	002d -->
+<!-- BSP 014c: 014c	ffff	ffff	ffff -->
+<!-- BSP 014d: 014d	ffff	ffff	ffff -->
+<!-- BSP 014e: 014e	014d	014d	0007 -->
+<!-- BSP 014f: 014f	0136	ffff	0022 -->
+<!-- BSP 0150: 0150	ffff	ffff	ffff -->
+<!-- BSP 0151: 0151	014f	ffff	004b -->
+<!-- BSP 0152: 0152	0151	00b2	0029 -->
+<!-- BSP 0153: 0153	ffff	ffff	ffff -->
+<!-- BSP 0154: 0154	0153	ffff	0153 -->
+<!-- BSP 0155: 0155	ffff	ffff	ffff -->
+<!-- BSP 0156: 0156	014f	0032	ffff -->
+<!-- BSP 0157: 0157	0139	00f1	ffff -->
+<!-- BSP 0158: 0158	0159	ffff	0159 -->
+<!-- BSP 0159: 0159	ffff	ffff	ffff -->
+<!-- BSP 015a: 015a	0159	0158	0137 -->
+<!-- BSP 015b: 015b	015a	0093	0043 -->
+<!-- BSP 015c: 015c	013d	003c	0044 -->
+<!-- BSP 015d: 015d	013d	013c	013b -->
+<!-- BSP 015e: 015e	ffff	ffff	ffff -->
+<!-- BSP 015f: 015f	015e	015e	005d -->
+<!-- BSP 0160: 0160	00fb	00f8	002b -->
+<!-- BSP 0161: 0161	015f	0039	0049 -->
+<!-- BSP 0162: 0162	ffff	ffff	ffff -->
+<!-- BSP 0163: 0163	ffff	ffff	ffff -->
+<!-- BSP 0164: 0164	ffff	ffff	ffff -->
+<!-- BSP 0165: 0165	0164	009b	003e -->
+<!-- BSP 0166: 0166	0165	004f	0033 -->
+<!-- BSP 0167: 0167	0165	0038	ffff -->
+<!-- BSP 0168: 0168	014b	0035	002f -->
+<!-- BSP 0169: 0169	0066	ffff	0064 -->
+<!-- BSP 016a: 016a	ffff	ffff	ffff -->
+<!-- BSP 016b: 016b	016a	016a	ffff -->
+<!-- BSP 016c: 016c	ffff	ffff	ffff -->
+<!-- BSP 016d: 016d	ffff	ffff	ffff -->
+<!-- BSP 016e: 016e	016f	ffff	016f -->
+<!-- BSP 016f: 016f	ffff	ffff	ffff -->
+<!-- BSP 0170: 0170	0179	0027	017a -->
+<!-- BSP 0171: 0171	016f	016e	ffff -->
+<!-- BSP 0172: 0172	0105	ffff	0103 -->
+<!-- BSP 0173: 0173	0164	0162	0164 -->
+<!-- BSP 0174: 0174	016c	0030	016c -->
+<!-- BSP 0175: 0175	00fb	00f9	ffff -->
+<!-- BSP 0176: 0176	ffff	ffff	ffff -->
+<!-- BSP 0177: 0177	0176	0041	0056 -->
+<!-- BSP 0178: 0178	0176	0048	003a -->
+<!-- BSP 0179: 016e	016d	ffff	016d -->
+<!-- BSP 017a: 001c	016d	0179	ffff -->
+<!-- BSP 017b: 0123	0121	ffff	0121 -->
+<!-- BSP 017c: 012c	011a	00c6	0118 -->
+<!-- BSP 017d: 0080	0081	ffff	0081 -->
+</svg>

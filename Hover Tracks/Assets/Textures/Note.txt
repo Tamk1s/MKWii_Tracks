@@ -1,0 +1,8 @@
+This folder contains various subfolders for various game/level textures, most ripped from Hover! game.
+
+"small"	- Textures ripped from Hover small.maz level (Credits/Easter egg). Also modified textures
+"Extra"	- Textures ripped from Arena Rumble for MTM64 from Project64 LemD3D plugin. Most unused...
+"Game"	- Some source textures from Hover/Windows 95. Used for some assets (powerup icons, green/red/blue shell dashboards, game's # digits, boostrap, etc)
+"maze1"	- Textures ripped from Hover maze1.maz level (Castle). Also modified textures, and BG split into 256x256 px chunks
+"maze2"	- Textures ripped from Hover maze2.maz level (Metro). Also modified textures, and BG/floor split into 256x256 px chunks
+"maze3"	- Textures ripped from Hover maze3.maz level (Sewers). Also modified textures

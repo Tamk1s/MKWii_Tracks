@@ -1,0 +1,2 @@
+Extract item_killer.brres
+from original Common.szs (for reference)

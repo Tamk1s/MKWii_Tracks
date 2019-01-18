@@ -1,0 +1,132 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'gesso.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl leg_d2
+Ka 1.000000 0.196078 0.196078
+Kd 1.000000 0.196078 0.196078
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_d2.PNG
+
+newmtl leg_d1
+Ka 1.000000 0.396078 0.396078
+Kd 1.000000 0.396078 0.396078
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_d1.PNG
+
+newmtl root_end_2
+Ka 0.886275 0.886275 0.886275
+Kd 0.886275 0.886275 0.886275
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/root_end_2.PNG
+
+newmtl skl_root_2
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/skl_root_2.PNG
+
+newmtl root_end1
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/root_end1.PNG
+
+newmtl skl_root_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/skl_root_1.PNG
+
+newmtl root_end_3
+Ka 1.000000 0.800000 0.000000
+Kd 1.000000 0.800000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/root_end_3.PNG
+
+newmtl arm_l
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/arm_l.PNG
+
+newmtl arm_r
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/arm_r.PNG
+
+newmtl leg_c1
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_c1.PNG
+
+newmtl leg_c2
+Ka 1.000000 0.749020 0.000000
+Kd 1.000000 0.749020 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_c2.PNG
+
+newmtl leg_b1
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_b1.PNG
+
+newmtl leg_b2
+Ka 1.000000 0.749020 0.000000
+Kd 1.000000 0.749020 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_b2.PNG
+
+newmtl leg_a1
+Ka 1.000000 0.800000 0.800000
+Kd 1.000000 0.800000 0.800000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_a1.PNG
+
+newmtl leg_a2
+Ka 1.000000 0.600000 0.600000
+Kd 1.000000 0.600000 0.600000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd gesso_Textures/leg_a2.PNG
+
+#EOF

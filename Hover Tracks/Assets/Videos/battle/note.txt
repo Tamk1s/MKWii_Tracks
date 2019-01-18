@@ -1,0 +1,4 @@
+Folder breakdown:
+
+"battle_cup_select"	- "thp/battle/battle_cup_select.thp" files
+"battle_retro"		- "thp/battle/battle_retro.thp" files

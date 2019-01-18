@@ -1,0 +1,1 @@
+VRCorn's mipmapping (if any) is handled exactly like with the Course Graphics; see the note in the "Graphics\Course"folder

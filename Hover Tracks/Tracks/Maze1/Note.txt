@@ -1,0 +1,5 @@
+Track folder breakdown:
+
+"Input"	- Contains Google SKetchup SKP files, MS Excel spreadsheet for KMP, images for route schematics
+"Source" - For Hover rips, .rip file of NinjaRipper extracted course from HoverRenderer, 3DS .max conversion of .rip, Lightwave obj/mtl pair conversion of .max
+"Output" - Folders for the graphics, KCL, and KMP for track (see more notes). The output brres, KCL, and KMP files will be used in "Hover Tracks\Payload" folder for compiling the modified track archives

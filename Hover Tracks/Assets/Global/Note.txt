@@ -1,0 +1,9 @@
+This folder contains some global assets for creating minimaps:
+
+"Dark.png"	- Dark texture for monochrome minimap color
+"Light.png"	- Light texture for monochrome minimap color
+
+Read http://wiki.tockdom.com/wiki/Minimap for bone info
+"map.bone"	- Dummy bone for root map bone
+"posLD.bone"	- Dummy child bone for posLD for map
+"posRU.bone"	- Dummy child bone for posRU for map

@@ -1,0 +1,44 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'pow_bloc.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.192157 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl _Color_M09_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pow_bloc_Textures/_Color_M09_.PNG
+
+newmtl _Metal_Aluminum_Anodized_
+Ka 0.768627 0.000000 0.011765
+Kd 0.768627 0.000000 0.011765
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pow_bloc_Textures/_Metal_Aluminum_Anodized_.PNG
+
+newmtl _Metal_Rough_
+Ka 0.600000 0.615686 0.627451
+Kd 0.600000 0.615686 0.627451
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pow_bloc_Textures/_Metal_Rough_.PNG
+
+newmtl _Color_A05_
+Ka 1.000000 0.000000 0.000000
+Kd 1.000000 0.000000 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pow_bloc_Textures/_Color_A05_.PNG
+
+#EOF

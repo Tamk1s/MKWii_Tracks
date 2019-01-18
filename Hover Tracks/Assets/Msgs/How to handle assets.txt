@@ -1,0 +1,7 @@
+This folder contains new global game textures, new bootstrap graphics, and updated BMG text files, among other stuff
+
+1. Goto Source folder, extract appropriate source .szs archive files from game into there. (Read SZSNotes.txt)
+2. Run extract.bat to extract source szs archives into Input folder. This folder also contains the modified input .png files for modified textures, and bmg.txt files for new messages
+3. Run Make.bat to copy assets into appropriate szs archives. This will further run "strap.bat" (copies new assets for bootstrap), and "compress.bat" (recompresses folders into new .szs with new assets into "Output" folder).
+
+Anytime you modify an asset, redo steps 2-3!

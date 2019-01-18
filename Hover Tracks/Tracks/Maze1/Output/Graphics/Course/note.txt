@@ -1,0 +1,8 @@
+Using irfanview, batch vflip all png images in Textures folder, so that they are upside down, and resave as png
+I save my batch converted images at C:\Temp2\ usually.
+
+Run RepText.bat to copy all vflip'd images from C:\Temp2 to Textures folder, and copy the transparent pngs (already vflip'd+transparency) at this folder into there.
+
+For applying mipmaps, read note in "Mipmap" folder
+
+

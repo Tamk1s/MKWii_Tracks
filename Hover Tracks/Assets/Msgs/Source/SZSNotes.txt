@@ -1,0 +1,24 @@
+Place the following SZS files here from MKWii NTSC ISO:
+
+[ISO]/Scene/UI/Award.szs
+[ISO]/Scene/UI/Award_U.szs
+[ISO]/Scene/UI/Channel.szs
+[ISO]/Scene/UI/Channel_U.szs
+[ISO]/Boot/Strap/us/English.szs
+[ISO]/Scene/UI/Event.szs
+[ISO]/Scene/UI/Event_U.szs
+[ISO]/Scene/UI/Font.szs
+[ISO]/Scene/UI/Globe.szs
+[ISO]/Scene/UI/Globe_U.szs
+[ISO]/Scene/UI/MenuMulti.szs
+[ISO]/Scene/UI/MenuMulti_U.szs
+[ISO]/Scene/UI/MenuOther.szs
+[ISO]/Scene/UI/MenuOther_U.szs
+[ISO]/Scene/UI/MenuSingle.szs
+[ISO]/Scene/UI/MenuSingle_U.szs
+[ISO]/Scene/UI/Present.szs
+[ISO]/Scene/UI/Present_U.szs
+[ISO]/Scene/UI/Race.szs
+[ISO]/Scene/UI/Race_U.szs
+[ISO]/Scene/UI/Title.szs
+[ISO]/Scene/UI/Title_U.szs

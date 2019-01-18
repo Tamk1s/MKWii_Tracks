@@ -1,0 +1,16 @@
+This folder is used for generating the track's KCL.
+
+How to handle it:
+
+1. Export KCL collision model to obj/mtl model pair
+2. If creating KCL for first time, run "kcl_cff.bat" to autogenerate .flag file.
+
+3. Modify .flag file as appropriate for KCL flags (most textures are named indicating main collision flag used)
+
+4. Run "kcl_make.bat" . This will convert the .flag file into course.kcl
+
+5. Run "kcl_fix.bat" . This will run unbeancorner.exe and patch beancorners
+
+   (http://wiki.tockdom.com/wiki/Un-beancorner) 
+   PLEASE create file symlink for unbeancorner.exe into "C:\Windows" to use from command prompt!
+   Patched KCL file will be named new-course.kcl; this is the file that will be used for the track payload

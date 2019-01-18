@@ -1,0 +1,28 @@
+Folder breakdown:
+
+"[This folder root]"	- KMP assets
+"Graphics"		- More folders for Graphics (see note)
+"KCL"			- KCL collision
+
+
+KMP notes:
+
+For enemy routes, I use Battle Course styled dispatch points with auto-routing
+(http://wiki.tockdom.com/wiki/Creating_enemy_routes_of_battle_arenas_with_Wiimm%27s_tools#Edit_the_ENPT_section)
+
+In KMP Cloud for course.kmp, click "Enemy Routes", and then set stuff as follows:
+
+Dispatch Points:
+*Last1-Last6 = $FF
+*Next1=$00, Next2-Next6=$FF
+
+All other non-dispatch routes:
+*Last1=$00, Last2-Last6=$FF
+*Next1=$00, Next2-Next6=$FF
+
+
+To complete auto-routing from course.kmp:
+1. Run "Extract.bat". This will convert "course.kmp" into a txt representation, into "orig.kmp.txt" and "new.kmp.txt"
+2. Do the steps in the above WIKI link in "new.kmp.txt", and save. Pay attention to notes in "1WayNote.txt" files! This indicates which routes are 1-way (if any)
+3. Run "Compile.bat". This will convert "new.kmp.txt" (with auto-routing now complete) into "new-course.kmp". This file will be used for the new tracks
+4. Run "Verify.bat". This will convert "new-course.kmp" into a 3D OBJ/MTL pair (verify.obj/.mlt) model. Load this in a Google Sketchup to verify the route paths.

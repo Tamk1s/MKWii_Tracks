@@ -1,0 +1,9 @@
+If model is exploded fully to deepest level,
+Harry Potter effect occurs. Also, the gfx BRRES created afterwards
+is unreadable by BrawlBox for Harry Potter effect fix.
+
+Workaround:
+*Remove VRCorn group, and offest angle group
+*Explode main course group.
+*Remove all ref lines for paths
+*DO NOT explode Decor groupings! This prevents Harry Potter effect

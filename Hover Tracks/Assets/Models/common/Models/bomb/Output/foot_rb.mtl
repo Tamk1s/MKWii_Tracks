@@ -1,0 +1,20 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'foot_rb.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Stone_Granite_BluePearl_c
+Ka 0.278431 0.282353 0.368627
+Kd 0.278431 0.282353 0.368627
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd foot_rb_Textures/Stone_Granite_BluePearl_c.PNG
+
+#EOF

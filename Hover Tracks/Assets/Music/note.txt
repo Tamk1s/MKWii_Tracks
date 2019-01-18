@@ -1,0 +1,12 @@
+This folder handles BRSAR sfx/jingles, and BRSTM music.
+
+Folder breakdown:
+
+"Source"	- Original source audio files, untouched
+"Input"		- Formatted files, ready to use for converting into BRSTM or into a SFX slot in the BRSAR
+"Output"	- Output BRSAR (new sfx, BRSTM lengths patched), new BRSTM files
+
+Tools needed for this folder:
+BrawlBox (WAV->BRSTM conversion, importing WAV into GRP SFX slots)
+Audacity (Project files)
+Patch that BRSAR! (http://wiki.tockdom.com/wiki/Patch_that_BRSAR!)

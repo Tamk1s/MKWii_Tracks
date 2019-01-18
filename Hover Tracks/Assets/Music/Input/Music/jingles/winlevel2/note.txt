@@ -1,0 +1,4 @@
+"winlevel2" handles the following:
+o_FanfareBTdraw_32.brstm
+o_FanfareMiwin_32.brstm
+o_FanfreTA1st_32.brstm

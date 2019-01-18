@@ -1,0 +1,2 @@
+Extract bomb.brres
+from original Common.szs (for reference)

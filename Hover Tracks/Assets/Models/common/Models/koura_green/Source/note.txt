@@ -1,0 +1,2 @@
+Extract koura_green.brres
+from original Common.szs (for reference)

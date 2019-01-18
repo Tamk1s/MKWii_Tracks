@@ -1,0 +1,20 @@
+This folder contains original WAV/MIDI files, used for Input folder.
+These are the source audio material.
+
+You should also extract the original revo_kart.brsar file here too from MKWii DVD
+
+Folder breakdown:
+
+"jingle_components\"			- Folder contains jingle components (intro, meat). For non-track songs (winning, losing, course intro, etc), non-BRSTM jingles (Invin, Big mushroom, hurry up jingle, etc), some sfx slots
+"jingle_components\Windows snds"	- Windows OS sounds
+"jingle_components\cry-w95.xm"		- Portion of WINDOWS!!!!!! song, used for Big Mushroom jingle
+"jingle_components\Hover"		- Hover jingles (Win, lose, etc)
+"jingle_components\W95 Remixes"		- Various remixes of Windows 95 jingle. Used for most non-track songs (Winning, losing, etc)
+"jingle_components\W95 Sampler Disc"	- Various songs from the windows 95 Sampler Disc. Used for meat of some non-track songs (Winning, losing, etc)
+
+"levels\"				- Non-MIDI based track songs. (Arena Rumble, Hover Credits song)
+
+"MIDI_renders\"				- Contains MIDI files, rendered to WAV for some songs/jingles 
+"MIDI_renders\ChoriumRevA.SF2"		- Soundfont used to render to wav. Use with XMPlay for rendering (https://www.un4seen.com/)
+"MIDI_renders\jingles"			- Parts of jingles rendered from MIDI. (GP 2nd-6th place jingle, hurry up, Invincibility)
+"MIDI_renders\level_songs"		- The original MIDIs from Hover (Maze 1, Maze 2, Maze 3)

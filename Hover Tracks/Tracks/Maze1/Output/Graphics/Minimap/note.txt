@@ -1,0 +1,8 @@
+Run "autocenter.bat" to patch the map_model.brress to be autocentered.
+(http://wiki.tockdom.com/wiki/Minimap#Step_3:_Fixing_positions_with_Wiimms_SZS_Tools)
+
+This model should also have the map, posLD, posRU bones inserted with brawlbox.
+(http://wiki.tockdom.com/wiki/Minimap#Additional.2FAdvanced_Topics)
+and use the light/dark textures for monochrome minimap
+
+(All minimap monochrome assets at "Hover Tracks\Assets\Global")

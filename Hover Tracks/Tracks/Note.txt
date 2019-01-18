@@ -1,0 +1,12 @@
+This folder contains the assets used to patch the original track slot's with the new levels
+(Track, Minimap, and VRCorn graphics; KCL collision, KMP objpos)
+
+Folders:
+
+"Extra"	- MTM64 Arena Rumble
+"Maze1"	- Hover Maze 1 (Castle)
+"Maze2"	- Hover Maze 2 (Metro) 
+"Maze3"	- Hover Maze 3 (Sewers)
+"Small"	- Hover Credits maze
+
+Please see notes in "Maze1" folder to see how the others are setup

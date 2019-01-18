@@ -1,0 +1,4 @@
+MAIN.wav covers the following BRSTM songs:
+"o_hyousyou_lose.brstm"
+"o_FanfareGPdame_32.brstm"
+"o_FanfareGPdame_only32.brstm"

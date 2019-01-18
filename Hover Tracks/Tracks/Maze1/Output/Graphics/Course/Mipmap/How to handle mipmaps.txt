@@ -1,0 +1,14 @@
+This folder allows the creation of mipmaps, and patching the "course_model.brres" into "new_course_model.brres" with the mipmaps
+
+Usage:
+1. Run "extract.bat" to extract the contents of course_model.brres
+2. Go into "course_model.d\Textures(NW4R)" directory, take note of the filenames. (Also see Fnames.txt for the filenames)
+3. Copy and rename the textures from "..\textures\ folder" as appropriately in step 2 into "Input" folder
+4. Run "make.bat" . This will run:
+5. "mipmap.bat" . This mipmap-ifies all of the textures from "Input" folder into "Output"
+   PLEASE NOTE! Hover Pack was created for Wiimms SZS Tools v1.61a r7601; newer versions have changed how the Mipmap commands work.
+   Mipmap.bat to be fixed for compatiblity later...
+
+6. The mipmap files will be copied from "Output" to "course_model.d\Textures(NW4R)\"
+7. "Compress.bat" is run to recompess the course BRRES into "..\new_course_model.brres"
+   This file is used for the track payload

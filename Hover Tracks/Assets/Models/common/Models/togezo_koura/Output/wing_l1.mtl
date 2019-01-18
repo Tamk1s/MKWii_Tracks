@@ -1,0 +1,28 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'wing_l1.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.090196 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl _Asphalt_New_l1
+Ka 0.262745 0.235294 0.243137
+Kd 0.262745 0.235294 0.243137
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd wing_l1_Textures/_Asphalt_New_l1.PNG
+
+newmtl _Tile_Hexagon_White_l1
+Ka 0.270588 0.243137 0.243137
+Kd 0.270588 0.243137 0.243137
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd wing_l1_Textures/_Tile_Hexagon_White_l1.PNG
+
+#EOF

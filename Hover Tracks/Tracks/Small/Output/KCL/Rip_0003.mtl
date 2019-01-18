@@ -1,0 +1,36 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Rip_0003.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 1.000000 0.031373
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Metal_Aluminum_Anodized
+Ka 0.250980 0.152941 0.149020
+Kd 0.250980 0.152941 0.149020
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Rip_0003_Textures/Metal_Aluminum_Anodized.PNG
+
+newmtl Metal_Aluminum_Anodized1
+Ka 0.290196 0.137255 0.168627
+Kd 0.290196 0.137255 0.168627
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Rip_0003_Textures/Metal_Aluminum_Anodized1.PNG
+
+newmtl Color_F041
+Ka 0.584314 0.600000 0.592157
+Kd 0.584314 0.600000 0.592157
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Rip_0003_Textures/Color_F041.PNG
+
+#EOF

@@ -1,0 +1,7 @@
+"Rip_0004-SKP--Default_Material"
+
+"Rip_0004-SKP--Color_C05"
+"Rip_0004-SKP--Color_F08"
+"Rip_0004-SKP--Color_F021"
+"Rip_0004-SKP--Color_G02"
+"Rip_0004-SKP--Color_K07"

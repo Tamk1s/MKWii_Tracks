@@ -1,0 +1,6 @@
+This folder contains the various graphical assets.
+
+Folder breakdown:
+"Course"	- Main course graphics
+"Minimap"	- Minimap
+"Vrcorn"	- VRCorn

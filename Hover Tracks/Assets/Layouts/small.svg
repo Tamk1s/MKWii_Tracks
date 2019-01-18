@@ -1,0 +1,272 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='307.2 204.8 460.8 540.4' preserveAspectRatio='xMidYMid'>
+<defs>
+	            <style type='text/css'><![CDATA[
+		            line {
+			            stroke: rgb(255,0,0);
+			            stroke-width: 2;
+			            /*marker-end: url(#tail);
+			            marker-start: url(#head);*/
+		            }
+                    line:hover {
+			            stroke: rgb(255,255,255);
+                        stroke-width: 4;
+			            marker-end: url(#tail);
+			            marker-start: url(#head);
+                    }
+                    line.unwall {
+                        stroke: rgb(128,128,128);
+                    }
+                    line.decal {
+                        stroke: rgb(0,255,0);
+                    }
+                    line.step {
+                        stroke: rgb(255,255,0);
+                    }
+		            g {
+			            fill: rgb(255,255,255);
+			            stroke: rgb(255,255,255);
+		            }
+                    g line {
+                        marker-start: none;
+                        marker-end: none;
+                    }
+                    g.location-HUMAN,
+                    g.location-HUMAN line {
+                        fill: rgb(255,255,255);
+                        stroke: rgb(255,255,255);
+                    }
+                    g.location-ROBOT,
+                    g.location-ROBOT line {
+                        fill: rgb(255,0,0);
+                        stroke: rgb(255,0,0);
+                    }
+                    g.location-FLAG,
+                    g.location-FLAG line {
+                        fill: rgb(255,255,0);
+                        stroke: rgb(255,255,0);
+                    }
+                    g.location-POD,
+                    g.location-POD line {
+                        fill: rgb(0,255,0);
+                        stroke: rgb(0,255,0);
+                    }
+                    g.location-BEACON,
+                    g.location-BEACON line {
+                        fill: rgb(0,255,255);
+                        stroke: rgb(0,255,255);
+                    }
+                    g>text {
+                        fill: transparent;
+                        stroke: transparent;
+                    }
+                    g:hover>text {
+                        stroke: rgb(255,255,255);
+                    }
+                    g.location line {
+                        stroke: rgb(255,255,255);
+                    }
+	            ]]></style>
+	            <marker id='head' orient='auto' markerWidth='1' markerHeight='4' refX='0' refY='4'>
+		            <line x1='0' y1='0' x2='0' y2='4' stroke='blue'/>
+	            </marker>
+	            <marker id='tail' orient='auto' markerWidth='4' markerHeight='8' refX='4' refY='4'>
+		            <path d='M0,0 V8 L4,4 Z' fill='blue' />
+	            </marker>
+                <line id='facing-East'  stroke='white' x1='0' y1='0' x2='20'  y2='0'    />
+                <line id='facing-South' stroke='white' x1='0' y1='0' x2='0'    y2='20' />
+                <line id='facing-West'  stroke='white' x1='0' y1='0' x2='-20' y2='0'    />
+                <line id='facing-North' stroke='white' x1='0' y1='0' x2='0'    y2='-20'  />
+            </defs>
+            
+<line x1='307.2' y1='204.8' x2='460.8' y2='540.4' style='stroke:rgb(0,0,255);stroke-width:1'/>>
+<rect x='307.2' y='204.8' width='153.6' height='335.6' style='fill:rgb(0,0,0);stroke:rgb(0,0,255);stroke-width:1'/>>
+
+                <foreignObject x='157.2' y='205.8' width='150' height='300'>
+	                <p style='text-color:black;background:white;border:solid 1px blue;' xmlns='http://www.w3.org/1999/xhtml'>
+		                Display statics:<br />
+		                <label><input type='checkbox' checked='checked' id='showwalls' /> Walls</label><br />
+		                <label><input type='checkbox' checked='checked' id='showunwalls' /> Unwalls</label><br />
+		                <label><input type='checkbox' checked='checked' id='showdecals' /> Decals</label><br />
+		                <label><input type='checkbox' checked='checked' id='showsteps' /> Steps</label><br />
+		                Display locations:<br />
+		                <label><input type='checkbox' checked='checked' /> Human spawn</label><br />
+		                <label><input type='checkbox' checked='checked' /> Robot spawn</label><br />
+		                <label><input type='checkbox' checked='checked' /> Flags</label><br />
+		                <label><input type='checkbox' checked='checked' /> Pods</label><br />
+		                <label><input type='checkbox' checked='checked' /> Beacons</label><br />
+	                </p>
+                </foreignObject>
+<line x1='358.4' y1='204.8' x2='307.2' y2='307.2' class='wall' id='static-0000' title='   CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='307.2' x2='307.2' y2='540.4' class='step' id='static-0001' title='   CBASE	        	   CBASE	   CBASE	   FBASE	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.8' y1='307.2' x2='409.6' y2='204.8' class='wall' id='static-0002' title='   CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.8' y1='540.4' x2='460.8' y2='307.2' class='step' id='static-0003' title='   CBASE	        	   CBASE	   CBASE	   FBASE	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.2' y1='540.4' x2='460.8' y2='540.4' class='step' id='static-0004' title='   CBASE	        	   CBASE	   CBASE	   FBASE	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='204.8' x2='358.4' y2='204.8' class='wall' id='static-0005' title='   CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE'>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.6' y1='493.2' x2='307.6' y2='506' class='decal' id='static-0006' title='        	        	    GREG	    GREG	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.6' y1='475.6' x2='307.6' y2='488.4' class='decal' id='static-0007' title='        	        	   DAVID	   DAVID	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.6' y1='458' x2='307.6' y2='470.8' class='decal' id='static-0008' title='        	        	   CHUCK	   CHUCK	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.6' y1='440.4' x2='307.6' y2='453.2' class='decal' id='static-0009' title='        	        	   BRYAN	   BRYAN	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='369.15' y1='540.05' x2='381.95' y2='540.05' class='decal' id='static-000a' title='        	        	   JOHNS	   JOHNS	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='386.75' y1='540.05' x2='399.55' y2='540.05' class='decal' id='static-000b' title='        	        	     JON	     JON	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='404.35' y1='540.05' x2='417.15' y2='540.05' class='decal' id='static-000c' title='        	        	    JOSH	    JOSH	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='351.55' y1='540.05' x2='364.35' y2='540.05' class='decal' id='static-000d' title='        	        	      JO	      JO	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='421.95' y1='540.05' x2='434.75' y2='540.05' class='decal' id='static-000e' title='        	        	     JOY	     JOY	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='333.95' y1='540.05' x2='346.75' y2='540.05' class='decal' id='static-000f' title='        	        	     JIM	     JIM	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='316.35' y1='540.05' x2='329.15' y2='540.05' class='decal' id='static-0010' title='        	        	JENNIFER	JENNIFER	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='307.6' y1='510.8' x2='307.6' y2='523.6' class='decal' id='static-0011' title='        	        	  HARLEY	  HARLEY	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.4' y1='523.2' x2='460.4' y2='510.4' class='decal' id='static-0012' title='        	        	   KEVIN	   KEVIN	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.4' y1='506' x2='460.4' y2='493.2' class='decal' id='static-0013' title='        	        	   LARRY	   LARRY	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.4' y1='488.4' x2='460.4' y2='475.6' class='decal' id='static-0014' title='        	        	     PAT	     PAT	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.4' y1='471.2' x2='460.4' y2='458.4' class='decal' id='static-0015' title='        	        	    STAN	    STAN	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='460.4' y1='453.6' x2='460.4' y2='440.8' class='decal' id='static-0016' title='        	        	  STEVEN	  STEVEN	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='358.4' y1='428' x2='409.6' y2='428' class='wall' id='static-0017' title='   CBASE	   CBASE	BACKGRND	   CBASE	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='358.4' y1='429.6' x2='409.6' y2='429.6' class='wall' id='static-0018' title='   CBASE	   CBASE	BACKGRND	   CBASE	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='358.4' y1='428' x2='358.4' y2='429.6' class='wall' id='static-0019' title='   CBASE	   CBASE	BACKGRND	   CBASE	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='409.6' y1='429.6' x2='409.6' y2='428' class='wall' id='static-001a' title='   CBASE	   CBASE	BACKGRND	   CBASE	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<line x1='439.55' y1='540.05' x2='452.35' y2='540.05' class='decal' id='static-001b' title='        	        	   JULIE	   JULIE	        	        '>
+<set attributeName='stroke' to='pink' begin='showwalls.click' />
+</line>
+<!-- Static strings 0000:    CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE -->
+<!-- Static strings 0001:    CBASE	        	   CBASE	   CBASE	   FBASE	         -->
+<!-- Static strings 0002:    CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE -->
+<!-- Static strings 0003:    CBASE	        	   CBASE	   CBASE	   FBASE	         -->
+<!-- Static strings 0004:    CBASE	        	   CBASE	   CBASE	   FBASE	         -->
+<!-- Static strings 0005:    CBASE	   CBASE	BACKGRND	BACKGRND	   FBASE	   FBASE -->
+<!-- Static strings 0006:         	        	    GREG	    GREG	        	         -->
+<!-- Static strings 0007:         	        	   DAVID	   DAVID	        	         -->
+<!-- Static strings 0008:         	        	   CHUCK	   CHUCK	        	         -->
+<!-- Static strings 0009:         	        	   BRYAN	   BRYAN	        	         -->
+<!-- Static strings 000a:         	        	   JOHNS	   JOHNS	        	         -->
+<!-- Static strings 000b:         	        	     JON	     JON	        	         -->
+<!-- Static strings 000c:         	        	    JOSH	    JOSH	        	         -->
+<!-- Static strings 000d:         	        	      JO	      JO	        	         -->
+<!-- Static strings 000e:         	        	     JOY	     JOY	        	         -->
+<!-- Static strings 000f:         	        	     JIM	     JIM	        	         -->
+<!-- Static strings 0010:         	        	JENNIFER	JENNIFER	        	         -->
+<!-- Static strings 0011:         	        	  HARLEY	  HARLEY	        	         -->
+<!-- Static strings 0012:         	        	   KEVIN	   KEVIN	        	         -->
+<!-- Static strings 0013:         	        	   LARRY	   LARRY	        	         -->
+<!-- Static strings 0014:         	        	     PAT	     PAT	        	         -->
+<!-- Static strings 0015:         	        	    STAN	    STAN	        	         -->
+<!-- Static strings 0016:         	        	  STEVEN	  STEVEN	        	         -->
+<!-- Static strings 0017:    CBASE	   CBASE	BACKGRND	   CBASE	        	         -->
+<!-- Static strings 0018:    CBASE	   CBASE	BACKGRND	   CBASE	        	         -->
+<!-- Static strings 0019:    CBASE	   CBASE	BACKGRND	   CBASE	        	         -->
+<!-- Static strings 001a:    CBASE	   CBASE	BACKGRND	   CBASE	        	         -->
+<!-- Static strings 001b:         	        	   JULIE	   JULIE	        	         -->
+<!-- Static numerics 0000: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0001: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0002: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0003: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0004: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0005: 0000	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0006: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0007: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0008: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0009: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000a: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000b: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000c: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000d: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000e: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 000f: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0010: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0011: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0012: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0013: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0014: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0015: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0016: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0017: 0001	0200	0000	0000	00	00	01	0005	00	00b9	0000	 -->
+<!-- Static numerics 0018: 0001	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 0019: 0001	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001a: 0001	0200	0000	0000	00	00	01	0005	00	0000	0000	 -->
+<!-- Static numerics 001b: 0000	0100	0000	0000	01	01	01	0005	00	0000	0000	 -->
+<g class='location-HUMAN'>
+	<use xlink:href='#facing-North' x='383.25' y='412.8' />
+	<circle r='8.00625' cx='383.25' cy='412.8' title='HUMAN_00' />
+	<text x='392.25' y='412.8'>HUMAN_00</text>
+</g>
+<!-- BSP 0000: 0000	0001	0005	ffff -->
+<!-- BSP 0001: 0001	0002	0004	ffff -->
+<!-- BSP 0002: 0002	0003	0016	ffff -->
+<!-- BSP 0003: 0003	0012	0015	ffff -->
+<!-- BSP 0004: 0004	0003	0002	ffff -->
+<!-- BSP 0005: 0005	0004	0001	ffff -->
+<!-- BSP 0006: 0006	0007	001b	0011 -->
+<!-- BSP 0007: 0007	0008	ffff	0009 -->
+<!-- BSP 0008: 0008	ffff	ffff	ffff -->
+<!-- BSP 0009: 0009	0008	ffff	0008 -->
+<!-- BSP 000a: 000a	000b	ffff	0010 -->
+<!-- BSP 000b: 000b	000c	ffff	000f -->
+<!-- BSP 000c: 000c	000d	ffff	000e -->
+<!-- BSP 000d: 000d	ffff	ffff	ffff -->
+<!-- BSP 000e: 000e	000d	ffff	000d -->
+<!-- BSP 000f: 000f	000e	ffff	000c -->
+<!-- BSP 0010: 0010	000f	ffff	000b -->
+<!-- BSP 0011: 0011	0009	ffff	0007 -->
+<!-- BSP 0012: 0012	0013	ffff	0014 -->
+<!-- BSP 0013: 0013	ffff	ffff	ffff -->
+<!-- BSP 0014: 0014	0013	ffff	0013 -->
+<!-- BSP 0015: 0015	0014	ffff	0012 -->
+<!-- BSP 0016: 0016	0015	0006	0003 -->
+<!-- BSP 0017: 0017	0018	ffff	001a -->
+<!-- BSP 0018: 0018	0019	0019	ffff -->
+<!-- BSP 0019: 0019	ffff	ffff	ffff -->
+<!-- BSP 001a: 001a	0019	0018	ffff -->
+<!-- BSP 001b: 001b	001a	0017	000a -->
+</svg>

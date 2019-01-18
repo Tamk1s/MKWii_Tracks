@@ -1,0 +1,27 @@
+This folder is the "Payload" folder.
+It compiles the tracks and entire project into "Output", and will send the entire project into the "My Stuff" folders of CTGP-R and OptPack
+
+The following assets should already be pre-compiled in the other folders, before compiling the tracks/entire pack:
+
+1. "Hover Tracks\Assets\Msgs"		- Game textures, bootstrap, updated messages
+2. "Hover Tracks\Assets\Models\Common"	- Hover Item Pack
+3. "Hover Tracks\Assets\Models\localcop"- Master copies of local level assets (new coins, new itemboxes)
+4. "Hover Tracks\Assets\Music"		- BRSAR, and the new BRSTRM music 
+5. "Hover Tracks\Assets\Videos"		- New THP videos
+6. "Hover Tracks\Tracks\"		- The compiled track assets (Course, Minimap, VRCorn graphics brres archives; KCL collision, KMP objpos)
+
+
+How to compile tracks/project:
+
+1. Goto "Source" folder, extract original szs track archives here (see note in folder)
+2. Run "Extract.bat". This will extract the original track archives into "Input" folder
+3. Run "Make.bat" . This will run:
+4. "Track.bat" . This will copy the modified track assets (Course, Minimap, and VRCorn graphics brres archives; KCL collision, KMP objpos) into the "Input" folders, as well as the local copies of modified coins and itembox models
+5. "Compress.bat" . This will compress the modified track archives, and place them into "Output" folder, as well as duplicate the files into "_d" 2P copies
+6. "Music.bat" . This will copy the BRSAR and BRSTRM music files from "Hover Tracks\Assets\Music" folder intto "Output" folder
+7. "Msg.bat" . This will copy all of the modified szs archives in "Hover Tracks\Assets\Msgs" into Output (new game graphics, updated BMG text files, bootstrap), as well as Common.szs (Hover Item Pack)
+8. "Output\send.bat" . This will send all of the files from above now in "Output" folder to your SD Card's "My Stuff" folders (CTGP-R, OptPack)
+
+Re-run steps 2-3 everytime you modify the tracks, for fast, iterative testing of tracks.
+
+Please read "Output/Hover_Pack_README.txt" for information about how to use the ISO Patcher scripts, and for credits on the packs various assets

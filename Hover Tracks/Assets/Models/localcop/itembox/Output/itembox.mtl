@@ -1,0 +1,28 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'itembox.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.192157 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl ef_hatenas
+Ka 0.941176 0.658824 0.752941
+Kd 0.941176 0.658824 0.752941
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd itembox_Textures/ef_hatenas.PNG
+
+newmtl ef_rainbows
+Ka 0.007843 0.568627 0.031373
+Kd 0.007843 0.568627 0.031373
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd itembox_Textures/ef_rainbows.PNG
+
+#EOF

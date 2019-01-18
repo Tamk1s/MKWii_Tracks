@@ -1,0 +1,2 @@
+Extract togezo_koura.brres
+from original Common.szs (for reference)

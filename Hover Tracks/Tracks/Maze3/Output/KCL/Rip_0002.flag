@@ -1,0 +1,72 @@
+
+##############################################################################
+#####     All behind a '#' on the same line is a comment and ignored.    #####
+#####     See https://szs.wiimm.de/doc/kcl/flagfile for more details.    #####
+##############################################################################
+# f()
+
+# First, we define a flag function named f().
+# This allows us to define type and variant as 2 values.
+
+@function f # (type,variant)
+    @return $1 & 0x1f | $2 << 5
+@endfunction
+
+##############################################################################
+# a()
+
+# Here we define function a() to support the flag variant type A.
+# For details see http://wiimm.de/r/ctw/KCL_flag
+
+@function a # (type,w,x,y,z)
+    @return $1 & 0x1f		# type (5 bits)
+	> | ( $2 & 7 ) << 13	# W (3 bits)
+	> | ( $3 & 3 ) << 11	# X (2 bits)
+	> | ( $4 & 7 ) << 8	# Y (3 bits)
+	> | ( $5 & 7 ) << 5	# Z (3 bits)
+@endfunction
+
+##############################################################################
+# i()
+
+# The function i() supports fall boundaries.
+
+@function i # (type,z,index)
+    @return $1 & 0x1f		# type (5 bits)
+	> | ( $2 &    7 ) << 5	# Z (3 bits)
+	> | ( $3 & 0xff ) << 8	# index (8 bits)
+@endfunction
+
+##############################################################################
+# table
+
+#-----------------------------------------------------------------------------
+# group_name			= flag_or_expression
+#				= f(type,variant)
+#				= a(type,w,x,y,z)
+#				= i(type,z,index)
+#-----------------------------------------------------------------------------
+  MESH_0002-SKP--BOOST_PAD_0X06_DOWN	= f(0x06,0x000)
+  MESH_0002-SKP--BOOST_PAD_0X06_LEFT	= f(0x06,0x000)
+  MESH_0002-SKP--BOOST_PAD_0X06_RIGHT	= f(0x06,0x000)
+  MESH_0002-SKP--BOOST_PAD_0X06_UP	= f(0x06,0x000)
+  MESH_0002-SKP--CANNON_0X11_0		= f(0x11,0x000)
+  MESH_0002-SKP--CANNON_0X11_1		= f(0x11,0x001)
+  MESH_0002-SKP--CANNON_0X11_2		= f(0x11,0x002)
+  MESH_0002-SKP--CANNON_0X11_3		= f(0x11,0x003)
+  MESH_0002-SKP--FALL_BOUNDARY_0X10	= f(0x0A,0x000)
+  MESH_0002-SKP--HEAVY_OFF_ROAD_0X04	= f(0x04,0x002)
+  MESH_0002-SKP--JUMP_PAD_0X08		= f(0x08,0x000)
+  MESH_0002-SKP--ROAD_0X00_1		= f(0x00,0x000)
+  MESH_0002-SKP--ROAD_0X00_2		= f(0x00,0x000)
+  MESH_0002-SKP--ROAD_0X00_3		= f(0x00,0x006)
+  MESH_0002-SKP--WALL_0X0C_1		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_10		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_2		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_3		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_4		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_5		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_6		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_7		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_8		= f(0x0C,0x001)
+  MESH_0002-SKP--WALL_0X0C_9		= f(0x0C,0x001)

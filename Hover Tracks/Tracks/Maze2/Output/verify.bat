@@ -1,0 +1,1 @@
+wkmpt draw new.kmp.txt --draw enpt,white -od verify.obj

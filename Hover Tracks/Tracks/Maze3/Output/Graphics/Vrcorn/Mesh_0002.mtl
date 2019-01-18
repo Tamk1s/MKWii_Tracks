@@ -1,0 +1,20 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'Mesh_0002.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.176471 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl BG
+Ka 0.596078 0.458824 0.305882
+Kd 0.596078 0.458824 0.305882
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd Mesh_0002_Textures/BG.PNG
+
+#EOF

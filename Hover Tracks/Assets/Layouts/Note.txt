@@ -1,0 +1,9 @@
+This folder contains svg level layouts from the original Hover! levels,
+generated using Merlin tools.
+
+Was used for reference for positioning of itemboxes and coins in the mod
+
+"maze1.svg"	-1st maze (Castle)
+"maze2.svg"	-2nd maze (Metro)
+"maze3.svg"	-3rd maze (Sewers)
+"small.svg"	-Hover Credits

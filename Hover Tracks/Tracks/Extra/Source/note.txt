@@ -1,0 +1,4 @@
+I had to rip the level 4 times at different places to get a full level model
+(Folder 1-4, 4 WRL models).
+
+The .blend file was the combination of the 4 WRL models, which was then outputted to standard Lightwave OBJ

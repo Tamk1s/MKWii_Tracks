@@ -1,0 +1,3 @@
+Extract original brress archives from any battle course from MKWii DVD Here:
+*coin.brres
+*and its rk_coin.breff and rk_coin.breft

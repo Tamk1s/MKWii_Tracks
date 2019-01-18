@@ -1,0 +1,28 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'pile_coin.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.141176 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl no_name1
+Ka 0.007843 0.588235 0.019608
+Kd 0.007843 0.588235 0.019608
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pile_coin_Textures/no_name1.PNG
+
+newmtl no_name2
+Ka 0.015686 0.388235 0.003922
+Kd 0.015686 0.388235 0.003922
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd pile_coin_Textures/no_name2.PNG
+
+#EOF

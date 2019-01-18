@@ -1,0 +1,4 @@
+"send.bat" will copy Common.szs directly to SD card for quick iterative testing.
+
+Copies to My Stuff folder in OptPack and CTGP-R
+(Change Drive letter as appropriately)

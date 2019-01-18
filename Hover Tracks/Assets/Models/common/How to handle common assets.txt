@@ -1,0 +1,6 @@
+1. Place original copy of [ISO ROOT]/Race/Common.szs into "Source" folder
+2. Run "Extract.bat" to extract contents of original Common.szs into "Input"
+3. Run "Make.bat" to copy modified models/assets into extracted Common archive. Will run "Compress.bat" to compress new archive into "Output" folder
+
+"Models" Folder contains Input, Output, and Source folder similarly for each model's brres. No batch files used for individual models; I generate those by-hand with the assets available. (To be refactored later)
+After making changes to an asset, re-run steps 2 and 3 to recompile

@@ -1,0 +1,24 @@
+All brstrm files are named appropriately here, except:
+
+"Break.brstm"			- Arena Rumble song
+"Break_F.brstm"			- Arena Rumble song (Fast)
+"level1_final.brstm"		- Hover Maze 1 Song
+"level1_final_f.brstm"		- Hover Maze 1 Song (Fast)
+"level2_final.brstm"		- Hover Maze 2 Song
+"level2_final_f.brstm"		- Hover Maze 2 Song (Fast)
+"level3_final.brstm"		- Hover Maze 3 Song
+"level3_final_f.brstm"		- Hover Maze 3 Song (Fast)
+"Windows_95_SQUAR_Remix.brstm"	- Hover Credits songs
+"Windows_95_SQUAR_RemixF.brstm"	- Hover Credits songs (Fast)
+
+These are renamed appropriately by "Hover Tracks\Payload\Make.bat" script
+(This was done in case the level slots get reordered)
+
+The original BRSAR in Source folder needs patched against these BRSTRM files,
+so that the lengths are appropriate in-game, and then placed in Output folder
+(use http://wiki.tockdom.com/wiki/Patch_that_BRSAR!)
+
+The BRSAR in this Output folder has already been pre-patched for the BRSTRM lengths, and new sfx
+
+See "Input\Sfx" folder for input sound effects/jingles (not BRSTM based)
+in format of XX_YY, where XX is the GRP ID, and YY is the SFX ID

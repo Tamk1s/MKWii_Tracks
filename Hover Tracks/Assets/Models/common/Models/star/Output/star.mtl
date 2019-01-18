@@ -1,0 +1,28 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'star.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl Metal_Rough
+Ka 0.756863 0.011765 0.000000
+Kd 0.756863 0.011765 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd star_Textures/Metal_Rough.PNG
+
+newmtl Metal_Aluminum_Anodized
+Ka 0.431373 0.447059 0.466667
+Kd 0.431373 0.447059 0.466667
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd star_Textures/Metal_Aluminum_Anodized.PNG
+
+#EOF

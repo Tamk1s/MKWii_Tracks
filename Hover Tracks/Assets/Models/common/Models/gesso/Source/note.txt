@@ -1,0 +1,2 @@
+Extract gesso.brres
+from original Common.szs (for reference)

@@ -1,0 +1,3203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2018-11-22T02:18:01Z</created><keywords></keywords><modified>2018-11-22T02:18:01Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="Map #19-image" name="Map #19"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\no_name2.PNG</init_from></image>
+    <image id="Map #20-image" name="Map #20"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_002_.PNG</init_from></image>
+    <image id="Map #21-image" name="Map #21"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_I03_.PNG</init_from></image>
+    <image id="Map #22-image" name="Map #22"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_C01_.PNG</init_from></image>
+    <image id="Map #23-image" name="Map #23"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_A07_.PNG</init_from></image>
+    <image id="Map #24-image" name="Map #24"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_F13_.PNG</init_from></image>
+    <image id="Map #25-image" name="Map #25"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_K18_.PNG</init_from></image>
+    <image id="Map #26-image" name="Map #26"><init_from>file://E:\GC_Wii\Hacking\Projects\MKWii\Hover Tracks\Assets\Models\common\Models\kumo\Output\Crapple_Textures\_Color_C02_.PNG</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="no_name2" name="no_name2">
+      <instance_effect url="#no_name2-fx"/>
+    </material>
+    <material id="_Color_002_" name="_Color_002_">
+      <instance_effect url="#_Color_002_-fx"/>
+    </material>
+    <material id="_Color_I03_" name="_Color_I03_">
+      <instance_effect url="#_Color_I03_-fx"/>
+    </material>
+    <material id="_Color_C01_" name="_Color_C01_">
+      <instance_effect url="#_Color_C01_-fx"/>
+    </material>
+    <material id="_Color_A07_" name="_Color_A07_">
+      <instance_effect url="#_Color_A07_-fx"/>
+    </material>
+    <material id="_Color_F13_" name="_Color_F13_">
+      <instance_effect url="#_Color_F13_-fx"/>
+    </material>
+    <material id="_Color_K18_" name="_Color_K18_">
+      <instance_effect url="#_Color_K18_-fx"/>
+    </material>
+    <material id="_Color_C02_" name="_Color_C02_">
+      <instance_effect url="#_Color_C02_-fx"/>
+    </material>
+    <material id="Color_M00" name="Color_M00">
+      <instance_effect url="#Color_M00-fx"/>
+    </material>
+    <material id="Color_M09" name="Color_M09">
+      <instance_effect url="#Color_M09-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="no_name2-fx" name="no_name2">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.858824  0.874510 0.878431 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #19-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_002_-fx" name="_Color_002_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.776471  0.776471 0.776471 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #20-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_I03_-fx" name="_Color_I03_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.396078  0.396078 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #21-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_C01_-fx" name="_Color_C01_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1.000000  0.498039 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #22-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_A07_-fx" name="_Color_A07_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.800000  0.156863 0.156863 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #23-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_F13_-fx" name="_Color_F13_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.419608  0.600000 0.239216 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #24-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_K18_-fx" name="_Color_K18_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.400000  0.156863 0.400000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #25-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_Color_C02_-fx" name="_Color_C02_">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1.000000  0.600000 0.196078 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Map #26-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Color_M00-fx" name="Color_M00">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">1.000000  1.000000 1.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">1.000000  1.000000 1.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Color_M09-fx" name="Color_M09">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.000000  0.000000 0.000000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.333333  0.333333 0.333333 1.000000</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">1.071773</float>
+            </shininess>
+            <reflective>
+              <color sid="reflective">0.000000  0.000000 0.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float sid="reflectivity">1.000000</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Crapple2_SKP__no_name2-lib" name="Crapple2_SKP__no_name2Mesh">
+      <mesh>
+        <source id="Crapple2_SKP__no_name2-POSITION">
+          <float_array id="Crapple2_SKP__no_name2-POSITION-array" count="78">
+0.518658 -0.421664 -0.530328
+0.450307 -0.421664 -0.434072
+-0.523139 -0.421664 -0.530328
+0.518658 -0.421664 0.328112
+0.450307 -0.421664 0.249347
+-0.458140 -0.421664 0.249347
+-0.458140 -0.421664 -0.434072
+-0.523139 -0.421664 0.328112
+0.617954 -0.463336 0.450367
+0.578051 -0.463336 -1.007227
+0.617954 -0.463336 -1.007227
+0.518658 -0.463336 -0.530328
+-0.597095 -0.463336 -1.007221
+-0.617954 -0.463336 -1.007221
+0.518658 -0.463336 0.328112
+-0.523139 -0.463336 0.328112
+-0.523139 -0.463336 -0.530328
+-0.617954 -0.463336 0.450367
+0.578051 -0.463336 -1.007227
+-0.597096 -0.463336 -1.223915
+0.578050 -0.463336 -1.223921
+-0.597095 -0.463336 -1.007221
+0.450307 -0.421664 0.249347
+-0.458140 -0.421664 -0.434072
+0.450307 -0.421664 -0.434072
+-0.458140 -0.421664 0.249347
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2-POSITION-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__no_name2-Normal0">
+          <float_array id="Crapple2_SKP__no_name2-Normal0-array" count="198">
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2-Normal0-array" count="66" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__no_name2-UV0">
+          <float_array id="Crapple2_SKP__no_name2-UV0-array" count="52">
+0.719853 -0.557756
+0.690768 -0.516796
+0.276536 -0.557756
+0.719853 -0.192463
+0.690768 -0.225980
+0.304195 -0.225980
+0.304195 -0.516796
+0.276536 -0.192463
+0.762107 -0.140439
+0.745127 -0.760692
+0.762107 -0.760692
+0.719853 -0.557756
+0.245065 -0.760690
+0.236189 -0.760690
+0.719853 -0.192463
+0.276536 -0.192463
+0.276536 -0.557756
+0.236189 -0.140439
+0.745127 -0.760692
+0.245064 -0.852900
+0.745127 -0.852902
+0.245065 -0.760690
+0.690768 -0.225980
+0.304195 -0.516796
+0.690768 -0.516796
+0.304195 -0.225980
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2-UV0-array" count="26" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP__no_name2-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP__no_name2-POSITION"/>
+        </vertices>
+        <triangles count="22" material="no_name2"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP__no_name2-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP__no_name2-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP__no_name2-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 1 6 1 3 7 3 4 8 4 4 9 4 3 10 3 5 11 5 2 12 2 6 13 6 7 14 7 6 15 6 2 16 2 1 17 1 7 18 7 6 19 6 5 20 5 7 21 7 5 22 5 3 23 3 8 24 8 9 25 9 10 26 10 9 27 9 8 28 8 11 29 11 9 30 9 11 31 11 12 32 12 12 33 12 11 34 11 13 35 13 11 36 11 8 37 8 14 38 14 14 39 14 8 40 8 15 41 15 13 42 13 16 43 16 17 44 17 16 45 16 13 46 13 11 47 11 17 48 17 16 49 16 15 50 15 17 51 17 15 52 15 8 53 8 18 54 18 19 55 19 20 56 20 19 57 19 18 58 18 21 59 21 22 60 22 23 61 23 24 62 24 23 63 23 22 64 22 25 65 25</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_002_-lib" name="Crapple2_SKP___Color_002_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_002_-POSITION">
+          <float_array id="Crapple2_SKP___Color_002_-POSITION-array" count="186">
+0.617954 0.463336 -1.007227
+0.578051 -0.463336 -1.007227
+0.578051 0.463336 -1.007227
+0.617954 -0.463336 -1.007227
+0.617954 0.463336 -1.007227
+0.617954 -0.463336 0.450367
+0.617954 -0.463336 -1.007227
+0.617954 0.263311 0.409619
+0.617954 0.463336 0.209592
+-0.617954 0.263311 0.409619
+-0.617954 -0.463336 -1.007221
+-0.617954 -0.463336 0.450367
+-0.617954 0.463336 -1.007221
+-0.617954 0.463336 0.209592
+0.578050 0.463336 -1.223921
+-0.597096 -0.463336 -1.223915
+-0.597096 0.463336 -1.223915
+0.578050 -0.463336 -1.223921
+0.617954 -0.463336 0.450367
+-0.617954 0.263311 0.409619
+-0.617954 -0.463336 0.450367
+0.617954 0.263311 0.409619
+-0.617954 0.263311 0.409619
+0.617954 0.463336 0.209592
+-0.617954 0.463336 0.209592
+0.617954 0.263311 0.409619
+-0.617954 0.463336 0.209592
+-0.597095 0.463336 -1.007221
+-0.617954 0.463336 -1.007221
+-0.597096 0.463336 -1.223915
+0.578051 0.463336 -1.007227
+0.578050 0.463336 -1.223921
+0.617954 0.463336 -1.007227
+0.617954 0.463336 0.209592
+0.578050 0.463336 -1.223921
+0.578051 -0.463336 -1.007227
+0.578050 -0.463336 -1.223921
+0.578051 0.463336 -1.007227
+-0.597095 0.463336 -1.007221
+-0.617954 -0.463336 -1.007221
+-0.617954 0.463336 -1.007221
+-0.597095 -0.463336 -1.007221
+-0.597095 0.463336 -1.007221
+-0.597096 -0.463336 -1.223915
+-0.597095 -0.463336 -1.007221
+-0.597096 0.463336 -1.223915
+0.518658 -0.463336 -0.530328
+-0.523139 -0.421664 -0.530328
+-0.523139 -0.463336 -0.530328
+0.518658 -0.421664 -0.530328
+0.518658 -0.421664 0.328112
+0.518658 -0.463336 -0.530328
+0.518658 -0.463336 0.328112
+0.518658 -0.421664 -0.530328
+0.518658 -0.421664 0.328112
+-0.523139 -0.463336 0.328112
+-0.523139 -0.421664 0.328112
+0.518658 -0.463336 0.328112
+-0.523139 -0.421664 -0.530328
+-0.523139 -0.463336 0.328112
+-0.523139 -0.463336 -0.530328
+-0.523139 -0.421664 0.328112
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_-POSITION-array" count="62" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_002_-Normal0">
+          <float_array id="Crapple2_SKP___Color_002_-Normal0-array" count="306">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-0.000005 0.000000 -1.000000
+-0.000005 0.000000 -1.000000
+-0.000005 0.000000 -1.000000
+-0.000005 0.000000 -1.000000
+-0.000005 0.000000 -1.000000
+-0.000005 0.000000 -1.000000
+0.000000 0.055988 0.998431
+0.000000 0.055988 0.998431
+0.000000 0.055988 0.998431
+0.000000 0.055988 0.998431
+0.000000 0.055988 0.998431
+0.000000 0.055988 0.998431
+0.000000 0.707111 0.707103
+0.000000 0.707111 0.707103
+0.000000 0.707111 0.707103
+0.000000 0.707111 0.707103
+0.000000 0.707111 0.707103
+0.000000 0.707111 0.707103
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+1.000000 0.000000 -0.000005
+1.000000 0.000000 -0.000005
+1.000000 0.000000 -0.000005
+1.000000 0.000000 -0.000005
+1.000000 0.000000 -0.000005
+1.000000 0.000000 -0.000005
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+-1.000000 0.000000 0.000005
+-1.000000 0.000000 0.000005
+-1.000000 0.000000 0.000005
+-1.000000 0.000000 0.000005
+-1.000000 0.000000 0.000005
+-1.000000 0.000000 0.000005
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_-Normal0-array" count="102" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_002_-UV0">
+          <float_array id="Crapple2_SKP___Color_002_-UV0-array" count="124">
+-0.933065 0.959423
+-0.903142 0.264506
+-0.903142 0.959423
+-0.933065 0.264506
+-0.933065 0.959423
+-2.026124 0.264506
+-0.933065 0.264506
+-1.995567 0.809423
+-1.845565 0.959423
+0.143750 2.021924
+0.688667 0.959427
+0.688667 2.052481
+-0.006250 0.959427
+-0.006250 1.871922
+-2.275812 1.824157
+2.350750 -1.824157
+2.350750 1.824157
+-2.275812 -1.824157
+-0.933065 1.440416
+-0.006250 0.894643
+-0.006250 1.440416
+-0.933065 0.894643
+-0.006250 0.894643
+-0.933065 0.682510
+-0.006250 0.682510
+-0.933065 0.894643
+-0.006250 1.871922
+-0.021892 0.959427
+-0.006250 0.959427
+-0.021891 0.796927
+-0.903142 0.959423
+-0.903141 0.796923
+-0.933065 0.959423
+-0.933065 1.871922
+-0.770567 0.959423
+-0.933067 0.264506
+-0.770567 0.264506
+-0.933067 0.959423
+-11.015434 1.256450
+-11.003203 0.713088
+-11.003203 1.256450
+-11.015434 0.713088
+-0.006250 0.959425
+0.688667 0.796925
+0.688667 0.959425
+-0.006250 0.796925
+0.858602 0.264506
+0.077352 0.295756
+0.077352 0.264506
+0.858602 0.295756
+-1.347648 0.295756
+-1.991398 0.264506
+-1.347648 0.264506
+-1.991398 0.295756
+-1.347648 0.295756
+-0.566398 0.264506
+-0.566398 0.295756
+-1.347648 0.264506
+0.077352 0.295756
+-0.566398 0.264506
+0.077352 0.264506
+-0.566398 0.295756
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_-UV0-array" count="62" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_002_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_002_-POSITION"/>
+        </vertices>
+        <triangles count="34" material="_Color_002_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_002_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_002_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_002_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 5 9 5 4 10 4 7 11 7 7 12 7 4 13 4 8 14 8 9 15 9 10 16 10 11 17 11 10 18 10 9 19 9 12 20 12 12 21 12 9 22 9 13 23 13 14 24 14 15 25 15 16 26 16 15 27 15 14 28 14 17 29 17 18 30 18 19 31 19 20 32 20 19 33 19 18 34 18 21 35 21 22 36 22 23 37 23 24 38 24 23 39 23 22 40 22 25 41 25 26 42 26 27 43 27 28 44 28 29 45 29 30 46 30 31 47 31 30 48 30 29 49 29 27 50 27 30 51 30 27 52 27 32 53 32 32 54 32 27 55 27 33 56 33 33 57 33 27 58 27 26 59 26 34 60 34 35 61 35 36 62 36 35 63 35 34 64 34 37 65 37 38 66 38 39 67 39 40 68 40 39 69 39 38 70 38 41 71 41 42 72 42 43 73 43 44 74 44 43 75 43 42 76 42 45 77 45 46 78 46 47 79 47 48 80 48 47 81 47 46 82 46 49 83 49 50 84 50 51 85 51 52 86 52 51 87 51 50 88 50 53 89 53 54 90 54 55 91 55 56 92 56 55 93 55 54 94 54 57 95 57 58 96 58 59 97 59 60 98 60 59 99 59 58 100 58 61 101 61</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_I03_-lib" name="Crapple2_SKP___Color_I03_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_I03_-POSITION">
+          <float_array id="Crapple2_SKP___Color_I03_-POSITION-array" count="237">
+0.129711 -0.077326 0.450460
+0.119452 -0.077325 0.450437
+0.122870 -0.077325 0.450283
+0.116034 -0.077326 0.450592
+0.136522 -0.077328 0.451123
+0.109237 -0.077329 0.451385
+0.143269 -0.077333 0.452267
+0.102513 -0.077334 0.452659
+0.149917 -0.077339 0.453888
+0.095897 -0.077341 0.454407
+0.156434 -0.077347 0.455976
+0.089421 -0.077350 0.456620
+0.162786 -0.077357 0.458522
+0.083119 -0.077360 0.459288
+0.171125 -0.077375 0.463095
+0.078247 -0.077372 0.462135
+0.073281 -0.077382 0.464815
+0.179252 -0.077395 0.468035
+0.068226 -0.077392 0.467324
+0.063088 -0.077401 0.469660
+0.187150 -0.077416 0.473333
+0.057874 -0.077410 0.471819
+0.052589 -0.077418 0.473799
+0.194804 -0.077438 0.478978
+0.047240 -0.077425 0.475599
+0.041833 -0.077431 0.477215
+0.036374 -0.077437 0.478645
+0.030870 -0.077442 0.479890
+0.202200 -0.077462 0.484958
+0.025326 -0.077446 0.480945
+0.019749 -0.077449 0.481812
+0.011473 -0.077453 0.482755
+0.003162 -0.077455 0.483308
+-0.005166 -0.077456 0.483469
+-0.209816 -0.077460 0.484488
+-0.216658 -0.077483 0.490274
+0.209321 -0.077487 0.491261
+-0.223232 -0.077507 0.496363
+0.216155 -0.077513 0.497876
+-0.229524 -0.077532 0.502743
+0.222686 -0.077540 0.504789
+-0.235522 -0.077558 0.509401
+0.228903 -0.077568 0.511986
+-0.241212 -0.077585 0.516322
+0.234794 -0.077598 0.519453
+-0.246585 -0.077614 0.523494
+0.240345 -0.077628 0.527175
+-0.251628 -0.077643 0.530901
+0.245547 -0.077660 0.535137
+-0.261751 -0.077697 0.544669
+0.252607 -0.077697 0.544539
+0.259465 -0.077734 0.554090
+-0.271371 -0.077753 0.558793
+-0.128241 -0.077336 0.453181
+-0.140441 -0.077337 0.453332
+-0.132308 -0.077336 0.453030
+-0.124174 -0.077337 0.453331
+-0.116085 -0.077340 0.454235
+-0.148530 -0.077340 0.454236
+-0.108085 -0.077346 0.455735
+-0.156530 -0.077346 0.455737
+-0.100219 -0.077355 0.457825
+-0.164396 -0.077355 0.457826
+-0.092528 -0.077365 0.460491
+-0.172086 -0.077365 0.460493
+-0.085057 -0.077378 0.463720
+-0.180051 -0.077381 0.464600
+-0.077845 -0.077393 0.467494
+-0.187821 -0.077399 0.469062
+-0.070189 -0.077406 0.470775
+-0.195383 -0.077418 0.473871
+-0.062387 -0.077417 0.473692
+-0.054456 -0.077427 0.476238
+-0.202719 -0.077438 0.479016
+-0.046413 -0.077436 0.478407
+-0.038278 -0.077443 0.480195
+-0.030067 -0.077448 0.481598
+-0.021799 -0.077452 0.482613
+-0.013493 -0.077455 0.483237
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_-POSITION-array" count="79" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_I03_-Normal0">
+          <float_array id="Crapple2_SKP___Color_I03_-Normal0-array" count="693">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_-Normal0-array" count="231" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_I03_-UV0">
+          <float_array id="Crapple2_SKP___Color_I03_-UV0-array" count="158">
+0.510672 1.774652
+0.470282 1.774562
+0.483740 1.773954
+0.456825 1.775170
+0.537488 1.777261
+0.430065 1.778293
+0.564050 1.781766
+0.403594 1.783309
+0.590225 1.788146
+0.377546 1.790191
+0.615882 1.796368
+0.352053 1.798905
+0.640890 1.806391
+0.327242 1.809407
+0.673720 1.824396
+0.308059 1.820618
+0.288506 1.831168
+0.705715 1.843847
+0.268605 1.841047
+0.248378 1.850242
+0.736811 1.864704
+0.227851 1.858743
+0.207045 1.866540
+0.766947 1.886926
+0.185986 1.873624
+0.164698 1.879986
+0.143206 1.885619
+0.121534 1.890517
+0.796062 1.910470
+0.099708 1.894674
+0.077753 1.898085
+0.045170 1.901800
+0.012448 1.903977
+-0.020340 1.904609
+-0.826046 1.908620
+-0.852984 1.931400
+0.824099 1.935288
+-0.878865 1.955374
+0.851002 1.961330
+-0.903638 1.980492
+0.876718 1.988546
+-0.927250 2.006704
+0.901195 2.016881
+-0.949655 2.033955
+0.924385 2.046279
+-0.970807 2.062190
+0.946241 2.076681
+-0.990662 2.091351
+0.966721 2.108027
+-1.030515 2.145557
+0.994514 2.145046
+1.021515 2.182646
+-1.068391 2.201162
+-0.504885 1.785363
+-0.552919 1.785958
+-0.520896 1.784769
+-0.488874 1.785957
+-0.457027 1.789514
+-0.584765 1.789517
+-0.425532 1.795421
+-0.616260 1.795426
+-0.394561 1.803647
+-0.647230 1.803653
+-0.364285 1.814145
+-0.677506 1.814153
+-0.334870 1.826858
+-0.708861 1.830322
+-0.306478 1.841715
+-0.739455 1.847890
+-0.276335 1.854633
+-0.769223 1.866822
+-0.245617 1.866116
+-0.214392 1.876140
+-0.798107 1.887079
+-0.182730 1.884681
+-0.150700 1.891721
+-0.118374 1.897245
+-0.085824 1.901239
+-0.053122 1.903696
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_-UV0-array" count="79" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_I03_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_I03_-POSITION"/>
+        </vertices>
+        <triangles count="77" material="_Color_I03_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_I03_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_I03_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_I03_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5 5 12 5 4 13 4 6 14 6 5 15 5 6 16 6 7 17 7 7 18 7 6 19 6 8 20 8 7 21 7 8 22 8 9 23 9 9 24 9 8 25 8 10 26 10 9 27 9 10 28 10 11 29 11 11 30 11 10 31 10 12 32 12 11 33 11 12 34 12 13 35 13 13 36 13 12 37 12 14 38 14 13 39 13 14 40 14 15 41 15 15 42 15 14 43 14 16 44 16 16 45 16 14 46 14 17 47 17 16 48 16 17 49 17 18 50 18 18 51 18 17 52 17 19 53 19 19 54 19 17 55 17 20 56 20 19 57 19 20 58 20 21 59 21 21 60 21 20 61 20 22 62 22 22 63 22 20 64 20 23 65 23 22 66 22 23 67 23 24 68 24 24 69 24 23 70 23 25 71 25 25 72 25 23 73 23 26 74 26 26 75 26 23 76 23 27 77 27 27 78 27 23 79 23 28 80 28 27 81 27 28 82 28 29 83 29 29 84 29 28 85 28 30 86 30 30 87 30 28 88 28 31 89 31 31 90 31 28 91 28 32 92 32 32 93 32 28 94 28 33 95 33 33 96 33 28 97 28 34 98 34 34 99 34 28 100 28 35 101 35 35 102 35 28 103 28 36 104 36 35 105 35 36 106 36 37 107 37 37 108 37 36 109 36 38 110 38 37 111 37 38 112 38 39 113 39 39 114 39 38 115 38 40 116 40 39 117 39 40 118 40 41 119 41 41 120 41 40 121 40 42 122 42 41 123 41 42 124 42 43 125 43 43 126 43 42 127 42 44 128 44 43 129 43 44 130 44 45 131 45 45 132 45 44 133 44 46 134 46 45 135 45 46 136 46 47 137 47 47 138 47 46 139 46 48 140 48 47 141 47 48 142 48 49 143 49 49 144 49 48 145 48 50 146 50 49 147 49 50 148 50 51 149 51 49 150 49 51 151 51 52 152 52 53 153 53 54 154 54 55 155 55 54 156 54 53 157 53 56 158 56 54 159 54 56 160 56 57 161 57 54 162 54 57 163 57 58 164 58 58 165 58 57 166 57 59 167 59 58 168 58 59 169 59 60 170 60 60 171 60 59 172 59 61 173 61 60 174 60 61 175 61 62 176 62 62 177 62 61 178 61 63 179 63 62 180 62 63 181 63 64 182 64 64 183 64 63 184 63 65 185 65 64 186 64 65 187 65 66 188 66 66 189 66 65 190 65 67 191 67 66 192 66 67 193 67 68 194 68 68 195 68 67 196 67 69 197 69 68 198 68 69 199 69 70 200 70 70 201 70 69 202 69 71 203 71 70 204 70 71 205 71 72 206 72 70 207 70 72 208 72 73 209 73 73 210 73 72 211 72 74 212 74 73 213 73 74 214 74 75 215 75 73 216 73 75 217 75 34 218 34 34 219 34 75 220 75 76 221 76 34 222 34 76 223 76 77 224 77 34 225 34 77 226 77 78 227 78 34 228 34 78 229 78 33 230 33</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_C01_-lib" name="Crapple2_SKP___Color_C01_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_C01_-POSITION">
+          <float_array id="Crapple2_SKP___Color_C01_-POSITION-array" count="36">
+0.210966 -0.078590 0.770994
+-0.346136 -0.078522 0.753701
+0.219370 -0.078500 0.748264
+-0.347908 -0.078568 0.765398
+-0.349549 -0.078635 0.782369
+0.205863 -0.078716 0.802898
+-0.350272 -0.078702 0.799404
+-0.350076 -0.078769 0.816452
+0.207054 -0.078843 0.835186
+-0.348961 -0.078837 0.833466
+-0.346931 -0.078903 0.850395
+0.209756 -0.078888 0.846609
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_-POSITION-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C01_-Normal0">
+          <float_array id="Crapple2_SKP___Color_C01_-Normal0-array" count="90">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_-Normal0-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C01_-UV0">
+          <float_array id="Crapple2_SKP___Color_C01_-UV0-array" count="24">
+0.830577 3.036607
+-1.362740 2.968523
+0.863660 2.947117
+-1.369715 3.014575
+-1.376175 3.081390
+0.810484 3.162215
+-1.379024 3.148456
+-1.378252 3.215578
+0.815171 3.289333
+-1.373863 3.282561
+-1.365868 3.349210
+0.825812 3.334304
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_-UV0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_C01_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_C01_-POSITION"/>
+        </vertices>
+        <triangles count="10" material="_Color_C01_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_C01_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_C01_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_C01_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 4 9 4 0 10 0 5 11 5 4 12 4 5 13 5 6 14 6 6 15 6 5 16 5 7 17 7 7 18 7 5 19 5 8 20 8 7 21 7 8 22 8 9 23 9 9 24 9 8 25 8 10 26 10 10 27 10 8 28 8 11 29 11</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_A07_-lib" name="Crapple2_SKP___Color_A07_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_A07_-POSITION">
+          <float_array id="Crapple2_SKP___Color_A07_-POSITION-array" count="45">
+0.316359 -0.078139 0.656736
+-0.317893 -0.078113 0.649947
+0.311665 -0.078097 0.645956
+-0.323686 -0.078176 0.666024
+0.287055 -0.078193 0.670346
+-0.328896 -0.078240 0.682300
+0.260953 -0.078268 0.689388
+-0.333517 -0.078305 0.698752
+0.239046 -0.078362 0.713137
+-0.337542 -0.078371 0.715360
+0.222170 -0.078471 0.740689
+-0.341896 -0.078436 0.731845
+-0.345354 -0.078502 0.748540
+0.219370 -0.078500 0.748264
+-0.346136 -0.078522 0.753701
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_-POSITION-array" count="15" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_A07_-Normal0">
+          <float_array id="Crapple2_SKP___Color_A07_-Normal0-array" count="117">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_-Normal0-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_A07_-UV0">
+          <float_array id="Crapple2_SKP___Color_A07_-UV0-array" count="30">
+1.245509 2.586770
+-1.251547 2.560041
+1.227029 2.544328
+-1.274353 2.623337
+1.130139 2.640350
+-1.294866 2.687414
+1.027374 2.715319
+-1.313058 2.752187
+0.941127 2.808821
+-1.328906 2.817574
+0.874685 2.917294
+-1.346046 2.882475
+-1.359663 2.948206
+0.863660 2.947117
+-1.362740 2.968523
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_-UV0-array" count="15" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_A07_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_A07_-POSITION"/>
+        </vertices>
+        <triangles count="13" material="_Color_A07_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_A07_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_A07_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_A07_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5 5 12 5 4 13 4 6 14 6 5 15 5 6 16 6 7 17 7 7 18 7 6 19 6 8 20 8 7 21 7 8 22 8 9 23 9 9 24 9 8 25 8 10 26 10 9 27 9 10 28 10 11 29 11 11 30 11 10 31 10 12 32 12 12 33 12 10 34 10 13 35 13 12 36 12 13 37 13 14 38 14</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_F13_-lib" name="Crapple2_SKP___Color_F13_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_F13_-POSITION">
+          <float_array id="Crapple2_SKP___Color_F13_-POSITION-array" count="252">
+-0.004450 -0.081366 1.037519
+-0.028185 -0.081450 1.058719
+-0.027836 -0.081358 1.035482
+0.018426 -0.081387 1.042782
+0.040351 -0.081420 1.051168
+0.060900 -0.081465 1.062515
+-0.025443 -0.081541 1.081796
+0.079676 -0.081520 1.076604
+0.096314 -0.081586 1.093163
+-0.019658 -0.081630 1.104303
+0.110494 -0.081659 1.111870
+-0.010932 -0.081715 1.125842
+0.121941 -0.081740 1.132363
+0.000580 -0.081794 1.146030
+0.130433 -0.081827 1.154247
+0.014672 -0.081867 1.164509
+0.135806 -0.081917 1.177098
+0.031096 -0.081932 1.180950
+0.137956 -0.082009 1.200473
+0.049560 -0.081988 1.195062
+0.069736 -0.082033 1.206595
+0.136841 -0.082101 1.223921
+0.091265 -0.082068 1.215344
+0.113767 -0.082091 1.221154
+0.247854 -0.078849 1.011362
+0.010259 -0.078853 1.012475
+-0.000113 -0.078852 1.012217
+0.232690 -0.078885 1.020605
+0.020583 -0.078857 1.013511
+0.030801 -0.078864 1.015318
+0.040854 -0.078874 1.017887
+0.050686 -0.078887 1.021203
+0.216714 -0.078916 1.028362
+0.060241 -0.078903 1.025247
+0.069466 -0.078922 1.029997
+0.200072 -0.078940 1.034564
+0.072964 -0.078927 1.031154
+0.076478 -0.078931 1.032265
+0.080005 -0.078935 1.033329
+0.083547 -0.078939 1.034346
+0.087101 -0.078943 1.035317
+0.182916 -0.078958 1.039154
+0.090669 -0.078947 1.036241
+0.094248 -0.078950 1.037117
+0.097838 -0.078954 1.037946
+0.101439 -0.078957 1.038728
+0.105050 -0.078959 1.039462
+0.165401 -0.078970 1.042090
+0.108670 -0.078962 1.040148
+0.112299 -0.078965 1.040786
+0.129931 -0.078973 1.042910
+0.147686 -0.078975 1.043346
+0.297788 -0.078652 0.961402
+-0.313198 -0.078606 0.949944
+0.270354 -0.078584 0.944334
+-0.309400 -0.078631 0.956186
+-0.300698 -0.078679 0.968363
+0.287151 -0.078708 0.975624
+-0.291123 -0.078724 0.979866
+0.275209 -0.078760 0.988769
+-0.280725 -0.078767 0.990631
+0.262071 -0.078807 1.000718
+-0.269562 -0.078806 1.000600
+-0.257694 -0.078842 1.009719
+-0.245186 -0.078875 1.017938
+-0.010476 -0.078854 1.012739
+-0.020771 -0.078859 1.014036
+-0.030939 -0.078867 1.016102
+-0.040923 -0.078878 1.018926
+-0.232106 -0.078903 1.025212
+-0.050668 -0.078893 1.022491
+-0.062461 -0.078916 1.028534
+-0.218526 -0.078928 1.031502
+-0.074645 -0.078937 1.033746
+-0.204518 -0.078949 1.036773
+-0.087160 -0.078954 1.038103
+-0.191814 -0.078964 1.040542
+-0.099946 -0.078968 1.041583
+-0.178879 -0.078975 1.043423
+-0.112943 -0.078978 1.044170
+-0.165776 -0.078983 1.045402
+-0.126087 -0.078985 1.045851
+-0.152567 -0.078987 1.046468
+-0.139317 -0.078988 1.046619
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_-POSITION-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_F13_-Normal0">
+          <float_array id="Crapple2_SKP___Color_F13_-Normal0-array" count="720">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_-Normal0-array" count="240" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_F13_-UV0">
+          <float_array id="Crapple2_SKP___Color_F13_-UV0-array" count="168">
+-0.017521 4.085954
+-0.110965 4.169418
+-0.109589 4.077935
+0.072544 4.106672
+0.158863 4.139688
+0.239764 4.184363
+-0.100169 4.260272
+0.313684 4.239833
+0.379190 4.305024
+-0.077392 4.348885
+0.435016 4.378674
+-0.043038 4.433684
+0.480082 4.459359
+0.002282 4.513165
+0.513515 4.545517
+0.057765 4.585915
+0.534668 4.635481
+0.122427 4.650646
+0.543132 4.727510
+0.195118 4.706207
+0.274550 4.751612
+0.538743 4.819823
+0.359312 4.786057
+0.447901 4.808929
+0.975805 3.982933
+0.040391 3.987316
+-0.000447 3.986302
+0.916100 4.019322
+0.081037 3.991393
+0.121263 3.998508
+0.160842 4.008622
+0.199550 4.021677
+0.853204 4.049864
+0.237169 4.037600
+0.273487 4.056301
+0.787686 4.074281
+0.287260 4.060856
+0.301093 4.065229
+0.314981 4.069418
+0.328924 4.073424
+0.342919 4.077245
+0.720142 4.092351
+0.356963 4.080882
+0.371054 4.084332
+0.385189 4.087596
+0.399365 4.090673
+0.413582 4.093563
+0.651184 4.103911
+0.427835 4.096265
+0.442122 4.098778
+0.511541 4.107139
+0.581439 4.108855
+1.172393 3.786238
+-1.233061 3.741131
+1.064385 3.719042
+-1.218109 3.765705
+-1.183852 3.813647
+1.130517 3.842231
+-1.146153 3.858933
+1.083502 3.893984
+-1.105217 3.901315
+1.031775 3.941027
+-1.061268 3.940564
+-1.014545 3.976465
+-0.965301 4.008823
+-0.041245 3.988354
+-0.081775 3.993462
+-0.121807 4.001597
+-0.161116 4.012713
+-0.913805 4.037462
+-0.199479 4.026748
+-0.245910 4.050541
+-0.860338 4.062226
+-0.293876 4.071062
+-0.805190 4.082979
+-0.343148 4.088215
+-0.755173 4.097818
+-0.393488 4.101917
+-0.704249 4.109159
+-0.444656 4.112101
+-0.652662 4.116949
+-0.496407 4.118720
+-0.600659 4.121149
+-0.548491 4.121741
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_-UV0-array" count="84" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_F13_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_F13_-POSITION"/>
+        </vertices>
+        <triangles count="80" material="_Color_F13_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_F13_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_F13_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_F13_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 1 6 1 3 7 3 4 8 4 1 9 1 4 10 4 5 11 5 1 12 1 5 13 5 6 14 6 6 15 6 5 16 5 7 17 7 6 18 6 7 19 7 8 20 8 6 21 6 8 22 8 9 23 9 9 24 9 8 25 8 10 26 10 9 27 9 10 28 10 11 29 11 11 30 11 10 31 10 12 32 12 11 33 11 12 34 12 13 35 13 13 36 13 12 37 12 14 38 14 13 39 13 14 40 14 15 41 15 15 42 15 14 43 14 16 44 16 15 45 15 16 46 16 17 47 17 17 48 17 16 49 16 18 50 18 17 51 17 18 52 18 19 53 19 19 54 19 18 55 18 20 56 20 20 57 20 18 58 18 21 59 21 20 60 20 21 61 21 22 62 22 22 63 22 21 64 21 23 65 23 24 66 24 25 67 25 26 68 26 25 69 25 24 70 24 27 71 27 25 72 25 27 73 27 28 74 28 28 75 28 27 76 27 29 77 29 29 78 29 27 79 27 30 80 30 30 81 30 27 82 27 31 83 31 31 84 31 27 85 27 32 86 32 31 87 31 32 88 32 33 89 33 33 90 33 32 91 32 34 92 34 34 93 34 32 94 32 35 95 35 34 96 34 35 97 35 36 98 36 36 99 36 35 100 35 37 101 37 37 102 37 35 103 35 38 104 38 38 105 38 35 106 35 39 107 39 39 108 39 35 109 35 40 110 40 40 111 40 35 112 35 41 113 41 40 114 40 41 115 41 42 116 42 42 117 42 41 118 41 43 119 43 43 120 43 41 121 41 44 122 44 44 123 44 41 124 41 45 125 45 45 126 45 41 127 41 46 128 46 46 129 46 41 130 41 47 131 47 46 132 46 47 133 47 48 134 48 48 135 48 47 136 47 49 137 49 49 138 49 47 139 47 50 140 50 50 141 50 47 142 47 51 143 51 52 144 52 53 145 53 54 146 54 53 147 53 52 148 52 55 149 55 55 150 55 52 151 52 56 152 56 56 153 56 52 154 52 57 155 57 56 156 56 57 157 57 58 158 58 58 159 58 57 160 57 59 161 59 58 162 58 59 163 59 60 164 60 60 165 60 59 166 59 61 167 61 60 168 60 61 169 61 62 170 62 62 171 62 61 172 61 63 173 63 63 174 63 61 175 61 24 176 24 63 177 63 24 178 24 26 179 26 63 180 63 26 181 26 64 182 64 64 183 64 26 184 26 65 185 65 64 186 64 65 187 65 66 188 66 64 189 64 66 190 66 67 191 67 64 192 64 67 193 67 68 194 68 64 195 64 68 196 68 69 197 69 69 198 69 68 199 68 70 200 70 69 201 69 70 202 70 71 203 71 69 204 69 71 205 71 72 206 72 72 207 72 71 208 71 73 209 73 72 210 72 73 211 73 74 212 74 74 213 74 73 214 73 75 215 75 74 216 74 75 217 75 76 218 76 76 219 76 75 220 75 77 221 77 76 222 76 77 223 77 78 224 78 78 225 78 77 226 77 79 227 79 78 228 78 79 229 79 80 230 80 80 231 80 79 232 79 81 233 81 80 234 80 81 235 81 82 236 82 82 237 82 81 238 81 83 239 83</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_K18_-lib" name="Crapple2_SKP___Color_K18_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_K18_-POSITION">
+          <float_array id="Crapple2_SKP___Color_K18_-POSITION-array" count="51">
+0.266119 -0.077773 0.563783
+-0.271371 -0.077753 0.558793
+0.259465 -0.077734 0.554090
+-0.280477 -0.077810 0.573254
+0.272566 -0.077811 0.573616
+-0.289056 -0.077868 0.588033
+0.278803 -0.077851 0.583583
+0.284828 -0.077891 0.593680
+-0.297097 -0.077928 0.603112
+0.290637 -0.077931 0.603903
+-0.304590 -0.077988 0.618471
+0.296227 -0.077972 0.614247
+0.301597 -0.078013 0.624707
+-0.311525 -0.078050 0.634089
+0.306744 -0.078055 0.635278
+-0.317893 -0.078113 0.649947
+0.311665 -0.078097 0.645956
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_-POSITION-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_K18_-Normal0">
+          <float_array id="Crapple2_SKP___Color_K18_-Normal0-array" count="135">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_-Normal0-array" count="45" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_K18_-UV0">
+          <float_array id="Crapple2_SKP___Color_K18_-UV0-array" count="34">
+1.047713 2.220810
+-1.068391 2.201162
+1.021515 2.182646
+-1.104239 2.258096
+1.073096 2.259522
+-1.138014 2.316283
+1.097651 2.298763
+1.121369 2.338516
+-1.169672 2.375649
+1.144238 2.378763
+-1.199172 2.436117
+1.166249 2.419486
+1.187390 2.460667
+-1.226475 2.497607
+1.207654 2.502287
+-1.251547 2.560041
+1.227029 2.544328
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_-UV0-array" count="17" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_K18_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_K18_-POSITION"/>
+        </vertices>
+        <triangles count="15" material="_Color_K18_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_K18_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_K18_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_K18_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5 5 12 5 4 13 4 6 14 6 5 15 5 6 16 6 7 17 7 5 18 5 7 19 7 8 20 8 8 21 8 7 22 7 9 23 9 8 24 8 9 25 9 10 26 10 10 27 10 9 28 9 11 29 11 10 30 10 11 31 11 12 32 12 10 33 10 12 34 12 13 35 13 13 36 13 12 37 12 14 38 14 13 39 13 14 40 14 15 41 15 15 42 15 14 43 14 16 44 16</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP___Color_C02_-lib" name="Crapple2_SKP___Color_C02_Mesh">
+      <mesh>
+        <source id="Crapple2_SKP___Color_C02_-POSITION">
+          <float_array id="Crapple2_SKP___Color_C02_-POSITION-array" count="39">
+0.214493 -0.078967 0.866628
+-0.346931 -0.078903 0.850395
+0.209756 -0.078888 0.846609
+-0.343990 -0.078970 0.867189
+0.227898 -0.079083 0.896026
+-0.340149 -0.079035 0.883801
+-0.335417 -0.079100 0.900181
+0.246758 -0.079187 0.922260
+-0.329810 -0.079163 0.916283
+-0.323995 -0.079218 0.930073
+0.270354 -0.079274 0.944331
+-0.317179 -0.079270 0.943398
+-0.313198 -0.079296 0.949942
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_-POSITION-array" count="13" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C02_-Normal0">
+          <float_array id="Crapple2_SKP___Color_C02_-Normal0-array" count="99">
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+0.000000 -0.999992 -0.003945
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_-Normal0-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C02_-UV0">
+          <float_array id="Crapple2_SKP___Color_C02_-UV0-array" count="26">
+0.844460 3.413120
+-1.365868 3.349210
+0.825812 3.334304
+-1.354292 3.415331
+0.897236 3.528860
+-1.339169 3.480731
+-1.320541 3.545221
+0.971487 3.632146
+-1.298463 3.608613
+-1.275571 3.662908
+1.064385 3.719042
+-1.248737 3.715367
+-1.233061 3.741131
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_-UV0-array" count="13" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP___Color_C02_-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP___Color_C02_-POSITION"/>
+        </vertices>
+        <triangles count="11" material="_Color_C02_"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP___Color_C02_-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP___Color_C02_-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP___Color_C02_-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5 5 12 5 4 13 4 6 14 6 6 15 6 4 16 4 7 17 7 6 18 6 7 19 7 8 20 8 8 21 8 7 22 7 9 23 9 9 24 9 7 25 7 10 26 10 9 27 9 10 28 10 11 29 11 11 30 11 10 31 10 12 32 12</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP__Color_M00-lib" name="Crapple2_SKP__Color_M00Mesh">
+      <mesh>
+        <source id="Crapple2_SKP__Color_M00-POSITION">
+          <float_array id="Crapple2_SKP__Color_M00-POSITION-array" count="174">
+-0.199167 0.125000 -0.403429
+-0.449167 0.000000 -0.403429
+-0.449167 0.125000 -0.403429
+-0.449167 -0.125000 -0.403429
+-0.199167 -0.125000 -0.403429
+-0.449167 0.125000 -0.278429
+-0.199167 0.125000 -0.403429
+-0.449167 0.125000 -0.403429
+-0.199167 0.125000 -0.153429
+-0.449167 0.125000 -0.153429
+-0.324167 0.125000 -0.153429
+-0.449167 0.000000 -0.153429
+-0.449167 -0.125000 -0.278429
+-0.449167 -0.125000 -0.153429
+-0.449167 0.000000 -0.278429
+-0.199167 -0.125000 -0.153429
+-0.449167 -0.125000 -0.403429
+-0.199167 -0.125000 -0.403429
+-0.449167 -0.125000 -0.278429
+-0.449167 -0.125000 -0.153429
+-0.324167 -0.125000 -0.153429
+-0.199167 0.125000 -0.403429
+-0.199167 -0.125000 -0.153429
+-0.199167 -0.125000 -0.403429
+-0.199167 0.000000 -0.153429
+-0.199167 0.125000 -0.153429
+-0.449167 0.000000 -0.153429
+-0.324167 0.000000 -0.278429
+-0.449167 0.000000 -0.278429
+-0.324167 0.000000 -0.153429
+-0.199167 -0.125000 -0.153429
+-0.324167 0.000000 -0.153429
+-0.324167 -0.125000 -0.153429
+-0.199167 0.000000 -0.153429
+-0.324167 -0.125000 -0.153429
+-0.449167 0.000000 -0.153429
+-0.449167 -0.125000 -0.153429
+-0.324167 0.000000 -0.153429
+-0.449167 0.000000 -0.278429
+-0.449167 -0.125000 -0.403429
+-0.449167 -0.125000 -0.278429
+-0.449167 0.000000 -0.403429
+-0.449167 0.125000 -0.153429
+-0.449167 0.000000 -0.278429
+-0.449167 0.000000 -0.153429
+-0.449167 0.125000 -0.278429
+-0.449167 0.125000 -0.278429
+-0.449167 0.000000 -0.403429
+-0.449167 0.000000 -0.278429
+-0.449167 0.125000 -0.403429
+-0.324167 0.000000 -0.153429
+-0.449167 0.125000 -0.153429
+-0.449167 0.000000 -0.153429
+-0.324167 0.125000 -0.153429
+-0.199167 0.000000 -0.153429
+-0.324167 0.125000 -0.153429
+-0.324167 0.000000 -0.153429
+-0.199167 0.125000 -0.153429
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00-POSITION-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M00-Normal0">
+          <float_array id="Crapple2_SKP__Color_M00-Normal0-array" count="288">
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M00-UV0">
+          <float_array id="Crapple2_SKP__Color_M00-UV0-array" count="116">
+7.841233 4.921260
+17.683752 0.000000
+17.683752 4.921260
+17.683752 -4.921260
+7.841233 -4.921260
+17.683752 -10.961759
+7.841233 -15.883019
+17.683752 -15.883019
+7.841233 -6.040499
+17.683752 -6.040499
+12.762493 -6.040499
+-0.000000 -6.040499
+4.921260 -10.961759
+4.921260 -6.040499
+-0.000000 -10.961759
+-7.841233 -6.040499
+-17.683752 -15.883019
+-7.841233 -15.883019
+-17.683752 -10.961759
+-17.683752 -6.040499
+-12.762493 -6.040499
+4.921260 -15.883019
+-4.921260 -6.040499
+-4.921260 -15.883019
+0.000000 -6.040499
+4.921260 -6.040499
+17.683752 -6.040499
+12.762493 -10.961759
+17.683752 -10.961759
+12.762493 -6.040499
+-7.841233 -4.921260
+-12.762493 0.000000
+-12.762493 -4.921260
+-7.841233 0.000000
+-12.762493 -4.921260
+-17.683752 0.000000
+-17.683752 -4.921260
+-12.762493 0.000000
+-0.000000 -10.961759
+4.921260 -15.883019
+4.921260 -10.961759
+-0.000000 -15.883019
+-4.921260 -6.040499
+-0.000000 -10.961759
+-0.000000 -6.040499
+-4.921260 -10.961759
+-4.921260 -10.961759
+-0.000000 -15.883019
+-0.000000 -10.961759
+-4.921260 -15.883019
+-12.762493 0.000000
+-17.683752 4.921260
+-17.683752 0.000000
+-12.762493 4.921260
+-7.841233 0.000000
+-12.762493 4.921260
+-12.762493 0.000000
+-7.841233 4.921260
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00-UV0-array" count="58" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP__Color_M00-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP__Color_M00-POSITION"/>
+        </vertices>
+        <triangles count="32" material="Color_M00"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP__Color_M00-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP__Color_M00-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP__Color_M00-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 5 9 5 6 10 6 7 11 7 6 12 6 5 13 5 8 14 8 8 15 8 5 16 5 9 17 9 8 18 8 9 19 9 10 20 10 11 21 11 12 22 12 13 23 13 12 24 12 11 25 11 14 26 14 15 27 15 16 28 16 17 29 17 16 30 16 15 31 15 18 32 18 18 33 18 15 34 15 19 35 19 19 36 19 15 37 15 20 38 20 21 39 21 22 40 22 23 41 23 22 42 22 21 43 21 24 44 24 24 45 24 21 46 21 25 47 25 26 48 26 27 49 27 28 50 28 27 51 27 26 52 26 29 53 29 30 54 30 31 55 31 32 56 32 31 57 31 30 58 30 33 59 33 34 60 34 35 61 35 36 62 36 35 63 35 34 64 34 37 65 37 38 66 38 39 67 39 40 68 40 39 69 39 38 70 38 41 71 41 42 72 42 43 73 43 44 74 44 43 75 43 42 76 42 45 77 45 46 78 46 47 79 47 48 80 48 47 81 47 46 82 46 49 83 49 50 84 50 51 85 51 52 86 52 51 87 51 50 88 50 53 89 53 54 90 54 55 91 55 56 92 56 55 93 55 54 94 54 57 95 57</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Crapple2_SKP__Color_M09-lib" name="Crapple2_SKP__Color_M09Mesh">
+      <mesh>
+        <source id="Crapple2_SKP__Color_M09-POSITION">
+          <float_array id="Crapple2_SKP__Color_M09-POSITION-array" count="174">
+0.388406 0.000000 -0.153431
+0.263406 0.125000 -0.153431
+0.263406 0.000000 -0.153431
+0.388406 0.125000 -0.153431
+0.388406 0.125000 -0.403431
+0.138406 0.000000 -0.403431
+0.138406 0.125000 -0.403431
+0.138406 -0.125000 -0.403431
+0.388406 -0.125000 -0.403431
+0.138406 0.125000 -0.278431
+0.388406 0.125000 -0.403431
+0.138406 0.125000 -0.403431
+0.388406 0.125000 -0.153431
+0.138406 0.125000 -0.153431
+0.263406 0.125000 -0.153431
+0.138406 0.000000 -0.153431
+0.138406 -0.125000 -0.278431
+0.138406 -0.125000 -0.153431
+0.138406 0.000000 -0.278431
+0.388406 -0.125000 -0.153431
+0.138406 -0.125000 -0.403431
+0.388406 -0.125000 -0.403431
+0.138406 -0.125000 -0.278431
+0.138406 -0.125000 -0.153431
+0.263406 -0.125000 -0.153431
+0.388406 0.125000 -0.403431
+0.388406 -0.125000 -0.153431
+0.388406 -0.125000 -0.403431
+0.388406 0.000000 -0.153431
+0.388406 0.125000 -0.153431
+0.138406 0.000000 -0.153431
+0.263406 0.000000 -0.278431
+0.138406 0.000000 -0.278431
+0.263406 0.000000 -0.153431
+0.388406 -0.125000 -0.153431
+0.263406 0.000000 -0.153431
+0.263406 -0.125000 -0.153431
+0.388406 0.000000 -0.153431
+0.263406 -0.125000 -0.153431
+0.138406 0.000000 -0.153431
+0.138406 -0.125000 -0.153431
+0.263406 0.000000 -0.153431
+0.138406 0.000000 -0.278431
+0.138406 -0.125000 -0.403431
+0.138406 -0.125000 -0.278431
+0.138406 0.000000 -0.403431
+0.138406 0.125000 -0.153431
+0.138406 0.000000 -0.278431
+0.138406 0.000000 -0.153431
+0.138406 0.125000 -0.278431
+0.138406 0.125000 -0.278431
+0.138406 0.000000 -0.403431
+0.138406 0.000000 -0.278431
+0.138406 0.125000 -0.403431
+0.263406 0.000000 -0.153431
+0.138406 0.125000 -0.153431
+0.138406 0.000000 -0.153431
+0.263406 0.125000 -0.153431
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09-POSITION-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M09-Normal0">
+          <float_array id="Crapple2_SKP__Color_M09-Normal0-array" count="288">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M09-UV0">
+          <float_array id="Crapple2_SKP__Color_M09-UV0-array" count="116">
+15.291580 0.000000
+10.370320 4.921260
+10.370320 0.000000
+15.291580 4.921260
+-15.291580 4.921260
+-5.449060 0.000000
+-5.449060 4.921260
+-5.449060 -4.921260
+-15.291580 -4.921260
+-5.449060 -10.961869
+-15.291580 -15.883129
+-5.449060 -15.883129
+-15.291580 -6.040609
+-5.449060 -6.040609
+-10.370320 -6.040609
+-0.000000 -6.040609
+4.921260 -10.961869
+4.921260 -6.040609
+-0.000000 -10.961869
+15.291580 -6.040609
+5.449060 -15.883129
+15.291580 -15.883129
+5.449060 -10.961869
+5.449060 -6.040609
+10.370320 -6.040609
+4.921260 -15.883129
+-4.921260 -6.040609
+-4.921260 -15.883129
+0.000000 -6.040609
+4.921260 -6.040609
+-5.449060 -6.040609
+-10.370320 -10.961869
+-5.449060 -10.961869
+-10.370320 -6.040609
+15.291580 -4.921260
+10.370320 0.000000
+10.370320 -4.921260
+15.291580 0.000000
+10.370320 -4.921260
+5.449060 0.000000
+5.449060 -4.921260
+10.370320 0.000000
+-0.000000 -10.961869
+4.921260 -15.883129
+4.921260 -10.961869
+-0.000000 -15.883129
+-4.921260 -6.040609
+-0.000000 -10.961869
+-0.000000 -6.040609
+-4.921260 -10.961869
+-4.921260 -10.961869
+-0.000000 -15.883129
+-0.000000 -10.961869
+-4.921260 -15.883129
+10.370320 0.000000
+5.449060 4.921260
+5.449060 0.000000
+10.370320 4.921260
+</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09-UV0-array" count="58" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Crapple2_SKP__Color_M09-VERTEX">
+          <input semantic="POSITION" source="#Crapple2_SKP__Color_M09-POSITION"/>
+        </vertices>
+        <triangles count="32" material="Color_M09"><input semantic="VERTEX" offset="0" source="#Crapple2_SKP__Color_M09-VERTEX"/><input semantic="NORMAL" offset="1" source="#Crapple2_SKP__Color_M09-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#Crapple2_SKP__Color_M09-UV0"/><p> 0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 5 9 5 4 10 4 7 11 7 7 12 7 4 13 4 8 14 8 9 15 9 10 16 10 11 17 11 10 18 10 9 19 9 12 20 12 12 21 12 9 22 9 13 23 13 12 24 12 13 25 13 14 26 14 15 27 15 16 28 16 17 29 17 16 30 16 15 31 15 18 32 18 19 33 19 20 34 20 21 35 21 20 36 20 19 37 19 22 38 22 22 39 22 19 40 19 23 41 23 23 42 23 19 43 19 24 44 24 25 45 25 26 46 26 27 47 27 26 48 26 25 49 25 28 50 28 28 51 28 25 52 25 29 53 29 30 54 30 31 55 31 32 56 32 31 57 31 30 58 30 33 59 33 34 60 34 35 61 35 36 62 36 35 63 35 34 64 34 37 65 37 38 66 38 39 67 39 40 68 40 39 69 39 38 70 38 41 71 41 42 72 42 43 73 43 44 74 44 43 75 43 42 76 42 45 77 45 46 78 46 47 79 47 48 80 48 47 81 47 46 82 46 49 83 49 50 84 50 51 85 51 52 86 52 51 87 51 50 88 50 53 89 53 54 90 54 55 91 55 56 92 56 55 93 55 54 94 54 57 95 57</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Crapple2_SKP__no_name2Controller">
+      <skin source="#Crapple2_SKP__no_name2-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP__no_name2Controller-Joints">
+          <Name_array id="Crapple2_SKP__no_name2Controller-Joints-array" count="1">
+ kumo_body</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__no_name2Controller-Matrices">
+          <float_array id="Crapple2_SKP__no_name2Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 -0.000000 -0.000000 100.000002 0.000004 57.338406 0.000000 -0.000004 100.000002 -0.000003 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__no_name2Controller-Weights">
+          <float_array id="Crapple2_SKP__no_name2Controller-Weights-array" count="27">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__no_name2Controller-Weights-array" count="27">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP__no_name2Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP__no_name2Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="26">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP__no_name2Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP__no_name2Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_002_Controller">
+      <skin source="#Crapple2_SKP___Color_002_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_002_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_002_Controller-Joints-array" count="1">
+ kumo_body</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_002_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_002_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 -0.000000 -0.000000 100.000002 0.000004 57.338406 0.000000 -0.000004 100.000002 -0.000003 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_002_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_002_Controller-Weights-array" count="63">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_002_Controller-Weights-array" count="63">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_002_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_002_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="62">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_002_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_002_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_I03_Controller">
+      <skin source="#Crapple2_SKP___Color_I03_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_I03_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_I03_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_I03_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_I03_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_I03_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_I03_Controller-Weights-array" count="80">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_I03_Controller-Weights-array" count="80">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_I03_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_I03_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="79">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_I03_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_I03_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0 79</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_C01_Controller">
+      <skin source="#Crapple2_SKP___Color_C01_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_C01_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_C01_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C01_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_C01_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C01_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_C01_Controller-Weights-array" count="13">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C01_Controller-Weights-array" count="13">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_C01_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_C01_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="12">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_C01_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_C01_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_A07_Controller">
+      <skin source="#Crapple2_SKP___Color_A07_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_A07_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_A07_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_A07_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_A07_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_A07_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_A07_Controller-Weights-array" count="16">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_A07_Controller-Weights-array" count="16">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_A07_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_A07_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="15">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_A07_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_A07_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_F13_Controller">
+      <skin source="#Crapple2_SKP___Color_F13_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_F13_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_F13_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_F13_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_F13_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_F13_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_F13_Controller-Weights-array" count="85">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_F13_Controller-Weights-array" count="85">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_F13_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_F13_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="84">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_F13_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_F13_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 64 0 65 0 66 0 67 0 68 0 69 0 70 0 71 0 72 0 73 0 74 0 75 0 76 0 77 0 78 0 79 0 80 0 81 0 82 0 83 0 84</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_K18_Controller">
+      <skin source="#Crapple2_SKP___Color_K18_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_K18_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_K18_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_K18_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_K18_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_K18_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_K18_Controller-Weights-array" count="18">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_K18_Controller-Weights-array" count="18">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_K18_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_K18_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="17">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_K18_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_K18_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP___Color_C02_Controller">
+      <skin source="#Crapple2_SKP___Color_C02_-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP___Color_C02_Controller-Joints">
+          <Name_array id="Crapple2_SKP___Color_C02_Controller-Joints-array" count="1">
+ thunder</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C02_Controller-Matrices">
+          <float_array id="Crapple2_SKP___Color_C02_Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 0.006392 -0.000000 100.000002 0.000004 -74.922802 0.000000 -0.000004 100.000002 -8.169504 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP___Color_C02_Controller-Weights">
+          <float_array id="Crapple2_SKP___Color_C02_Controller-Weights-array" count="14">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP___Color_C02_Controller-Weights-array" count="14">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP___Color_C02_Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP___Color_C02_Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="13">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP___Color_C02_Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP___Color_C02_Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP__Color_M00Controller">
+      <skin source="#Crapple2_SKP__Color_M00-lib">
+        <bind_shape_matrix>1.000000 -0.000000 -0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP__Color_M00Controller-Joints">
+          <Name_array id="Crapple2_SKP__Color_M00Controller-Joints-array" count="1">
+ kumo_eye_R</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M00Controller-Matrices">
+          <float_array id="Crapple2_SKP__Color_M00Controller-Matrices-array" count="16">
+
+-100.000002 -0.000009 -0.000000 -32.678995 -0.000009 100.000002 -0.000004 27.527592 0.000000 -0.000004 -100.000002 -0.050024 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M00Controller-Weights">
+          <float_array id="Crapple2_SKP__Color_M00Controller-Weights-array" count="59">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M00Controller-Weights-array" count="59">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP__Color_M00Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP__Color_M00Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="58">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP__Color_M00Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP__Color_M00Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="Crapple2_SKP__Color_M09Controller">
+      <skin source="#Crapple2_SKP__Color_M09-lib">
+        <bind_shape_matrix>1.000000 0.000000 -0.000000 -0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000
+</bind_shape_matrix>
+        <source id="Crapple2_SKP__Color_M09Controller-Joints">
+          <Name_array id="Crapple2_SKP__Color_M09Controller-Joints-array" count="1">
+ kumo_eye_L</Name_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09Controller-Joints-array" count="1">
+              <param type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M09Controller-Matrices">
+          <float_array id="Crapple2_SKP__Color_M09Controller-Matrices-array" count="16">
+
+100.000002 0.000000 0.000000 -26.362950 -0.000000 100.000002 0.000004 27.868820 0.000000 -0.000004 100.000002 0.051928 0.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09Controller-Matrices-array" count="1" stride="16">
+              <param type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Crapple2_SKP__Color_M09Controller-Weights">
+          <float_array id="Crapple2_SKP__Color_M09Controller-Weights-array" count="59">
+
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000</float_array>
+          <technique_common>
+            <accessor source="#Crapple2_SKP__Color_M09Controller-Weights-array" count="59">
+              <param type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Crapple2_SKP__Color_M09Controller-Joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Crapple2_SKP__Color_M09Controller-Matrices"/>
+        </joints>
+        <vertex_weights count="58">
+          <input semantic="JOINT" offset="0" source="#Crapple2_SKP__Color_M09Controller-Joints"/>
+          <input semantic="WEIGHT" offset="1" source="#Crapple2_SKP__Color_M09Controller-Weights"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0 52 0 53 0 54 0 55 0 56 0 57 0 58</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_animations>
+    <animation id="kumo_model-anim" name="kumo_model"><animation><source id="kumo_model-Matrix-animation-input"><float_array id="kumo_model-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#kumo_model-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="kumo_model-Matrix-animation-output-transform"><float_array id="kumo_model-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#kumo_model-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="kumo_model-Interpolations"><Name_array id="kumo_model-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#kumo_model-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="kumo_model-Matrix-animation-transform"><input semantic="INPUT" source="#kumo_model-Matrix-animation-input"/><input semantic="OUTPUT" source="#kumo_model-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#kumo_model-Interpolations"/></sampler><channel source="#kumo_model-Matrix-animation-transform" target="kumo_model/matrix"/></animation></animation>
+    <animation id="kumo_body-anim" name="kumo_body"><animation><source id="kumo_body-Matrix-animation-input"><float_array id="kumo_body-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#kumo_body-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="kumo_body-Matrix-animation-output-transform"><float_array id="kumo_body-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#kumo_body-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="kumo_body-Interpolations"><Name_array id="kumo_body-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#kumo_body-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="kumo_body-Matrix-animation-transform"><input semantic="INPUT" source="#kumo_body-Matrix-animation-input"/><input semantic="OUTPUT" source="#kumo_body-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#kumo_body-Interpolations"/></sampler><channel source="#kumo_body-Matrix-animation-transform" target="kumo_body/matrix"/></animation></animation>
+    <animation id="kumo_eye_L-anim" name="kumo_eye_L"><animation><source id="kumo_eye_L-Matrix-animation-input"><float_array id="kumo_eye_L-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#kumo_eye_L-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="kumo_eye_L-Matrix-animation-output-transform"><float_array id="kumo_eye_L-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#kumo_eye_L-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="kumo_eye_L-Interpolations"><Name_array id="kumo_eye_L-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#kumo_eye_L-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="kumo_eye_L-Matrix-animation-transform"><input semantic="INPUT" source="#kumo_eye_L-Matrix-animation-input"/><input semantic="OUTPUT" source="#kumo_eye_L-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#kumo_eye_L-Interpolations"/></sampler><channel source="#kumo_eye_L-Matrix-animation-transform" target="kumo_eye_L/matrix"/></animation></animation>
+    <animation id="kumo_eye_R-anim" name="kumo_eye_R"><animation><source id="kumo_eye_R-Matrix-animation-input"><float_array id="kumo_eye_R-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#kumo_eye_R-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="kumo_eye_R-Matrix-animation-output-transform"><float_array id="kumo_eye_R-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#kumo_eye_R-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="kumo_eye_R-Interpolations"><Name_array id="kumo_eye_R-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#kumo_eye_R-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="kumo_eye_R-Matrix-animation-transform"><input semantic="INPUT" source="#kumo_eye_R-Matrix-animation-input"/><input semantic="OUTPUT" source="#kumo_eye_R-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#kumo_eye_R-Interpolations"/></sampler><channel source="#kumo_eye_R-Matrix-animation-transform" target="kumo_eye_R/matrix"/></animation></animation>
+    <animation id="thunder-anim" name="thunder"><animation><source id="thunder-Matrix-animation-input"><float_array id="thunder-Matrix-animation-input-array" count="0">
+</float_array><technique_common><accessor source="#thunder-Matrix-animation-input-array" count="0"><param name="TIME" type="float"/></accessor></technique_common></source><source id="thunder-Matrix-animation-output-transform"><float_array id="thunder-Matrix-animation-output-transform-array" count="0">
+</float_array><technique_common><accessor source="#thunder-Matrix-animation-output-transform-array" count="0" stride="16"><param type="float4x4"/></accessor></technique_common></source><source id="thunder-Interpolations"><Name_array id="thunder-Interpolations-array" count="0">
+</Name_array><technique_common><accessor source="#thunder-Interpolations-array" count="0"><param type="name"/></accessor></technique_common></source><sampler id="thunder-Matrix-animation-transform"><input semantic="INPUT" source="#thunder-Matrix-animation-input"/><input semantic="OUTPUT" source="#thunder-Matrix-animation-output-transform"/><input semantic="INTERPOLATION" source="#thunder-Interpolations"/></sampler><channel source="#thunder-Matrix-animation-transform" target="thunder/matrix"/></animation></animation>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="kumo" name="kumo">
+      <node name="kumo_model" id="kumo_model" sid="kumo_model"><matrix sid="matrix">0.010000 0.000000 0.000000 0.000000 0.000000 0.010000 0.000000 -1.310806 0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="kumo_body" id="kumo_body" sid="kumo_body" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 73.742188 0.000000 0.000000 1.000000 -0.000003 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="kumo_eye_L" id="kumo_eye_L" sid="kumo_eye_L" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 26.362949 0.000000 1.000000 0.000000 103.211777 0.000000 0.000000 1.000000 -0.051933 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="kumo_eye_R" id="kumo_eye_R" sid="kumo_eye_R" type="JOINT"><matrix sid="matrix">-1.000000 0.000000 0.000000 -32.678993 0.000000 1.000000 0.000000 103.553001 0.000000 0.000000 -1.000000 -0.050028 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="thunder" id="thunder" sid="thunder" type="JOINT"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.006392 0.000000 1.000000 0.000000 206.003387 0.000000 0.000000 1.000000 8.169498 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
+      <node name="Crapple2_SKP__no_name2" id="Crapple2_SKP__no_name2" sid="Crapple2_SKP__no_name2"><instance_controller url="#Crapple2_SKP__no_name2Controller"><bind_material><technique_common><instance_material symbol="no_name2" target="#no_name2"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_002_" id="Crapple2_SKP___Color_002_" sid="Crapple2_SKP___Color_002_"><instance_controller url="#Crapple2_SKP___Color_002_Controller"><bind_material><technique_common><instance_material symbol="_Color_002_" target="#_Color_002_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_I03_" id="Crapple2_SKP___Color_I03_" sid="Crapple2_SKP___Color_I03_"><instance_controller url="#Crapple2_SKP___Color_I03_Controller"><bind_material><technique_common><instance_material symbol="_Color_I03_" target="#_Color_I03_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_C01_" id="Crapple2_SKP___Color_C01_" sid="Crapple2_SKP___Color_C01_"><instance_controller url="#Crapple2_SKP___Color_C01_Controller"><bind_material><technique_common><instance_material symbol="_Color_C01_" target="#_Color_C01_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_A07_" id="Crapple2_SKP___Color_A07_" sid="Crapple2_SKP___Color_A07_"><instance_controller url="#Crapple2_SKP___Color_A07_Controller"><bind_material><technique_common><instance_material symbol="_Color_A07_" target="#_Color_A07_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_F13_" id="Crapple2_SKP___Color_F13_" sid="Crapple2_SKP___Color_F13_"><instance_controller url="#Crapple2_SKP___Color_F13_Controller"><bind_material><technique_common><instance_material symbol="_Color_F13_" target="#_Color_F13_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_K18_" id="Crapple2_SKP___Color_K18_" sid="Crapple2_SKP___Color_K18_"><instance_controller url="#Crapple2_SKP___Color_K18_Controller"><bind_material><technique_common><instance_material symbol="_Color_K18_" target="#_Color_K18_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP___Color_C02_" id="Crapple2_SKP___Color_C02_" sid="Crapple2_SKP___Color_C02_"><instance_controller url="#Crapple2_SKP___Color_C02_Controller"><bind_material><technique_common><instance_material symbol="_Color_C02_" target="#_Color_C02_"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP__Color_M00" id="Crapple2_SKP__Color_M00" sid="Crapple2_SKP__Color_M00"><instance_controller url="#Crapple2_SKP__Color_M00Controller"><bind_material><technique_common><instance_material symbol="Color_M00" target="#Color_M00"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <node name="Crapple2_SKP__Color_M09" id="Crapple2_SKP__Color_M09" sid="Crapple2_SKP__Color_M09"><instance_controller url="#Crapple2_SKP__Color_M09Controller"><bind_material><technique_common><instance_material symbol="Color_M09" target="#Color_M09"/></technique_common></bind_material></instance_controller><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>30.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>3.333333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#kumo"></instance_visual_scene>
+  </scene>
+</COLLADA>

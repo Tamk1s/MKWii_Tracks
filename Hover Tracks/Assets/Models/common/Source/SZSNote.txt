@@ -1,0 +1,2 @@
+Extract a copy of the original "Common.szs" archive here
+[ISO ROOT]/Race/Common.szs

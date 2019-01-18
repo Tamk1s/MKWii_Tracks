@@ -1,0 +1,10 @@
+This folder contains the source files used for creating the new THP videos.
+
+The source files are meant to be used with my own Thwimp utility, which was designed in parallel with this project. (http://wiki.tockdom.com/wiki/Thwimp)
+
+Folder breakdown is the same as the THP root folder on the MKWii DVD, (http://wiki.tockdom.com/wiki/Filesystem/thp) just only the files/folders we need to modify
+
+Folder breakdown:
+"battle"	- "/thp/battle" on DVD
+"title"		- "/thp/title" on DVD
+"Thwimp"	- Place Thwimp here to use it from the make.bat batch scripts for THP re-encoding

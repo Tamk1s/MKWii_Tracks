@@ -1,0 +1,2 @@
+Extract pow_bloc_plane.brres
+from original Common.szs (for reference)

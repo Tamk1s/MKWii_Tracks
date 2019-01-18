@@ -1,0 +1,52 @@
+# Alias Wavefront MTL File Exported from SketchUp
+# with OBJexporter (c) 2010-2011 TIG
+# Made for 'koura_red.obj'
+
+newmtl Default_Material
+Ka 0.000000 0.000000 0.000000
+Kd 0.066667 1.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 0
+d 1.000000
+
+newmtl _Formica_Laminate_Dark_
+Ka 0.192157 0.203922 0.231373
+Kd 0.192157 0.203922 0.231373
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd koura_red_Textures/_Formica_Laminate_Dark_.PNG
+
+newmtl _Formica_Blue_
+Ka 0.631373 0.003922 0.043137
+Kd 0.631373 0.003922 0.043137
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd koura_red_Textures/_Formica_Blue_.PNG
+
+newmtl _Color_000_
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd koura_red_Textures/_Color_000_.PNG
+
+newmtl _Color_C01_
+Ka 1.000000 0.498039 0.000000
+Kd 1.000000 0.498039 0.000000
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd koura_red_Textures/_Color_C01_.PNG
+
+newmtl _Carpet_Berber_Pattern_Gray_
+Ka 0.517647 0.133333 0.141176
+Kd 0.517647 0.133333 0.141176
+Ks 0.333333 0.333333 0.333333
+Ns 0
+d 1.000000
+map_Kd koura_red_Textures/_Carpet_Berber_Pattern_Gray_.PNG
+
+#EOF

@@ -1,0 +1,18 @@
+The following files/subfolders should be ready-to-use WAV files to import into the BRSAR for sfx/jingles, or for WAV music to BRSTM. Both can be down with BrawlBox.
+
+Some of the subfolders include AUP files, which are Audacity project files.
+Most WAV files are named after the BRSTM song they will replace, or the Group ID/SFX ID pair for sfx
+
+Some folders have more notes, please read them
+
+Folder breakdown:
+
+"Sfx"				- Folder containing sfx, non-BRSTM jingles (Invin, Big Mushroom, hurry up, etc)
+"Music"				- Music
+
+"Music\jingles"			- Root folder for Non-track based BRSTM jingle files (winning, losing, track start, etc)
+"Music\jingles\winlevel"	- Handles a set of various winning songs (duplicates based on one particular song)
+"Music\jingles\winlevel2"	- Handles another set of various winning songs (duplicates based on a different, particular song)
+"Music\jingles\lose"		- Handle a set of various loser songs (duplicates based on one particular song)
+
+"Music\levels"			- The level's music (Hover Pack tracks)

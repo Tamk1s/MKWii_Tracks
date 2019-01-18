@@ -1,0 +1,10 @@
+Place the following files here (NTSC MKWii ISO):
+
+[ISO]/Race/Course/old_battle4_sfc.szs
+[ISO]/Race/Course/old_battle3_gba.szs
+[ISO]/Race/Course/old_matenro_64.szs
+[ISO]/Race/Course/old_CookieLand_gc.szs
+[ISO]/Race/Course/old_House_ds.szs
+
+These are the original track slots (Retro Battle Cup courses),
+which will be modified

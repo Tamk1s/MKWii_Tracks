@@ -1,0 +1,192 @@
+#Doggone LFS files which refuse to commit, due to buggy Git LFS regression.
+*.mp4
+*.wav
+*.mp3
+*.mpg
+*.thp
+*.sf2
+*.7z
+*.zip
+*.rar
+*.brsar
+*.brstm
+*.au
+*.aup
+*.bmp
+*.avi
+
+
+#HOVER PACK
+
+#Assets/Models/common/
+#Ignore folders in "input" (extracted archives), and output/source Common.szs archives
+Hover Tracks/Assets/Models/common/Input/Common.d
+Hover Tracks/Assets/Models/common/Output/Common.szs
+Hover Tracks/Assets/Models/common/Source/Common.szs
+
+#Ignore files in "source" folders of each common/model folder. Only allow note.txt in each source folder
+Hover Tracks/Assets/Models/common/Models/banana/source/*
+!Hover Tracks/Assets/Models/common/Models/banana/source/note.txt
+Hover Tracks/Assets/Models/common/Models/big_kinoko/source/*
+!Hover Tracks/Assets/Models/common/Models/big_kinoko/source/note.txt
+Hover Tracks/Assets/Models/common/Models/bomb/source/*
+!Hover Tracks/Assets/Models/common/Models/bomb/source/note.txt
+Hover Tracks/Assets/Models/common/Models/gesso/source/*
+!Hover Tracks/Assets/Models/common/Models/gesso/source/note.txt
+Hover Tracks/Assets/Models/common/Models/item_killer/source/*
+!Hover Tracks/Assets/Models/common/Models/item_killer/source/note.txt
+Hover Tracks/Assets/Models/common/Models/itemBoxNiseRtpa/source/*
+!Hover Tracks/Assets/Models/common/Models/itemBoxNiseRtpa/source/note.txt
+Hover Tracks/Assets/Models/common/Models/kart_killer/source/*
+!Hover Tracks/Assets/Models/common/Models/kart_killer/source/note.txt
+Hover Tracks/Assets/Models/common/Models/kinoko/source/*
+!Hover Tracks/Assets/Models/common/Models/kinoko/source/note.txt
+Hover Tracks/Assets/Models/common/Models/kinoko_p/source/*
+!Hover Tracks/Assets/Models/common/Models/kinoko_p/source/note.txt
+Hover Tracks/Assets/Models/common/Models/koura_green/source/*
+!Hover Tracks/Assets/Models/common/Models/koura_green/source/note.txt
+Hover Tracks/Assets/Models/common/Models/koura_red/source/*
+!Hover Tracks/Assets/Models/common/Models/koura_red/source/note.txt
+Hover Tracks/Assets/Models/common/Models/koura_s/source/*
+!Hover Tracks/Assets/Models/common/Models/koura_s/source/note.txt
+Hover Tracks/Assets/Models/common/Models/kumo/source/*
+!Hover Tracks/Assets/Models/common/Models/kumo/source/note.txt
+Hover Tracks/Assets/Models/common/Models/kumo_s/source/*
+!Hover Tracks/Assets/Models/common/Models/kumo_s/source/note.txt
+Hover Tracks/Assets/Models/common/Models/pow_bloc/source/*
+!Hover Tracks/Assets/Models/common/Models/pow_bloc/source/note.txt
+Hover Tracks/Assets/Models/common/Models/pow_bloc_plane/source/*
+!Hover Tracks/Assets/Models/common/Models/pow_bloc_plane/source/note.txt
+Hover Tracks/Assets/Models/common/Models/RKRace/source/*
+!Hover Tracks/Assets/Models/common/Models/RKRace/source/note.txt
+Hover Tracks/Assets/Models/common/Models/star/source/*
+!Hover Tracks/Assets/Models/common/Models/star/source/note.txt
+Hover Tracks/Assets/Models/common/Models/togezo_koura/source/*
+!Hover Tracks/Assets/Models/common/Models/togezo_koura/source/note.txt
+
+#Assets/Models/common/localcop/ Ditto with source folders/note.txt here
+Hover Tracks/Assets/Models/localcop/coin/Source/*
+!Hover Tracks/Assets/Models/localcop/coin/Source/note.txt
+Hover Tracks/Assets/Models/localcop/itembox/Source/*
+!Hover Tracks/Assets/Models/localcop/itembox/Source/note.txt
+
+
+#Assets/Music/
+#Ignore the source BRSAR
+Hover Tracks/Assets/Music/Source/revo_kart.brsar
+
+
+#Assets/Msgs/
+#Ignore all extracted archives in Input, and re-encoded bmg/tpl files
+Hover Tracks/Assets/Msgs/Input/*.bmg
+Hover Tracks/Assets/Msgs/Input/*.tpl
+Hover Tracks/Assets/Msgs/Input/Award.d
+Hover Tracks/Assets/Msgs/Input/Award_U.d
+Hover Tracks/Assets/Msgs/Input/Channel.d
+Hover Tracks/Assets/Msgs/Input/Channel_U.d
+Hover Tracks/Assets/Msgs/Input/English.d
+Hover Tracks/Assets/Msgs/Input/Event.d
+Hover Tracks/Assets/Msgs/Input/Event_U.d
+Hover Tracks/Assets/Msgs/Input/Font.d
+Hover Tracks/Assets/Msgs/Input/Globe.d
+Hover Tracks/Assets/Msgs/Input/Globe_U.d
+Hover Tracks/Assets/Msgs/Input/MenuMulti.d
+Hover Tracks/Assets/Msgs/Input/MenuMulti_U.d
+Hover Tracks/Assets/Msgs/Input/MenuOther.d
+Hover Tracks/Assets/Msgs/Input/MenuOther_U.d
+Hover Tracks/Assets/Msgs/Input/MenuSingle.d
+Hover Tracks/Assets/Msgs/Input/MenuSingle_U.d
+Hover Tracks/Assets/Msgs/Input/Present.d
+Hover Tracks/Assets/Msgs/Input/Present_U.d
+Hover Tracks/Assets/Msgs/Input/Race.d
+Hover Tracks/Assets/Msgs/Input/Race_U.d
+Hover Tracks/Assets/Msgs/Input/Title.d
+Hover Tracks/Assets/Msgs/Input/Title_U.d
+#Ignore all files re-encoded archives in Output
+Hover Tracks/Assets/Msgs/Output/*
+#Ignore all source szs archives
+Hover Tracks/Assets/Msgs/Source/*.szs
+
+
+#Assets/Videos
+#Ignore all renamed WAV, MP4, JPG, and BMP files in each video's output folder
+Hover Tracks/Assets/Videos/battle/battle_cup_select/Output/*.wav
+Hover Tracks/Assets/Videos/battle/battle_cup_select/Output/*.mp4
+Hover Tracks/Assets/Videos/battle/battle_cup_select/Output/*.jpg
+Hover Tracks/Assets/Videos/battle/battle_cup_select/Output/*.bmp
+Hover Tracks/Assets/Videos/battle/battle_retro/Output/*.wav
+Hover Tracks/Assets/Videos/battle/battle_retro/Output/*.mp4
+Hover Tracks/Assets/Videos/battle/battle_retro/Output/*.jpg
+Hover Tracks/Assets/Videos/battle/battle_retro/Output/*.bmp
+
+#Ignore contents in Thwimp folder, except note.txt
+Hover Tracks/Assets/Videos/Thwimp/*
+!Hover Tracks/Assets/Videos/Thwimp/note.txt
+
+
+#Payload/ folder
+#Ignore all extracted archives in "Input" folder
+Hover Tracks/Payload/Input/*
+#Ignore all newly re-encoded SZS, BRSTM, BRSAR, and THP files in Output
+Hover Tracks/Payload/Output/*.szs
+Hover Tracks/Payload/Output/*.brstm
+Hover Tracks/Payload/Output/*.brsar
+Hover Tracks/Payload/Output/*.thp
+#Ignore all files in ISO_[blah] folders
+Hover Tracks/Payload/Output/ISO_Source/*
+Hover Tracks/Payload/Output/iso_only_files/*
+Hover Tracks/Payload/Output/ISO_Output/*
+#Ignore all original SZS archives in Source
+Hover Tracks/Payload/Source/*.szs
+
+
+#Tracks folder
+#Extra track
+#Ignore KMP verify obj/mtl model
+Hover Tracks/Tracks/Extra/Output/verify.obj
+Hover Tracks/Tracks/Extra/Output/verify.mtl
+#Ignore Course/VRCorn Mipmap extracted archives, mipmap output
+Hover Tracks/Tracks/Extra/Output/Graphics/Course/Mipmap/course_model.d
+Hover Tracks/Tracks/Extra/Output/Graphics/Course/Mipmap/Output/*
+Hover Tracks/Tracks/Extra/Output/Graphics/Vrcorn/Mipmap/Output/*
+Hover Tracks/Tracks/Extra/Output/Graphics/Vrcorn/Mipmap/vrcorn_model.d
+
+#Maze 1 track
+#Ignore KMP verify obj/mtl model
+Hover Tracks/Tracks/Maze1/Output/verify.obj
+Hover Tracks/Tracks/Maze1/Output/verify.mtl
+#Ignore Course/VRCorn Mipmap extracted archives, mipmap output
+Hover Tracks/Tracks/Maze1/Output/Graphics/Course/Mipmap/Output/*
+Hover Tracks/Tracks/Maze1/Output/Graphics/Course/Mipmap/course_model.d
+Hover Tracks/Tracks/Maze1/Output/Graphics/Vrcorn/Mipmap/Output/*
+Hover Tracks/Tracks/Maze1/Output/Graphics/Vrcorn/Mipmap/vrcorn_model.d
+
+#Maze 2 track
+#Ignore KMP verify obj/mtl model
+Hover Tracks/Tracks/Maze2/Output/verify.mtl
+Hover Tracks/Tracks/Maze2/Output/verify.obj
+#Ignore Course Mipmap extracted archives, mipmap output
+Hover Tracks/Tracks/Maze2/Output/Graphics/Course/Mipmap/Output/*
+Hover Tracks/Tracks/Maze2/Output/Graphics/Course/Mipmap/course_model.d
+
+#Maze 3 track
+#Ignore KMP verify obj/mtl model
+Hover Tracks/Tracks/Maze3/Output/verify.mtl
+Hover Tracks/Tracks/Maze3/Output/verify.obj
+#Ignore Course Mipmap extracted archives, mipmap output
+Hover Tracks/Tracks/Maze3/Output/Graphics/Course/Mipmap/Output/*
+Hover Tracks/Tracks/Maze3/Output/Graphics/Course/Mipmap/course_model.d
+
+#Small track
+#Ignore KMP verify obj/mtl model
+Hover Tracks/Tracks/Small/Output/verify.obj
+Hover Tracks/Tracks/Small/Output/verify.mtl
+#Ignore Course Mipmap extracted archives, mipmap output
+Hover Tracks/Tracks/Small/Output/Graphics/Course/Mipmap/Output/*
+Hover Tracks/Tracks/Small/Output/Graphics/Course/Mipmap/course_model.d
+
+
+#MrTamkis Kart Wii (TKW) and Sonic CDR tracks/CTs:
+#Temporiarly disabled (structure under construction)
+MrTamkis_Kart_Wii/*
+Sonic CDR/*
