@@ -1,0 +1,408 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 18.12.2018 16:16:58
+
+newmtl Tex_0000_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0000_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0000_0.dds
+
+newmtl Tex_0002_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0002_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0002_0.dds
+
+newmtl Tex_0004_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0004_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0004_0.dds
+
+newmtl Tex_0006_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0006_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0006_0.dds
+
+newmtl Tex_0008_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0008_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0008_0.dds
+
+newmtl Tex_0010_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0010_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0010_0.dds
+
+newmtl Tex_0012_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0012_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0012_0.dds
+
+newmtl Tex_0014_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0014_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0014_0.dds
+
+newmtl Tex_0016_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0016_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0016_0.dds
+
+newmtl Tex_0018_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0018_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0018_0.dds
+
+newmtl Tex_0020_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0020_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0020_0.dds
+
+newmtl Tex_0022_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0022_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0022_0.dds
+
+newmtl Tex_0024_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0024_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0024_0.dds
+
+newmtl Tex_0026_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0026_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0026_0.dds
+
+newmtl Tex_0028_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0028_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0028_0.dds
+
+newmtl Tex_0030_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0030_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0030_0.dds
+
+newmtl Tex_0038_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0038_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0038_0.dds
+
+newmtl Tex_0044_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0044_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0044_0.dds
+
+newmtl Tex_0046_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0046_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0046_0.dds
+
+newmtl Tex_0048_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0048_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0048_0.dds
+
+newmtl Tex_0054_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0054_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0054_0.dds
+
+newmtl Tex_0058_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0058_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0058_0.dds
+
+newmtl Tex_0078_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0078_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0078_0.dds
+
+newmtl Tex_0080_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0080_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0080_0.dds
+
+newmtl Tex_0102_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0102_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0102_0.dds
+
+newmtl Tex_0108_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0108_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0108_0.dds
+
+newmtl Tex_0120_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0120_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0120_0.dds
+
+newmtl Tex_0124_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0124_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0124_0.dds
+
+newmtl Tex_0126_0_dds
+	Ns 10.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.000000 0.000000 0.000000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0126_0.dds
+	map_Kd E:\GC_Wii\Hacking\Projects\MKWii\Tamkis_Kart_Wii\Tracks\Lego_Island_Raceway\Source\Track\Tex_0126_0.dds

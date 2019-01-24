@@ -1,0 +1,17 @@
+Cannon_0x11_0	0x11	0
+Cannon_0x11_1	0x11	1
+InvisWall_0x0C	0x0C	000
+Boost		0x06	0
+Tex_0006_0_dds	0x03	4
+Tex_0008_0_dds	0x0C	001
+Tex_0020_0_dds1	0x0C	001
+Tex_0030_0_dds1	0x00	0	Trickable
+Tex_0038_0_dds	0x00	0
+Tex_0038_0_dds1	0x0C	001
+Tex_0044_0_dds1	0x0C	001
+Tex_0046_0_dds1	0x00	000
+Tex_0054_0_dds1	0x03	2
+Tex_0058_0_dds1	0x0C	001
+Tex_0078_0_dds1	0x0C	001
+Tex_0080_0_dds1	0x00	000
+Tex_0120_0_dds1	0x00	000

@@ -186,7 +186,31 @@ Hover Tracks/Tracks/Small/Output/Graphics/Course/Mipmap/Output/*
 Hover Tracks/Tracks/Small/Output/Graphics/Course/Mipmap/course_model.d
 
 
-#MrTamkis Kart Wii (TKW) and Sonic CDR tracks/CTs:
-#Temporiarly disabled (structure under construction)
-MrTamkis_Kart_Wii/*
+#MrTamkis_Kart_Wii
+#Ignore Assets/input bmg, tpl files
+MrTamkis_Kart_Wii/Assets/Msgs/Input/*.bmg
+MrTamkis_Kart_Wii/Assets/Msgs/Input/*.tpl
+#Ignore Assets/Output szs archives
+MrTamkis_Kart_Wii/Assets/Msgs/Output/*.szs
+#Ignore Assets/Source szs archives
+MrTamkis_Kart_Wii/Assets/Msgs/Source/*.szs
+
+#Ignore input Source BRSAR
+MrTamkis_Kart_Wii/Assets/Music/Source/*.brsar
+
+#Ignore Payload's input files, source archives
+MrTamkis_Kart_Wii/Payload/Input/
+MrTamkis_Kart_Wii/Payload/Source/*.szs
+
+#Ignore Payload's Outputs ISO folders, and output files
+MrTamkis_Kart_Wii/Payload/Output/iso_only_files/
+MrTamkis_Kart_Wii/Payload/Output/ISO_Output/
+MrTamkis_Kart_Wii/Payload/Output/ISO_Source/
+MrTamkis_Kart_Wii/Payload/Output/*.brstm
+MrTamkis_Kart_Wii/Payload/Output/*.brsar
+MrTamkis_Kart_Wii/Payload/Output/*.szs
+MrTamkis_Kart_Wii/Payload/Output/*.thp
+
+
+#Sonic CDR tracks disabled (structure under construction)
 Sonic CDR/*
