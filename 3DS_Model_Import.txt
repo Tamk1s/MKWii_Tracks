@@ -1,0 +1,8 @@
+Proper importing:
+*Export dae of orig model
+*Import into 3DS Max with Advanced->Units-CM
+*Export obj from Skp model (original scale)
+*Import new model automatic (1.0 scale meters)
+*Rig bones, create FBX/DAE of new model. FBX Units (1.0 scale meters)
+*Import into 3DS max using Model>Scale>Maya scaling
+

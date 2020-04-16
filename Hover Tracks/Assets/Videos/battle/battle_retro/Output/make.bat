@@ -11,6 +11,6 @@ Copy /y ..\Input\Extra\ExtraOutput.mp4 battle_retro_B2_1.mp4
 Copy /y ..\Input\Dummy\DummyOutput.mp4 battle_retro_B3_1.mp4
 Copy /y ..\Input\Dummy\*.bmp
 call "..\..\..\Thwimp\Thwimp.exe"
-del *.mp4
-del *.bmp
+REM del *.mp4
+REM del *.bmp
 pause
